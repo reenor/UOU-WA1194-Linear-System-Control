@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Diffeq by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:13:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = ""; 
+			var section = ""; 
+			var aux = "Extras_Diffeq"; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "indexb290.html?aux=Index_Extras";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Extras: Difference Equations and System Representations</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="indexb290.html?aux=Index_Extras">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Extras: Difference Equations and System Representations</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#1">Difference equations</a></li>
+            <li><a href="#4">Finding transfer function using the z-transform</a></li>
+            <li><a href="#8">Derivation of state-space from difference equations</a></li>
+            <li><a href="#12">MATLAB representation</a></li>
+         </ul>
+      </div>
+      <h2>Difference equations<a name="1"></a></h2>
+      <p>Whereas continuous-time systems are described by differential equations, discrete-time systems are described by <b>difference equations</b>. From the <a href="index4e79.html?example=Introduction&amp;section=ControlDigital">digital control schematic</a>, we can see that a difference equation shows the relationship between an input signal <i>e</i>(<i>k</i>) and an output signal <i>u</i>(<i>k</i>) at discrete intervals of time where <i>k</i> represents the index of the sample. For example, if the sample time is a constant <i>T</i>, then <i>e</i>(<i>k</i>) represents the value of <i>e</i> at the time <i>kT</i>. Suppose we are interested in the <i>kth</i> output signal <i>u</i>(<i>k</i>). A computer can calculate the output signal <i>u</i>(<i>k</i>) based on the past and current input signals, <i>e</i>(0) to <i>e</i>(<i>k</i>), and past output signals, <i>u</i>(0) to <i>u</i>(<i>k</i>-1). Such a calculation can be expressed as a function of the following form.
+      </p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq95957.png" alt="$$ u_{k} = f(e(0),...e(k);u(0),...,u(k-1)) $$"></p>
+      <p>We will in general assume that the function <i>f</i> is linear and depends only on a finite number of signals, <i>e</i>(<i>k</i>) and <i>u</i>(<i>k</i>). Therefore, the basic structure of the difference equation can be written as follows.
+      </p>
+      <p><span class="eqn_num">(2)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq99568.png" alt="$$ u_{k} = -a_{k-1}u(k-1) - ... - a_{0}u(0) + b_{k}e(k-1) + ... + b_{0}e(0)$$"></p>
+      <p>For example, the following difference equation calculates the output <i>u</i>(<i>k</i>) based on the current input <i>e</i>(<i>k</i>) and the input and output from the last time step, <i>e</i>(<i>k-1</i>) and <i>u</i>(<i>k-1</i>).
+      </p>
+      <p><span class="eqn_num">(3)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq07359.png" alt="$$ u(k) = 0.75u(k-1) + e(k) - 0.95e(k-1)\;\;\;\;(1)$$"></p>
+      <h2>Finding transfer function using the z-transform<a name="4"></a></h2>
+      <p>Recall that a transfer function for a continuous system as we have considered so far is derived by first taking the Laplace
+         transform of a set of differential equations and then rearranging the results into the form Output/Input. To derive the transfer
+         function in discrete form, a mathematical tool very similar to the Laplace transform called the <b>z-transform</b> will be used.
+      </p>
+      <p>The z-transform is defined by</p>
+      <p><span class="eqn_num">(4)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq65579.png" alt="$$ Z\{f(k)\}=F(z)=\sum_{k=0}^{\infty} {f(k)z^{-k}}$$"></p>
+      <p>where <i>f</i>(<i>k</i>) is the amplitude of a sample, and the values <i>k</i> = 0, 1, 2, 3, ..., are the index corresponding to the discrete sample time.
+      </p>
+      <p>The above leads to the following relation where <i>z</i>^-1 can be thought of as a delay operator.
+      </p>
+      <p><span class="eqn_num">(5)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq60939.png" alt="$$ Z\{f(k-m)\}=z^{-m}F(z) $$"></p>
+      <p>Employing these relations, we can easily find the discrete-time transfer function of a given difference equation.</p>
+      <p>Suppose we are going to find the transfer function of the system defined by the above difference equation (1). First, apply
+         the above relations to each of <i>u</i>(<i>k</i>), <i>e</i>(<i>k</i>), <i>u</i>(<i>k-1</i>), and <i>e</i>(<i>k-1</i>) and you should arrive at the following.
+      </p>
+      <p><span class="eqn_num">(6)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq91525.png" alt="$$ U(z)= 0.75z^{-1}U(z)+E(z)-0.95z^{-1}E(z)$$"></p>
+      <p>After few steps of algebra, you can rerrange this equation into the form Output\Input and you will have the following transfer
+         function in discrete-time form as shown in equation (2).
+      </p>
+      <p><span class="eqn_num">(7)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq88926.png" alt="$$\frac{U(z)}{E(z)}= \frac{z-0.95}{z-0.75}\;\;\;\;(2) $$"></p>
+      <h2>Derivation of state-space from difference equations<a name="8"></a></h2>
+      <p>As you see in the continuous <a href="indexf617.html?example=Introduction&amp;section=SystemModeling">modeling tutorial</a> page, another way to represent a system is to use the state-space form. The basic structure of the discrete state-space equations
+         is the following.
+      </p>
+      <p><span class="eqn_num">(8)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq77203.png" alt="$$x(k)=Ax(k-1)+Be(k-1)$$"></p>
+      <p><span class="eqn_num">(9)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq72012.png" alt="$$y(k-1)=Cx(k-1)+De(k-1)$$"></p>
+      <p>Matrices <i>A</i>, <i>B</i>, <i>C</i> and <i>D</i> are discrete versions of the state-space matrices employed for the continuous case. We can express our example system in
+         state-space form as follows.
+      </p>
+      <p><span class="eqn_num">(10)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq57793.png" alt="$$x(k)=[0.75]x(k-1)+[0.5]e(k-1)$$"></p>
+      <p><span class="eqn_num">(11)</span><img class="display_eqn" src="Content/Extras/html/Extras_Diffeq_eq33938.png" alt="$$u(k)=[-0.4]x(k)+[1]e(k)$$"></p>
+      <h2>MATLAB representation<a name="12"></a></h2>
+      <p>Now we will show you how to enter the equations derived above into MATLAB.</p>
+      <p><b>1. Transfer Function</b></p>
+      <p>Recall for continuous transfer function, the numerator and the denominator matrices are entered in descending powers of <i>s</i>. The same applies to discrete transfer functions. The numerator and the denominator matrices are entered in descending powers
+         of <i>z</i>. For example, we can define the above transfer function from equation (2) as follows.
+      </p><pre class="codeinput">numDz = [1 -0.95];
+denDz = [1 -0.75];
+sys = tf(numDz, denDz, -1);
+</pre><p>The -1 tells MATLAB that the sample time is undetermined. Alternatively, we can define transfer functions by defining the
+         <i>z</i> variable as follows.
+      </p><pre class="codeinput">z = tf(<span class="string">'z'</span>,-1);
+sys = (z-0.95)/(z-0.75);
+</pre><p><b>2. State-Space</b></p>
+      <p>For discrete state-space models, we can define the model in the same manner we did in the continous case. For example, the
+         above discrete state-space model can be defined as follows.
+      </p><pre class="codeinput">A = .75;
+B = .5;
+C = -.4;
+D = 1;
+sys = ss(A,B,C,D,-1);
+</pre><p>Again, -1 is used for an undetermined sample time.</p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Extras: Difference Equations and System Representations
+%% Difference equations
+% Whereas continuous-time systems are described by differential equations,
+% discrete-time systems are described by *difference equations*. From the 
+% < ?example=Introduction&section=ControlDigital digital control schematic>, 
+% we can see that a difference equation shows the relationship between an input signal 
+% _e_(_k_) and an output signal _u_(_k_) at discrete intervals of time where
+% _k_ represents the index of the sample. For example, if the sample time
+% is a constant _T_, then _e_(_k_) represents the value of _e_ at the time
+% _kT_. Suppose we are interested in the _kth_ output signal _u_(_k_). A
+% computer can calculate the output signal _u_(_k_) based on the past and
+% current input signals, _e_(0) to _e_(_k_), and past output signals, _u_(0)
+% to _u_(_k_-1). Such a calculation can be expressed as a function of the
+% following form.
+%
+% $$ u_{k} = f(e(0),...e(k);u(0),...,u(k-1)) $$
+%
+%%
+% We will in general assume that the function _f_ is linear and depends only on a finite
+% number of signals, _e_(_k_) and _u_(_k_). Therefore, the basic structure of the difference
+% equation can be written as follows.
+%
+% $$ u_{k} = -a_{k-1}u(k-1) - ... - a_{0}u(0) + b_{k}e(k-1) + ... + b_{0}e(0)$$
+%
+%%
+% For example, the following difference equation calculates the output
+% _u_(_k_) based on the current input _e_(_k_) and the input and output from
+% the last time step, _e_(_k-1_) and _u_(_k-1_).
+%
+% $$ u(k) = 0.75u(k-1) + e(k) - 0.95e(k-1)\;\;\;\;(1)$$
+%
+%% Finding transfer function using the z-transform
+% Recall that a transfer function for a continuous system as we have
+% considered so far is derived by first taking the Laplace transform of  
+% a set of differential equations and then rearranging the results into the
+% form Output/Input. To derive the transfer function in discrete form, a
+% mathematical tool very similar to the Laplace transform called the
+% *z-transform* will be used.  
+%
+% The z-transform is defined by 
+%
+% $$ Z\{f(k)\}=F(z)=\sum_{k=0}^{\infty} {f(k)z^{-k}}$$
+%
+% where _f_(_k_) is the amplitude of a sample, and the values _k_ = 0, 1, 2, 3, 
+% ..., are the index corresponding to the discrete sample time. 
+%%
+% The above leads to the following relation where _z_^-1 can be
+% thought of as a delay operator.  
+%
+% $$ Z\{f(k-m)\}=z^{-m}F(z) $$
+%
+% Employing these relations, we can easily find the discrete-time transfer
+% function of a given difference equation. 
+%
+% Suppose we are going to find the transfer function of the system defined
+% by the above difference equation (1). First, apply the above relations 
+% to each of _u_(_k_), _e_(_k_), _u_(_k-1_), and _e_(_k-1_) and you should
+% arrive at the following.
+%% 
+% $$ U(z)= 0.75z^{-1}U(z)+E(z)-0.95z^{-1}E(z)$$
+%
+% After few steps of algebra, you can rerrange this equation into the form
+% Output\Input and you will have the following transfer function in
+% discrete-time form as shown in equation (2). 
+%%
+% $$\frac{U(z)}{E(z)}= \frac{z-0.95}{z-0.75}\;\;\;\;(2) $$
+%
+%% Derivation of state-space from difference equations
+% As you see in the continuous
+% < ?example=Introduction&section=SystemModeling modeling tutorial> 
+% page, another way to represent a system is to use the state-space form.
+% The basic structure of the discrete state-space equations is the following.  
+%%
+% $$x(k)=Ax(k-1)+Be(k-1)$$
+%
+% $$y(k-1)=Cx(k-1)+De(k-1)$$
+%%
+% Matrices _A_, _B_, _C_ and _D_ are discrete versions of the state-space matrices employed 
+% for the continuous case. We can express our example system in state-space form as follows. 
+%%
+% $$x(k)=[0.75]x(k-1)+[0.5]e(k-1)$$
+%
+% $$u(k)=[-0.4]x(k)+[1]e(k)$$
+%
+%% MATLAB representation
+% Now we will show you how to enter the equations derived above into MATLAB. 
+%
+% *1. Transfer Function*
+%
+% Recall for continuous transfer function, the numerator and the
+% denominator matrices are entered in descending powers of _s_. The same 
+% applies to discrete transfer functions. The numerator and the 
+% denominator matrices are entered in descending powers of _z_. For example,
+% we can define the above transfer function from equation (2) as follows. 
+
+numDz = [1 -0.95];
+denDz = [1 -0.75];
+sys = tf(numDz, denDz, -1);
+%%
+% The -1 tells MATLAB that the sample time is undetermined. Alternatively,
+% we can define transfer functions by defining the _z_ variable as follows.
+
+z = tf('z',-1);
+sys = (z-0.95)/(z-0.75);
+%%
+% *2. State-Space*
+%
+% For discrete state-space models, we can define the model in the same
+% manner we did in the continous case. For example, the above discrete
+% state-space model can be defined as follows.
+
+A = .75;
+B = .5;
+C = -.4;
+D = 1;
+sys = ss(A,B,C,D,-1);
+%%
+% Again, -1 is used for an undetermined sample time. 
+
+
+
+
+
+
+
+
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Diffeq by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:13:58 GMT -->
+</html>
+
+	ras_Diffeq by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:13:58 GMT -->
+</html>
+
+	
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Diffeq by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:13:58 GMT -->
+</html>
+
+	ras_Diffeq by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:13:58 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:13:58 GMT -->
+</html>
+
+	ras_Diffeq by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:13:58 GMT -->
+</html>
+
+	

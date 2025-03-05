@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlRootLocus by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:08:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = "Introduction"; 
+			var section = "ControlRootLocus"; 
+			var aux = ""; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "index7f35.html?example=Introduction&amp;section=ControlFrequency";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Introduction: Root Locus Controller Design</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index4431.html?example=CruiseControl&amp;section=ControlRootLocus"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e58.html?example=MotorSpeed&amp;section=ControlRootLocus"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index3c83.html?example=MotorPosition&amp;section=ControlRootLocus"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index8618.html?example=Suspension&amp;section=ControlRootLocus"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="index2ed1.html?example=InvertedPendulum&amp;section=ControlRootLocus"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index559a.html?example=AircraftPitch&amp;section=ControlRootLocus"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="indexc9b8.html?example=BallBeam&amp;section=ControlRootLocus"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Introduction: Root Locus Controller Design</h1>
+      <!--introduction-->
+      <p>In this tutorial we will introduce the root locus, show how to create it using MATlAB, and demonstrate how to design feedback
+         controllers using the root locus that satisfy certain performance criteria.
+      </p>
+      <p>Key MATLAB commands used in this tutorial are: <a href="http://www.mathworks.com/help/toolbox/control/ref/feedback.html"><tt>feedback</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/rlocus.html"><tt>rlocus</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/step.html"><tt>step</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/sisotool.html"><tt>sisotool</tt></a></p>
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#1">Closed-Loop Poles</a></li>
+            <li><a href="#13">Plotting the Root Locus of a Transfer Function</a></li>
+            <li><a href="#17">Choosing a Value of K from the Root Locus</a></li>
+            <li><a href="#26">Closed-Loop Response</a></li>
+            <li><a href="#33">Using SISOTOOL for Root Locus Design</a></li>
+         </ul>
+      </div>
+      <h2>Closed-Loop Poles<a name="1"></a></h2>
+      <p>The root locus of an (open-loop) transfer function <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$"> is a plot of the locations (locus) of all possible closed-loop poles with proportional gain <tt>K</tt> and unity feedback.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_ClosedLoopPoles_BlockDiagram.png" alt=""> </p>
+      <p>The closed-loop transfer function is:</p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq24544.png" alt="$$&#xA;\frac{Y(s)}{R(s)} = \frac{KH(s)}{1 + KH(s)}&#xA;$$"></p>
+      <p>and thus the poles of the closed-loop poles of the closed-loop system are values of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq72999.png" alt="$s$"> such that <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq87227.png" alt="$1 + KH(s) = 0$">.
+      </p>
+      <p>If we write <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq06474.png" alt="$H(s) = b(s)/a(s)$">, then this equation has the form:
+      </p>
+      <p><span class="eqn_num">(2)</span><img class="display_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq49959.png" alt="$$&#xA;a(s) + Kb(s) = 0&#xA;$$"></p>
+      <p><span class="eqn_num">(3)</span><img class="display_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq92594.png" alt="$$&#xA;\frac{a(s)}{K} + b(s) = 0&#xA;$$"></p>
+      <p>Let <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq25947.png" alt="$n$"> = order of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq59424.png" alt="$a(s)$"> and <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq81831.png" alt="$m$"> = order of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq72006.png" alt="$b(s)$"> (the order of a polynomial is the highest power of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq72999.png" alt="$s$"> that appears in it).
+      </p>
+      <p>We will consider all positive values of <tt>K</tt>.  In the limit as <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq59538.png" alt="$K \rightarrow 0$">, the poles of the closed-loop system are <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq05355.png" alt="$a(s) = 0$"> or the poles of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$">.  In the limit as <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq90867.png" alt="$K \rightarrow \infty$">, the poles of the closed-loop system are <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq55756.png" alt="$b(s) = 0$"> or the zeros of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$">.
+      </p>
+      <p>No matter what we pick <tt>K</tt> to be, <b>the closed-loop system must always have <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq25947.png" alt="$n$"> poles</b>, where <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq25947.png" alt="$n$"> is the number of poles of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$">.  <b>The root locus must have <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq25947.png" alt="$n$"> branches</b>, each branch starts at a pole of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$"> and goes to a zero of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$">.  If <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$"> has more poles than zeros (as is often the case), <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq61205.png" alt="$m < n$"> and we say that <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$"> has <b>zeros at infinity</b>. In this case, the limit of <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$"> as <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq22754.png" alt="$s \rightarrow \infty$"> is zero.  The number of zeros at infinity is <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq35943.png" alt="$n-m$">, the number of poles minus the number of zeros, and is the number of branches of the root locus that go to infinity (asymptotes).
+      </p>
+      <p>Since the root locus is actually the locations of all possible closed-loop poles, from the root locus we can select a gain
+         such that our closed-loop system will perform the way we want.  If any of the selected poles are on the right half plane,
+         the closed-loop system will be unstable.  The poles that are closest to the imaginary axis have the greatest influence on
+         the closed-loop response, so even though the system has three or four poles, it may still act like a second or even first
+         order system depending on the location(s) of the dominant pole(s).
+      </p>
+      <h2>Plotting the Root Locus of a Transfer Function<a name="13"></a></h2>
+      <p>Consider an open-loop system which has a transfer function of</p>
+      <p><span class="eqn_num">(4)</span><img class="display_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq50432.png" alt="$$&#xA;H(s) = \frac{Y(s)}{U(s)} = \frac{s + 7}{s(s + 5)(s + 15)(s + 20)}&#xA;$$"></p>
+      <p>How do we design a feedback controller for the system by using the root locus method?  Say our design criteria are 5% overshoot
+         and 1 second rise time.  Make a MATLAB file called <tt>rl.m</tt>.  Enter the transfer function, and the command to plot the root locus:
+      </p><pre class="codeinput">s = tf(<span class="string">'s'</span>);
+sys = (s + 7)/(s*(s + 5)*(s + 15)*(s + 20));
+rlocus(sys)
+axis([-22 3 -15 15])
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_01.png" alt=""> <h2>Choosing a Value of K from the Root Locus<a name="17"></a></h2>
+      <p>The plot above shows all possible closed-loop pole locations for a pure proportional controller.  Obviously not all of those
+         closed-loop poles will satisfy our design criteria,  To determine what part of the locus is acceptable, we can use the command
+         <tt>sgrid(Zeta,Wn)</tt> to plot lines of constant damping ratio and natural frequency.  Its two arguments are the damping ratio (<img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq47634.png" alt="$\zeta$">) and natural frequency (<img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq17080.png" alt="$\omega_n$">) [these may be vectors if you want to look at a range of acceptable values].  In our problem, we need an overshoot less than
+         5% (which means a damping ratio <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq47634.png" alt="$\zeta$"> of greater than 0.7) and a rise time of 1 second (which means a natural frequency <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq17080.png" alt="$\omega_n$"> greater than 1.8).  Enter the following in the MATLAB command window:
+      </p><pre class="codeinput">Zeta = 0.7;
+Wn = 1.8;
+sgrid(Zeta,Wn)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_02.png" alt=""> <p>On the plot above, the two dotted lines at about a 45 degree angle indicate pole locations with <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq47634.png" alt="$\zeta$"> = 0.7; in between these lines, the poles will have <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq47634.png" alt="$\zeta$"> &gt; 0.7 and outside of the lines <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq47634.png" alt="$\zeta$"> &lt; 0.7.  The semicircle indicates pole locations with a natural frequency <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq17080.png" alt="$\omega_n$"> = 1.8; inside the circle, <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq17080.png" alt="$\omega_n$"> &lt; 1.8 and outside the circle <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq17080.png" alt="$\omega_n$"> &gt; 1.8.
+      </p>
+      <p>Going back to our problem, to make the overshoot less than 5%, the poles have to be in between the two white dotted lines,
+         and to make the rise time shorter than 1 second, the poles have to be outside of the white dotted semicircle.  So now we know
+         only the part of the locus outside of the semicircle and in betwen the two lines are acceptable.  All the poles in this location
+         are in the left-half plane, so the closed-loop system will be stable.
+      </p>
+      <p>From the plot above we see that there is part of the root locus inside the desired region.  So in this case, we need only
+         a proportional controller to move the poles to the desired region.  You can use the <tt>rlocfind</tt> command in MATLAB to choose the desired poles on the locus:
+      </p>
+      <p><tt>[k,poles] = rlocfind(sys)</tt></p>
+      <p>Click on the plot the point where you want the closed-loop pole to be. You may want to select the points indicated in the
+         plot below to satisfy the design criteria.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_NewKValue_rlocfindplot.png" alt=""> </p>
+      <p>Note that since the root locus may have more than one branch, when you select a pole, you may want to find out where the other
+         pole (poles) are. Remember they will affect the response too.  From the plot above, we see that all the poles selected (all
+         the "+" signs) are at reasonable positions.  We can go ahead and use the chosen <tt>K</tt> as our proportional controller.
+      </p>
+      <h2>Closed-Loop Response<a name="26"></a></h2>
+      <p>In order to find the step response, you need to know the closed-loop transfer function.  You could compute this using the
+         rules of block diagrams, or let MATLAB do it for you (there is no need to enter a value for <tt>K</tt> if the <tt>rlocfind</tt> command was used):
+      </p><pre class="codeinput">K = 350;
+sys_cl = feedback(K*sys,1)
+</pre><pre class="codeoutput">
+sys_cl =
+ 
+               350 s + 2450
+  --------------------------------------
+  s^4 + 40 s^3 + 475 s^2 + 1850 s + 2450
+ 
+Continuous-time transfer function.
+
+</pre><p>The two arguments to the function <tt>feedback</tt> are the numerator and denominator of the open-loop system.  You need to include the proportional gain that you have chosen.
+          Unity feedback is assumed.
+      </p>
+      <p>If you have a non-unity feedback situation, look at the help file for the MATLAB function <tt>feedback</tt>, which can find the closed-loop transfer function with a gain in the feedback loop.
+      </p>
+      <p>Check out the step response of your closed-loop system:</p><pre class="codeinput">step(sys_cl)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_03.png" alt=""> <p>As we expected, this response has an overshoot less than 5% and a rise time less than 1 second.</p>
+      <h2>Using SISOTOOL for Root Locus Design<a name="33"></a></h2>
+      <p>Another way to complete what was done above is to use the interactive MATLAB GUI called <tt>sisotool</tt>.  Using the same model as above, first define the plant, <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq15146.png" alt="$H(s)$">.
+      </p><pre class="codeinput">s = tf(<span class="string">'s'</span>);
+plant = (s + 7)/(s*(s + 5)*(s + 15)*(s + 20));
+</pre><p>The <tt>sisotool</tt> function can be used for analysis and design.  In this case, we will focus on using the Root Locus as the design method to
+         improve the step response of the plant.  To begin, type the following into the MATLAB command window:
+      </p>
+      <p><tt>sisotool(plant)</tt></p>
+      <p>The following window should appear.  To start, select the tab labeled <b>Graphical Tuning</b>.  Within this window, turn off <b>Plot 2</b> and make sure <b>Plot 1</b> is the Root Locus and verify that <b>Open Loop 1</b> is selected. Finally, click the button labeled <b>Show Design Plot</b> to bring up the tunable Root Locus plot.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_GraphicalRootLocus.png" alt=""> </p>
+      <p>In the same fashion, select the tab labeled <b>Analysis Plots</b>.  Within this window, for <b>Plot 1</b>, select <b>Step</b>.  In the <b>Contents of Plots</b> subwindow, select <b>Closed Loop r to y</b> for <b>Plot 1</b>.  If the window does not automatically pop up, click the button labeled <b>Show Analysis Plot</b>.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_AnalysisStepResponse.png" alt=""> </p>
+      <p>The next thing to do is to add the design requirements to the Root Locus plot.  This is done directly on the plot by right-clicking
+         and selecting <b>Design Requirements</b>, <b>New</b>.  Design requirements can be set for the Settling Time, the Percent Overshoot, the Damping Ratio, the Natural Frequency,
+         or a Region Constraint.  There is no direct requirement for Rise Time, but the natural frequency can be used for this.
+      </p>
+      <p>Here, we will set the design requirements for the damping ratio and the natural frequency just like was done with <tt>sgrid</tt>.  Recall that the requirements call for <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq47634.png" alt="$\zeta$"> = 0.7 and <img class="inline_eqn" src="Content/Introduction/Control/RootLocus/html/Introduction_ControlRootLocus_eq17080.png" alt="$\omega_n$"> = 1.8.  Set these within the design requirements.  On the plot, any area which is still white, is an acceptable region for
+         the poles.
+      </p>
+      <p>Zoom into the Root Locus by right-clicking on the axis and select <b>Properties</b>, then click the label <b>Limits</b>.  Change the real axis to <tt>-25 to 5</tt> and the imaginary to <tt>-2.5 to 2.5</tt>.
+      </p>
+      <p>Also, we can see the current values of some key parameters in the response.  In the Step response, right-click on the plot
+         and go to <b>Characteristics</b> and select <b>Peak Response</b>.  Do the same for the <b>Rise Time</b>.  There should now be two large dots on the screen indicating the location of these parameters.  Click each of these dots
+         to bring up a screen with information.
+      </p>
+      <p>Both plots should appear as shown here:</p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_DesignRequirements.png" alt=""> </p>
+      <p>As the characteristics show on the Step response, the overshoot is acceptable, but the rise time is incredibly off.</p>
+      <p>To fix this, we need to choose a new value for the gain <tt>K</tt>.  Similarly to the <tt>rlocfind</tt> command, the gain of the controller can be changed directly on the root locus plot.  Click and drag the pink box on the origin
+         to the acceptable area where the poles have an imaginary component as shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_NewKValue.png" alt=""> </p>
+      <p>At the bottom of the plot, it can be seen that the loop gain has been changed to 361.  Looking at the Step response, both
+         of the values are acceptable for our requirements.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_FinalDesignandResponse.png" alt=""> </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Introduction: Root Locus Controller Design
+%
+% In this tutorial we will introduce the root locus, show how to create it 
+% using MATlAB, and demonstrate how to design feedback controllers using the 
+% root locus that satisfy certain performance criteria.
+%
+% Key MATLAB commands used in this tutorial are:
+% <http://www.mathworks.com/help/toolbox/control/ref/feedback.html |feedback|> , 
+% <http://www.mathworks.com/help/toolbox/control/ref/rlocus.html |rlocus|> , 
+% <http://www.mathworks.com/help/toolbox/control/ref/step.html |step|> , 
+% <http://www.mathworks.com/help/toolbox/control/ref/sisotool.html |sisotool|>
+%
+%% Closed-Loop Poles
+% The root locus of an (open-loop) transfer function $H(s)$ is a plot of
+% the locations (locus) of all possible closed-loop poles with proportional
+% gain |K| and unity feedback.
+%
+%%
+%
+% <<Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_ClosedLoopPoles_BlockDiagram.png>>
+%
+%%
+% The closed-loop transfer function is:
+%
+%%
+% $$
+% \frac{Y(s)}{R(s)} = \frac{KH(s)}{1 + KH(s)}
+% $$
+%
+%%
+% and thus the poles of the closed-loop poles of the closed-loop system are
+% values of $s$ such that $1 + KH(s) = 0$.
+%
+%%
+% If we write $H(s) = b(s)/a(s)$, then this equation has the form:
+%
+%%
+% $$
+% a(s) + Kb(s) = 0
+% $$
+%
+%%
+% $$
+% \frac{a(s)}{K} + b(s) = 0
+% $$
+%
+%%
+% Let $n$ = order of $a(s)$ and $m$ = order of $b(s)$ (the order of a
+% polynomial is the highest power of $s$ that appears in it).
+%
+%%
+% We will consider all positive values of |K|.  In the limit as $K \rightarrow 0$,
+% the poles of the closed-loop system are $a(s) = 0$ or the poles of
+% $H(s)$.  In the limit as $K \rightarrow \infty$, the poles of the closed-loop
+% system are $b(s) = 0$ or the zeros of $H(s)$.
+%
+%%
+% No matter what we pick |K| to be, *the closed-loop system must always 
+% have $n$ poles*, where $n$ is the number of poles of $H(s)$.  *The root 
+% locus must have $n$ branches*, each branch starts at a pole of $H(s)$ and
+% goes to a zero of $H(s)$.  If $H(s)$ has more poles than zeros (as is 
+% often the case), $m < n$ and we say that $H(s)$ has *zeros at infinity*. 
+% In this case, the limit of $H(s)$ as $s \rightarrow \infty$ is zero.  The number
+% of zeros at infinity is $n-m$, the number of poles minus the number of 
+% zeros, and is the number of branches of the root locus that go to 
+% infinity (asymptotes).
+%
+%%
+% Since the root locus is actually the locations of all possible 
+% closed-loop poles, from the root locus we can select a gain such that our
+% closed-loop system will perform the way we want.  If any of the selected 
+% poles are on the right half plane, the closed-loop system will be 
+% unstable.  The poles that are closest to the imaginary axis have the 
+% greatest influence on the closed-loop response, so even though the system
+% has three or four poles, it may still act like a second or even first 
+% order system depending on the location(s) of the dominant pole(s).
+%
+%% Plotting the Root Locus of a Transfer Function
+% Consider an open-loop system which has a transfer function of
+%
+%%
+% $$
+% H(s) = \frac{Y(s)}{U(s)} = \frac{s + 7}{s(s + 5)(s + 15)(s + 20)}
+% $$
+%
+%%
+% How do we design a feedback controller for the system by using the root
+% locus method?  Say our design criteria are 5% overshoot and 1 second rise
+% time.  Make a MATLAB file called |rl.m|.  Enter the transfer function,
+% and the command to plot the root locus:
+%
+%%
+
+s = tf('s');
+sys = (s + 7)/(s*(s + 5)*(s + 15)*(s + 20));
+rlocus(sys)
+axis([-22 3 -15 15])
+
+%% Choosing a Value of K from the Root Locus
+% The plot above shows all possible closed-loop pole locations for a pure
+% proportional controller.  Obviously not all of those closed-loop poles
+% will satisfy our design criteria,  To determine what part of the locus is
+% acceptable, we can use the command |sgrid(Zeta,Wn)| to plot lines of
+% constant damping ratio and natural frequency.  Its two arguments are the
+% damping ratio ($\zeta$) and natural frequency ($\omega_n$) [these may be vectors
+% if you want to look at a range of acceptable values].  In our problem, we
+% need an overshoot less than 5% (which means a damping ratio $\zeta$ of
+% greater than 0.7) and a rise time of 1 second (which means a natural
+% frequency $\omega_n$ greater than 1.8).  Enter the following in the MATLAB
+% command window:
+%
+%%
+
+Zeta = 0.7;
+Wn = 1.8;
+sgrid(Zeta,Wn)
+
+%%
+% On the plot above, the two dotted lines at about a 45 degree angle
+% indicate pole locations with $\zeta$ = 0.7; in between these lines, the
+% poles will have $\zeta$ > 0.7 and outside of the lines $\zeta$ < 0.7.  The
+% semicircle indicates pole locations with a natural frequency $\omega_n$ = 1.8;
+% inside the circle, $\omega_n$ < 1.8 and outside the circle $\omega_n$ > 1.8.
+%
+%%
+% Going back to our problem, to make the overshoot less than 5%, the poles
+% have to be in between the two white dotted lines, and to make the rise
+% time shorter than 1 second, the poles have to be outside of the white
+% dotted semicircle.  So now we know only the part of the locus outside of
+% the semicircle and in betwen the two lines are acceptable.  All the poles
+% in this location are in the left-half plane, so the closed-loop system
+% will be stable.
+%
+%%
+% From the plot above we see that there is part of the root locus inside
+% the desired region.  So in this case, we need only a proportional
+% controller to move the poles to the desired region.  You can use the
+% |rlocfind| command in MATLAB to choose the desired poles on the locus:
+%
+%%
+% |[k,poles] = rlocfind(sys)|
+%
+%%
+% Click on the plot the point where you want the closed-loop pole to be.
+% You may want to select the points indicated in the plot below to satisfy
+% the design criteria.
+%
+%%
+%
+% <<Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_NewKValue_rlocfindplot.png>>
+%
+%%
+% Note that since the root locus may have more than one branch, when you
+% select a pole, you may want to find out where the other pole (poles) are.
+% Remember they will affect the response too.  From the plot above, we see
+% that all the poles selected (all the "+" signs) are at reasonable
+% positions.  We can go ahead and use the chosen |K| as our proportional
+% controller.
+%
+%% Closed-Loop Response
+% In order to find the step response, you need to know the closed-loop
+% transfer function.  You could compute this using the rules of block
+% diagrams, or let MATLAB do it for you (there is no need to enter a value
+% for |K| if the |rlocfind| command was used):
+%
+%%
+
+K = 350;
+sys_cl = feedback(K*sys,1)
+
+%%
+% The two arguments to the function |feedback| are the numerator and
+% denominator of the open-loop system.  You need to include the
+% proportional gain that you have chosen.  Unity feedback is assumed.
+%
+%%
+% If you have a non-unity feedback situation, look at the help file for the
+% MATLAB function |feedback|, which can find the closed-loop transfer
+% function with a gain in the feedback loop.
+%
+%%
+% Check out the step response of your closed-loop system:
+%
+%%
+
+step(sys_cl)
+
+%%
+% As we expected, this response has an overshoot less than 5% and a rise
+% time less than 1 second.
+%
+%% Using SISOTOOL for Root Locus Design
+% Another way to complete what was done above is to use the interactive
+% MATLAB GUI called |sisotool|.  Using the same model as above, first
+% define the plant, $H(s)$.
+%
+%%
+
+s = tf('s');
+plant = (s + 7)/(s*(s + 5)*(s + 15)*(s + 20));
+
+%%
+% The |sisotool| function can be used for analysis and design.  In this
+% case, we will focus on using the Root Locus as the design method to
+% improve the step response of the plant.  To begin, type the following
+% into the MATLAB command window:
+%
+%%
+% |sisotool(plant)|
+%
+%%
+% The following window should appear.  To start, select the tab labeled
+% *Graphical Tuning*.  Within this window, turn off *Plot 2* and make sure
+% *Plot 1* is the Root Locus and verify that *Open Loop 1* is selected. 
+% Finally, click the button labeled *Show Design Plot* to bring up the 
+% tunable Root Locus plot.
+%
+%%
+%
+% <<Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_GraphicalRootLocus.png>>
+%
+%%
+% In the same fashion, select the tab labeled *Analysis Plots*.  Within
+% this window, for *Plot 1*, select *Step*.  In the *Contents of Plots*
+% subwindow, select *Closed Loop r to y* for *Plot 1*.  If the window does
+% not automatically pop up, click the button labeled *Show Analysis Plot*.
+%
+%%
+%
+% <<Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_AnalysisStepResponse.png>>
+%
+%%
+% The next thing to do is to add the design requirements to the Root Locus
+% plot.  This is done directly on the plot by right-clicking and selecting
+% *Design Requirements*, *New*.  Design requirements can be set for the
+% Settling Time, the Percent Overshoot, the Damping Ratio, the Natural
+% Frequency, or a Region Constraint.  There is no direct requirement for
+% Rise Time, but the natural frequency can be used for this.
+%
+%%
+% Here, we will set the design requirements for the damping ratio and the
+% natural frequency just like was done with |sgrid|.  Recall that the
+% requirements call for $\zeta$ = 0.7 and $\omega_n$ = 1.8.  Set these within the
+% design requirements.  On the plot, any area which is still white, is an
+% acceptable region for the poles.
+%
+%%
+% Zoom into the Root Locus by right-clicking on the axis and select
+% *Properties*, then click the label *Limits*.  Change the real axis to
+% |-25 to 5| and the imaginary to |-2.5 to 2.5|.
+%
+%%
+% Also, we can see the current values of some key parameters in the
+% response.  In the Step response, right-click on the plot and go to
+% *Characteristics* and select *Peak Response*.  Do the same for the *Rise
+% Time*.  There should now be two large dots on the screen indicating the
+% location of these parameters.  Click each of these dots to bring up a
+% screen with information.
+%
+%%
+% Both plots should appear as shown here:
+%
+%%
+%
+% <<Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_DesignRequirements.png>>
+%
+%%
+% As the characteristics show on the Step response, the overshoot is
+% acceptable, but the rise time is incredibly off.
+%
+%%
+% To fix this, we need to choose a new value for the gain |K|.  Similarly
+% to the |rlocfind| command, the gain of the controller can be changed
+% directly on the root locus plot.  Click and drag the pink box on the
+% origin to the acceptable area where the poles have an imaginary
+% component as shown below.
+%
+%%
+%
+% <<Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_NewKValue.png>>
+%
+%%
+% At the bottom of the plot, it can be seen that the loop gain has been
+% changed to 361.  Looking at the Step response, both of the values are
+% acceptable for our requirements.
+%
+%%
+%
+% <<Content/Introduction/Control/RootLocus/figures/RootLocusTutorial_SISOTOOL_FinalDesignandResponse.png>>
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlRootLocus by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:07 GMT -->
+</html>
+
+	lRootLocus by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:07 GMT -->
+</html>
+
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlRootLocus by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:07 GMT -->
+</html>
+
+	lRootLocus by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:07 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:07 GMT -->
+</html>
+
+	lRootLocus by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:07 GMT -->
+</html>
+
+	

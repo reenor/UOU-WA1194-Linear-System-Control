@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_rscale by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = ""; 
+			var section = ""; 
+			var aux = "Extras_rscale"; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "indexb290.html?aux=Index_Extras";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Function rscale: Finding the Scale Factor to Eliminate Steady-State Error</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="indexb290.html?aux=Index_Extras">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Function rscale: Finding the Scale Factor to Eliminate Steady-State Error</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <p>Below is the <a href="index7f05.html?aux=Extras_Function">function</a> <tt>rscale.m</tt>. This function will find the scale factor for a full-state feedback system to eliminate the steady-state error. Copy the
+         following text into a file <tt>rscale.m</tt>, and put it in the same directory as the MATLAB software, or in a directory which is contained in MATLAB's search path.
+      </p>
+      <p>
+         <pre class="codeinput">
+         function[Nbar]=rscale(a,b,c,d,k)
+         % Given the single-input linear system:
+         %       .
+         %       x = Ax + Bu
+         %       y = Cx + Du
+         % and the feedback matrix K,
+         %
+         % the function rscale(sys,K) or rscale(A,B,C,D,K)
+         % finds the scale factor N which will
+         % eliminate the steady-state error to a step reference
+         % for a continuous-time, single-input system
+         % with full-state feedback using the schematic below:
+         %
+         %                         /---------\
+         %      R         +     u  | .       |
+         %      ---> N --->() ---->| X=Ax+Bu |--> y=Cx ---> y
+         %                -|       \---------/
+         %                 |             |
+         %                 |<---- K <----|
+         %
+         %8/21/96 Yanjie Sun of the University of Michigan
+         %        under the supervision of Prof. D. Tilbury
+         %6/12/98 John Yook, Dawn Tilbury revised
+         error(nargchk(2,5,nargin));
+         % --- Determine which syntax is being used ---
+         nargin1 = nargin;
+         if (nargin1==2),	% System form
+         		[A,B,C,D] = ssdata(a);
+         		K=b;
+         elseif (nargin1==5), % A,B,C,D matrices
+         		A=a; B=b; C=c; D=d; K=k;
+         else error('Input must be of the form (sys,K) or (A,B,C,D,K)')
+         end;
+         % compute Nbar
+         s = size(A,1);
+         Z = [zeros([1,s]) 1];
+         N = inv([A,B;C,D])*Z';
+         Nx = N(1:s);
+         Nu = N(1+s);
+         Nbar=Nu + K*Nx;
+         </pre>
+         
+      </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Function rscale: Finding the Scale Factor to Eliminate Steady-State Error
+%
+%%
+% Below is the < ?aux=Extras_Function
+% function> |rscale.m|. This function will find the scale factor for a
+% full-state feedback system to eliminate the steady-state error. Copy the
+% following text into a file |rscale.m|, and put it in the same directory as
+% the MATLAB software, or in a directory which is contained in MATLAB's search path.
+%
+%%
+% <html>
+% <pre class="codeinput">
+% function[Nbar]=rscale(a,b,c,d,k)
+% % Given the single-input linear system: 
+% %       .
+% %       x = Ax + Bu
+% %       y = Cx + Du
+% % and the feedback matrix K,
+% % 
+% % the function rscale(sys,K) or rscale(A,B,C,D,K) 
+% % finds the scale factor N which will 
+% % eliminate the steady-state error to a step reference 
+% % for a continuous-time, single-input system
+% % with full-state feedback using the schematic below:
+% %
+% %                         /REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-\
+% %      R         +     u  | .       |
+% %      REPLACE_WITH_DASH_DASH-> N REPLACE_WITH_DASH_DASH->() REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH>| X=Ax+Bu |REPLACE_WITH_DASH_DASH> y=Cx REPLACE_WITH_DASH_DASH-> y
+% %                -|       \REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-/
+% %                 |             | 
+% %                 |<REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH K <REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH|
+% %
+% %8/21/96 Yanjie Sun of the University of Michigan
+% %        under the supervision of Prof. D. Tilbury
+% %6/12/98 John Yook, Dawn Tilbury revised
+% error(nargchk(2,5,nargin));
+% % REPLACE_WITH_DASH_DASH- Determine which syntax is being used REPLACE_WITH_DASH_DASH-
+% nargin1 = nargin;
+% if (nargin1==2),	% System form
+% 		[A,B,C,D] = ssdata(a);
+% 		K=b;
+% elseif (nargin1==5), % A,B,C,D matrices
+% 		A=a; B=b; C=c; D=d; K=k;
+% else error('Input must be of the form (sys,K) or (A,B,C,D,K)')
+% end;
+% % compute Nbar
+% s = size(A,1);
+% Z = [zeros([1,s]) 1];
+% N = inv([A,B;C,D])*Z';
+% Nx = N(1:s);
+% Nu = N(1+s);
+% Nbar=Nu + K*Nx;
+% </pre>
+% </html>
+% 
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_rscale by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	ras_rscale by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_rscale by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	ras_rscale by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	ras_rscale by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	

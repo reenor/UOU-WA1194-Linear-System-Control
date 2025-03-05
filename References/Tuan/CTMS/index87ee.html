@@ -1,0 +1,800 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=SimulinkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = "Introduction"; 
+			var section = "SimulinkControl"; 
+			var aux = ""; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "index9b00.html?example=CruiseControl&amp;section=SystemModeling";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Introduction: Simulink Control</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index8e57.html?example=CruiseControl&amp;section=SimulinkControl"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="indexc535.html?example=MotorSpeed&amp;section=SimulinkControl"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index4c9e.html?example=MotorPosition&amp;section=SimulinkControl"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index24af.html?example=Suspension&amp;section=SimulinkControl"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexd477.html?example=InvertedPendulum&amp;section=SimulinkControl"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index9a32.html?example=AircraftPitch&amp;section=SimulinkControl"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index7413.html?example=BallBeam&amp;section=SimulinkControl"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Introduction: Simulink Control</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#1">The open-loop plant model</a></li>
+            <li><a href="#2">Implementing a PID controller in Simulink</a></li>
+            <li><a href="#3">Running the closed-loop model</a></li>
+            <li><a href="#5">Extracting a model into MATLAB</a></li>
+            <li><a href="#8">Controller design within Simulink</a></li>
+         </ul>
+      </div>
+      <h2>The open-loop plant model<a name="1"></a></h2>
+      <p>In the <a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">Introduction: Simulink Modeling</a> page we demonstrated how Simulink can be employed to simulate a physical system. More generally, Simulink can also simulate
+         the complete control system, including the control algorithm in addition to the physical plant. As mentioned previously, Simulink
+         is especially useful for generating the approximate solutions of mathematical models that may be prohibitively difficult to
+         solve "by hand." For example, consider that you have a nonlinear plant. A common approach is to generate a linear approximation
+         of the plant and then use the linearized model to design a controller using analytical techniques. Simulink can then be employed
+         to simulate the performance of your controller when applied to the full nonlinear model. Simulink can be employed for generating
+         the linearized model and MATLAB can be employed for designing the controller as described in the other Introduction pages.
+         Various control design facilities of MATLAB can also be accessed directly from within Simulink. We will demonstrate both approaches
+         in this page.
+      </p>
+      <p>Recall the Simulink model of the toy train system derived in the <a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">Introduction: Simulink Modeling</a> page and pictured below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/inoutv.png" alt=""> </p>
+      <p>You can generate this model yourself, or you can download the completed model <a href="Content/Introduction/Simulink/Control/train.mdl">here</a>. Assuming that the train only travels in one dimension (along the track), we want to apply control to the train engine so
+         that it starts and comes to rest smoothly, and so that it can track a constant speed command with minimal error in steady
+         state.
+      </p>
+      <h2>Implementing a PID controller in Simulink<a name="2"></a></h2>
+      <p>Let us first create the structure for simulating the train system in unity feedback with a PID controller. In order to make
+         our Simulink model more understandable, we will first save the train model into its own subsystem block. To accomplish this,
+         delete the three scope blocks and replace each one by an Out1 block from the Sinks library. Label each Out1 block with the
+         corresponding variable name, "x1_dot", "x1", and "x2". Then delete the Signal Generator block and replace it with an In1 block
+         from the Sources library. Label this input "F" for the force generated between the train engine and the railroad track. Your
+         model should now appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/inout2.png" alt=""> </p>
+      <p>Next select all of the blocks in your model (<b>Ctrl A</b>) and select <b>Create Subsystem</b> from the <b>Edit</b> menu at the top of the model window. With a little rearranging and relabeling, your model will appear as shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/subsystem.png" alt=""> </p>
+      <p>Now we can add a controller to our system. We will employ a PID controller which can be implemented using a PID Controller
+         block from the Continuous library. Placing this block in series with the train subsystem, your model will appear as follows.
+         In the following, we model the controller as generating the force "F" directly. This neglects the dynamics with which the
+         train engine generates the torque applied to the wheels, and subsequently neglects the dynamics of how the force is generated
+         at the wheel/track interface. This simplified approach is taken at this point since we only wish to introduce the basic functionality
+         of Simulink for controller design and analysis.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/pid.png" alt=""> </p>
+      <p>Double-clicking on the PID Controller block, we will initially set the <b>Integral (I)</b> gain field equal to 0 and will leave the <b>Proportional (P)</b> and <b>Derivative (D)</b> gains as their defaults of 1 and 0, respectively. Next add a Sum block from the Math Operations library. Double-click on
+         this block and modify the <b>List of signs</b> field to "|+-". Since we wish to control the velocity of the toy train engine, we will feedback the engine's velocity. This
+         is accomplished by 4ring a line off of the "x1_dot" signal and connecting it to the negative sign of the Sum block. The output
+         of the Sum block will be the velocity error for the train engine and should be connected to the input of the PID Controller
+         block. Connecting the blocks as described and adding labels, your model should appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/feedback.png" alt=""> </p>
+      <p>Next add a Signal Builder block from the Sources library to represent the velocity commanded to the train. Since we wish to
+         design a controller to bring the train smoothly up to speed and smoothly to rest, we will test the system with a velocity
+         command that steps up to 1 m/s followed by a step back down to 0 m/s (recall that our system is a <i>toy</i> train). To generate this type of command signal, double-click on the Signal Builder block. Then choose <b>Change time range</b> from the <b>Axes</b> menu at the top of the block's dialog window. Set the <b>Max time</b> field to "300" seconds. Next, set the step up to occur at 10 seconds and the step down to occur at 150 seconds. This is accomplished
+         by clicking on the corresponding portions of the signal graph (left and right vertical lines) and either dragging the line
+         to the desired position, or entering the desired time in the <b>T</b> field at the bottom of the window. When done, your signal should appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/signal.png" alt=""> </p>
+      <p>Also add a Scope block from the Sinks library and use it to replace the Out1 block for the train's velocity. Relabeling the
+         blocks, your model will appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/train_cl.png" alt=""> </p>
+      <p>We are now ready to run the closed-loop simulation. If you wish to skip the above steps, you may download the completed model
+         with control <a href="Content/Introduction/Simulink/Control/train_cl.mdl">here</a>.
+      </p>
+      <h2>Running the closed-loop model<a name="3"></a></h2>
+      <p>Before running the model, we need to assign numerical values to each of the variables used in the model. For the train system,
+         we will employ the following values.
+      </p>
+      <div>
+         <ul>
+            <li><img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq48351.png" alt="$M_1$"> = 1 kg
+            </li>
+            <li><img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq83700.png" alt="$M_2$"> = 0.5 kg
+            </li>
+            <li><img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq86607.png" alt="$k$"> = 1 N/sec
+            </li>
+            <li><img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq86924.png" alt="$F$"> = 1 N
+            </li>
+            <li><img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq68803.png" alt="$\mu$"> = 0.02 sec/m
+            </li>
+            <li><img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq31049.png" alt="$g$"> = 9.8 m/s^2
+            </li>
+         </ul>
+      </div>
+      <p>Create a new <a href="indexd754.html?aux=Extras_Mfile">m-file</a> and enter the following commands.
+      </p><pre class="codeinput">M1 = 1;
+M2 = 0.5;
+k  = 1;
+F  = 1;
+mu = 0.02;
+g  = 9.8;
+</pre><p>Execute your m-file in the MATLAB command window to define these values. Simulink will recognize these MATLAB variables for
+         use in the model. Next we need to set the time for which our simulation will run to match the time range of the command from
+         the Signal Builder block. This is accomplished by selecting <b>Parameters</b> from the <b>Simulation</b> menu at the top of the model window and changing the <b>Stop Time</b> field to "300". Now, run the simulation and open the "x1_dot" scope to examine the velocity output (hit autoscale). The result
+         as shown below demonstrates that the closed-loop system is unstable for this controller.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/x1_dot_cl.png" alt=""> </p>
+      <p>Since the performance achieved above is unsatisfactory, we need to redesign our controller. We will first demonstrate how
+         to extract a model from Simulink into MATLAB for analysis and design. Then we will demonstrate how to design the control from
+         directly within Simulink.
+      </p>
+      <h2>Extracting a model into MATLAB<a name="5"></a></h2>
+      <p>The Simulink Control Design toolbox offers the functionality to extract a model from Simulink into the MATLAB workspace. This
+         is especially useful for complicated, or nonlinear simulation models. This is also useful for generating discrete-time (sampled)
+         models. For this example, let us extract a continous-time model of our train subsystem. First we need to identify the inputs
+         and outputs of the model we wish to extract. The input to the train system is the force <img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq86924.png" alt="$F$">. We can designate this fact by right-clicking on the signal representing "F" (output of the PID block) and choosing <b>Linearization Points &gt; Input Point</b> from the resulting menu. Likewise, we can designate the output of the train system by right-clicking on the "x1_dot" signal
+         and choosing <b>Linearization Points &gt; Output Point</b> from the resulting menu. These inputs and outputs will now be indicated by small arrow symbols as shown in the following
+         figure. Since we wish to extract a model of the train by itself, without control, we need to further delete the feedback signal,
+         otherwise we will extract the closed-loop model from <img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq86924.png" alt="$F$"> to <img class="inline_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq14337.png" alt="$\dot{x}_1$">. Your model should now appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/open_loop.png" alt=""> </p>
+      <p>We can now extract the model by opening the <b>Linear Analysis Tool</b>. This is accomplished by selecting <b>Control Design &gt; Linear Analysis</b> from under the <b>Tools</b> menu at the top of the model window. Following these steps will open the window shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/train_lin.png" alt=""> </p>
+      <p>This tool generates an LTI object from a (possibly nonlinear) Simulink model and allows you to specify the point about which
+         the linearization is performed. Since our Simulink model is already linear, our choice of operating point will have no effect
+         and we can leave it as the default <tt>Model Initial Condition</tt>. In order to generate the linearized model, select the <b>Linearize</b> button in the above figure, which is indicated by the green triangle. The <b>Linear Analysis Tool</b> window should now appear as shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/train_lin2.png" alt=""> </p>
+      <p>Inspecting the above, the step response of the linearized model was automatically generated. Comparing this step response
+         to the one generated by the simulation of the open-loop train system in the <a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">Introduction: Simulink Modeling</a> page, you can see that the responses are identical. This makes sense since the simulation model was already linear. Additionally,
+         the linearization process generated the object <tt>linsys1</tt> shown in the <b>Linear Analysis Workspace</b> above. This LTI object can be exported for use within MATLAB by simply dragging the object into the <b>MATLAB Workspace</b> window.
+      </p>
+      <p>Having extracted this model, we can now employ all of the facilities that MATLAB offers for controller design. For example,
+         let us employ the following commands to generate and analyze the closed-loop system reflecting the Simulink model created
+         above.
+      </p>
+      <p>
+         </p><pre class="codeinput">
+         sys_cl = feedback(linsys1,1);
+         pole(sys_cl)
+         </pre>
+         </p><pre class="codeoutput">
+         ans =
+         </p>
+         -1.5261
+         0.0000
+         0.0670 + 1.1977i
+         0.0670 - 1.1977i
+         </pre>
+         
+      </p>
+      <p>Examination of the above demonstrates that the closed-loop system in its current state has poles with positive real part and,
+         therefore, is unstable. This agrees with the result of our closed-loop simulation from above. We can then employ MATLAB to
+         design a new controller. Instead, we will demonstrate how to access some of MATLAB's functionality from directly within Simulink.
+      </p>
+      <h2>Controller design within Simulink<a name="8"></a></h2>
+      <p>Rather than performing the controller design in MATLAB, we can also launch interactive tools to tune our controller from within
+         Simulink. One manner in which this can be done is to double-click on the PID Controller in the model and select the <b>Tune</b> button to launch the <b>PID Tuner GUI</b>. Rather than do this, will launch the more general Simulink Control Design GUI by selecting <b>Linear Analysis &gt; Compensator Design</b> from under the <b>Tools</b> menu located at the top of the model window. Following these steps will open the <b>Control and Estimation Tools Manager</b> window shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd.png" alt=""> </p>
+      <p>The first thing that needs to be done is to identify the controller block that is to be tuned. This is accomplished by first
+         clicking on the <b>Select Blocks</b> button, and then selecting the PID Controller block from the resulting window as shown below. Next click the <b>OK</b> button. Note that controllers represented in other types of blocks (Transfer Function, State Space, etc.) can also be tuned.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd2.png" alt=""> </p>
+      <p>Before we proceed to tune our controller, we must first identify the inputs and outputs of the closed-loop system we wish
+         to analyze. This is done in the same manner we did when extracting a model into MATLAB. Specifically, right-click on the velocity
+         command signal (output of the Signal Builder block) and choose <b>Linearization Points &gt; Input Point</b> from the resulting menu to identify the input of our closed-loop system. Similarly, right-click on the train engine velocity
+         signal ("x1_dot") and select <b>Linearization Points &gt; Output Point</b> from the menu to choose the output of our system. Your model should now appear as follows where the small arrow symbols identify
+         the input and output of the model.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/train_cl2.png" alt=""> </p>
+      <p>Now that we have identified the block to tune and our input and output signals, we can now commence with tuning the controller.
+         Select the <b>Tune Blocks</b> button in the <b>Control and Estimation Tools Manager</b> window. This will open the <b>Design Configuration Window</b> shown below which provides some introduction on how to employ the interactive design tool. In essence, this GUI is the <b>SISO Design Tool</b> that is available from within MATLAB as well.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd3.png" alt=""> </p>
+      <p>Clicking the <b>Next</b> button, we will choose the design plots we wish to employ for designing our controller. In this example, we will employ a
+         root locus design approach and hence will choose a <b>Plot Type</b> of <tt>Root Locus</tt> for <b>Plot 1</b> as shown below. Since the root locus approach to design employs a plot from the open-loop system for placing the closed-loop
+         poles, we will leave the choice of <b>Open/Closed Loops</b> as <tt>Open Loop 1</tt> (this is our only choice!).
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd4.png" alt=""> </p>
+      <p>Clicking the <b>Next</b> button again will allow us to choose our analysis plots. We use the step response plot to assess how well we are able to
+         meet our goal of bringing the train up to speed smoothly with minimal steady-state error to a constant speed command. Therefore,
+         we will choose a <b>Plot Type</b> of <tt>Step</tt> from the drop-down menu under <b>Plot 1</b> as shown below. We will also select <b>Plot 1</b> under the <b>Plot Contents</b> portion of the window for the only system that is defined. There is only one system available because we have defined only
+         a single input and single output for our system.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd5.png" alt=""> </p>
+      <p>Selecting the <b>Next Button</b> will then open the <b>SISO Design Tool</b> with a root locus plot and a step response plot. The root locus plot shown below displays the closed-loop pole locations
+         of the train system plant under simple proportional control. Examining the plot, one can see that many values of loop gain
+         will place closed-loop poles in the right-half plane leading to an unstable response.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd6.png" alt=""> </p>
+      <p>If we decrease the loop gain sufficiently, we can move the closed-loop poles into the left-half plane and we can stabilize
+         our system. This can be accomplished graphically by "grabbing" the pink boxes marking the closed-loop pole locations and dragging
+         them toward the open-loop pole locations (marked by <tt>x</tt>'s). A loop gain of approximately 0.1 will stabilize the system. Examining the corresponding step response, which will change
+         automatically in response to the gain change if the <b>Real-Time Update</b> box is checked in the <b>LTI Viewer</b> window, you can see that while the response is stable its steady-state error is quite large.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd7.png" alt=""> </p>
+      <p>Recall that adding integral control is one way to reduce the steady-state error for a system. In this case, adding an integrator
+         via the controller will make the system type 1, where type 1 systems can track step references with zero steady-state error.
+         Recall the following form of a PI controller.
+      </p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Introduction/Simulink/Control/html/Introduction_SimulinkControl_eq56333.png" alt="$$ C(s) = K_p + \frac{K_i}{s} = \frac{K_ps + Ki}{s} $$"></p>
+      <p>Therefore, a PI controller will add an integrator and a zero to our open-loop system. The integrator can be added to the system
+         by right-clicking in the field of the root locus plot and selecting <b>Add Pole/Zero &gt; Integrator</b> from the resulting menu. Similarly, the zero can be added by right-clicking on the root locus plot and selecting <b>Add Pole/Zero &gt; Real zero</b> from the resulting menu. Then click where along the real axis you wish to place the zero. We will place the zero just to
+         the right of the plant pole on the real axis. You can move the zero by clicking on it and dragging it to a new location. Once
+         you have placed the zero, then grab the pink boxes representing the closed-loop poles and attempt to line the three dominant
+         poles up so that they have the same real part. There also will be a real closed-loop pole to the left that is "faster" than
+         the rest, and a closed-loop pole at the origin that is cancelled by a closed-loop zero at the origin. The resulting root locus
+         plot is shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd8.png" alt=""> </p>
+      <p>The compensator can also be edited by directly typing in pole and zero locations. This can be done by choosing <b>Edit Compensator</b> from the <b>Design</b> menu located at the top of the <b>SISO Design Task</b> window. The window that opens is shown below. We will more precisely place the zero at -0.15 and will choose a loop gain
+         equal to 0.01.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd9.png" alt=""> </p>
+      <p>The resulting closed-loop step response plot is shown below demonstrating that the train engine is brought to speed smoothly
+         and with zero steady-state error for a constant speed command.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd8a.png" alt=""> </p>
+      <p>The control gains that have been chosen can then be applied to the Simulink model by clicking the <b>Update Simulink Block Parameters</b> button under the <b>Compensator Editor</b> tab of the <b>Control and Estimation Tools Manager</b> window (see above). The simulation can then be run with this newly tuned controller. Clicking on the Scope block for the
+         train engine's velocity and selecting autoscale will produce a plot like the one shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Simulink/Control/figures/scd10.png" alt=""> </p>
+      <p>Overall this response seems to meet our goals of bringing the train up to speed and to rest smoothly, while maintaining minimal
+         steady-state error. This response matches the result generated with the <b>SISO Design Tool</b> above because that analysis and the Simulink model used the exact same linear model.
+      </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Introduction: Simulink Control
+%
+%% The open-loop plant model
+% In the
+% < ?example=Introduction&section=SimulinkModeling
+% Introduction: Simulink Modeling> page we demonstrated how Simulink can be
+% employed to simulate a physical system. More generally, Simulink can
+% also simulate the complete control system, including the control algorithm in
+% addition to the physical plant. As mentioned previously, Simulink is
+% especially useful for generating the approximate solutions of
+% mathematical models that may be prohibitively difficult to solve "by
+% hand." For example, consider that you have a nonlinear plant. A common
+% approach is to generate a linear approximation of the plant and then use the
+% linearized model to design a controller using analytical techniques.
+% Simulink can then be employed to simulate the performance of your
+% controller when applied to the full nonlinear model. Simulink can be
+% employed for generating the linearized model and MATLAB can be employed
+% for designing the controller as described in the other Introduction
+% pages. Various control design facilities of MATLAB can also be accessed
+% directly from within Simulink. We will demonstrate both approaches in this page. 
+%
+% Recall the Simulink model of the toy train system derived in the
+% < ?example=Introduction&section=SimulinkModeling 
+% Introduction: Simulink Modeling> page and pictured below.
+%
+% <<Content/Introduction/Simulink/Control/figures/inoutv.png>>
+%
+% You can generate this model yourself, or you can download the completed
+% model <Content/Introduction/Simulink/Control/train.mdl here>. Assuming that the train only travels in one
+% dimension (along the track), we want to apply control to the train engine
+% so that it starts and comes to rest smoothly, and so that it can track a
+% constant speed command with minimal error in steady state.
+%
+%% Implementing a PID controller in Simulink
+%
+% Let us first create the structure for simulating the train system in
+% unity feedback with a PID controller. In order to make our Simulink model
+% more understandable, we will first save the train model into its own subsystem
+% block. To accomplish this, delete the three scope blocks and replace each
+% one by an Out1 block from the Sinks library. Label each Out1 block with
+% the corresponding variable name, "x1_dot", "x1", and "x2". Then delete
+% the Signal Generator block and replace it with an In1 block from the
+% Sources library. Label this input "F" for the force generated between the
+% train engine and the railroad track. Your model should now appear as
+% follows.
+%
+% <<Content/Introduction/Simulink/Control/figures/inout2.png>>
+%
+% Next select all of the blocks in your model (*Ctrl A*) and select *Create
+% Subsystem* from the *Edit* menu at the top of the model window. With a
+% little rearranging and relabeling, your model will appear as shown below.
+%
+% <<Content/Introduction/Simulink/Control/figures/subsystem.png>>
+%
+% Now we can add a controller to our system. We will employ a PID
+% controller which can be implemented using a PID Controller block from the
+% Continuous library. Placing this block in series with the train
+% subsystem, your model will appear as follows. In the following, we model
+% the controller as generating the force "F" directly. This neglects the
+% dynamics with which the train engine generates the torque applied to the
+% wheels, and subsequently neglects the dynamics of how the force is
+% generated at the wheel/track interface. This simplified approach is taken
+% at this point since we only wish to introduce the basic functionality of
+% Simulink for controller design and analysis.
+%
+% <<Content/Introduction/Simulink/Control/figures/pid.png>>
+%
+% Double-clicking on the PID Controller block, we will initially set the
+% *Integral (I)* gain field equal to 0 and will leave the *Proportional
+% (P)* and *Derivative (D)* gains as their defaults of 1 and 0,
+% respectively. Next add a Sum block from the Math Operations library.
+% Double-click on this block and modify the *List of signs* field to "|+-".
+% Since we wish to control the velocity of the toy train engine, we will
+% feedback the engine's velocity. This is accomplished by 4ring a line
+% off of the "x1_dot" signal and connecting it to the negative sign of the Sum
+% block. The output of the Sum block will be the velocity error for the
+% train engine and should be connected to the input of the PID Controller
+% block. Connecting the blocks as described and adding labels, your model
+% should appear as follows.
+% 
+% <<Content/Introduction/Simulink/Control/figures/feedback.png>>
+%
+% Next add a Signal Builder block from the Sources library to represent the
+% velocity commanded to the train. Since we wish to design a controller to
+% bring the train smoothly up to speed and smoothly to rest, we will test
+% the system with a velocity command that steps up to 1 m/s followed by a
+% step back down to 0 m/s (recall that our system is a _toy_ train). To
+% generate this type of command signal, double-click on the Signal Builder
+% block. Then choose *Change time range* from the *Axes* menu at the top of
+% the block's dialog window. Set the *Max time* field to "300" seconds.
+% Next, set the step up to occur at 10 seconds and the step down to occur
+% at 150 seconds. This is accomplished by clicking on the corresponding
+% portions of the signal graph (left and right vertical lines) and either
+% dragging the line to the desired position, or entering the desired time
+% in the *T* field at the bottom of the window. When done, your signal
+% should appear as follows. 
+%
+% <<Content/Introduction/Simulink/Control/figures/signal.png>>
+%
+% Also add a Scope block from the Sinks library and use it to replace the
+% Out1 block for the train's velocity. Relabeling the blocks, your model
+% will appear as follows.
+%
+% <<Content/Introduction/Simulink/Control/figures/train_cl.png>>
+%
+% We are now ready to run the closed-loop simulation. If you wish to skip
+% the above steps, you may download the completed model with control
+% <Content/Introduction/Simulink/Control/train_cl.mdl here>. 
+
+%% Running the closed-loop model
+%
+% Before running the model, we need to assign numerical values to each of
+% the variables used in the model. For the train system, we will employ the
+% following values.
+%
+% * $M_1$ = 1 kg
+% * $M_2$ = 0.5 kg
+% * $k$ = 1 N/sec
+% * $F$ = 1 N
+% * $\mu$ = 0.02 sec/m
+% * $g$ = 9.8 m/s^2
+%
+% Create a new < ?aux=Extras_Mfile m-file>
+% and enter the following commands. 
+
+M1 = 1;
+M2 = 0.5;
+k  = 1;
+F  = 1;
+mu = 0.02;
+g  = 9.8;
+
+%%
+% Execute your m-file in the MATLAB command window to define these values.
+% Simulink will recognize these MATLAB variables for use in the model. Next
+% we need to set the time for which our simulation will run to match the
+% time range of the command from the Signal Builder block. This is
+% accomplished by selecting *Parameters* from the *Simulation* menu at the
+% top of the model window and changing the *Stop Time* field to "300". Now,
+% run the simulation and open the "x1_dot" scope to examine the velocity
+% output (hit autoscale). The result as shown below demonstrates that the
+% closed-loop system is unstable for this controller.
+%
+% <<Content/Introduction/Simulink/Control/figures/x1_dot_cl.png>>
+%
+% Since the performance achieved above is unsatisfactory, we need to
+% redesign our controller. We will first demonstrate how to extract a model
+% from Simulink into MATLAB for analysis and design. Then we will
+% demonstrate how to design the control from directly within Simulink.
+
+%% Extracting a model into MATLAB
+%
+% The Simulink Control Design toolbox offers the functionality to extract a
+% model from Simulink into the MATLAB workspace. This is especially useful
+% for complicated, or nonlinear simulation models. This is also useful for
+% generating discrete-time (sampled) models. For this example, let us
+% extract a continous-time model of our train subsystem. First we need to
+% identify the inputs and outputs of the model we wish to extract. The
+% input to the train system is the force $F$. We can designate this fact by
+% right-clicking on the signal representing "F" (output of the PID block)
+% and choosing *Linearization Points > Input Point* from the resulting
+% menu. Likewise, we can designate the output of the train system by
+% right-clicking on the "x1_dot" signal and choosing *Linearization Points
+% > Output Point* from the resulting menu. These inputs and outputs will
+% now be indicated by small arrow symbols as shown in the following figure.
+% Since we wish to extract a model of the train by itself, without control,
+% we need to further delete the feedback signal, otherwise we will extract
+% the closed-loop model from $F$ to $\dot{x}_1$. Your model should now
+% appear as follows.
+% 
+% <<Content/Introduction/Simulink/Control/figures/open_loop.png>>
+%
+% We can now extract the model by opening the *Linear Analysis Tool*. This
+% is accomplished by selecting *Control Design > Linear Analysis* from under the
+% *Tools* menu at the top of the model window. Following these steps will
+% open the window shown below.
+%
+% <<Content/Introduction/Simulink/Control/figures/train_lin.png>>
+%
+% This tool generates an LTI object from a (possibly nonlinear) Simulink
+% model and allows you to specify the point about which the linearization
+% is performed. Since our Simulink model is already linear, our choice of
+% operating point will have no effect and we can leave it as the default
+% |Model Initial Condition|. In order to generate the linearized model,
+% select the *Linearize* button in the above figure, which is indicated by
+% the green triangle. The *Linear Analysis Tool* window should now appear
+% as shown below.
+%
+% <<Content/Introduction/Simulink/Control/figures/train_lin2.png>>
+%
+% Inspecting the above, the step response of the linearized model was
+% automatically generated. Comparing this step response to the one
+% generated by the simulation of the open-loop train system in the
+% < ?example=Introduction&section=SimulinkModeling
+% Introduction: Simulink Modeling> page, you can see that the responses are
+% identical. This makes sense since the simulation model was already
+% linear. Additionally, the linearization process generated the object
+% |linsys1| shown in the *Linear Analysis Workspace* above. This LTI object
+% can be exported for use within MATLAB by simply dragging the object into
+% the *MATLAB Workspace* window.
+%
+% Having extracted this model, we can now employ all of the facilities that
+% MATLAB offers for controller design. For example, let us employ the
+% following commands to generate and analyze the closed-loop system reflecting the
+% Simulink model created above. 
+%%
+% <html>
+% </p><pre class="codeinput">
+% sys_cl = feedback(linsys1,1);
+% pole(sys_cl)
+% </pre>
+% </p><pre class="codeoutput">
+% ans =
+% </p>
+%  -1.5261          
+%   0.0000          
+%   0.0670 + 1.1977i
+%   0.0670 - 1.1977i
+% </pre>
+% </html>
+%%
+% Examination of the above demonstrates that the closed-loop system in its
+% current state has poles with positive real part and, therefore, is
+% unstable. This agrees with the result of our closed-loop simulation
+% from above. We can then employ MATLAB to design a new controller.
+% Instead, we will demonstrate how to access some of MATLAB's
+% functionality from directly within Simulink.
+%
+%% Controller design within Simulink
+% 
+% Rather than performing the controller design in MATLAB, we can also
+% launch interactive tools to tune our controller from within Simulink. One
+% manner in which this can be done is to double-click on the PID
+% Controller in the model and select the *Tune* button to launch the *PID
+% Tuner GUI*. Rather than do this, will launch the more general Simulink
+% Control Design GUI by selecting *Linear Analysis > Compensator Design*
+% from under the *Tools* menu located at the top of the model window.
+% Following these steps will open the *Control and Estimation Tools
+% Manager* window shown below.
+%
+% <<Content/Introduction/Simulink/Control/figures/scd.png>>
+%
+% The first thing that needs to be done is to identify the controller
+% block that is to be tuned. This is accomplished by first clicking on the
+% *Select Blocks* button, and then selecting the PID Controller block from the
+% resulting window as shown below. Next click the *OK* button. Note that
+% controllers represented in other types of blocks (Transfer Function,
+% State Space, etc.) can also be tuned.
+%
+% <<Content/Introduction/Simulink/Control/figures/scd2.png>>
+%
+% Before we proceed to tune our controller, we must first identify the
+% inputs and outputs of the closed-loop system we wish to analyze. This is
+% done in the same manner we did when extracting a model into MATLAB.
+% Specifically, right-click on the velocity command signal (output of the
+% Signal Builder block) and choose *Linearization Points > Input Point*
+% from the resulting menu to identify the input of our closed-loop system.
+% Similarly, right-click on the train engine velocity signal ("x1_dot") and
+% select *Linearization Points > Output Point* from the menu to choose the
+% output of our system. Your model should now appear as follows where the
+% small arrow symbols identify the input and output of the model.
+%
+% <<Content/Introduction/Simulink/Control/figures/train_cl2.png>>
+%
+% Now that we have identified the block to tune and our input and output
+% signals, we can now commence with tuning the controller. Select the *Tune
+% Blocks* button in the *Control and Estimation Tools Manager* window. This
+% will open the *Design Configuration Window* shown below which provides
+% some introduction on how to employ the interactive design tool. In
+% essence, this GUI is the *SISO Design Tool* that is available
+% from within MATLAB as well.
+%
+% <<Content/Introduction/Simulink/Control/figures/scd3.png>>
+%
+% Clicking the *Next* button, we will choose the design plots we wish to
+% employ for designing our controller. In this example, we will employ a
+% root locus design approach and hence will choose a *Plot Type* of |Root
+% Locus| for *Plot 1* as shown below. Since the root locus approach to
+% design employs a plot from the open-loop system for placing the closed-loop
+% poles, we will leave the choice of *Open/Closed Loops* as |Open Loop 1|
+% (this is our only choice!).
+%
+% <<Content/Introduction/Simulink/Control/figures/scd4.png>>
+%
+% Clicking the *Next* button again will allow us to choose our analysis
+% plots. We use the step response plot to assess how well we are able to
+% meet our goal of bringing the train up to speed smoothly with minimal
+% steady-state error to a constant speed command. Therefore, we will choose
+% a *Plot Type* of |Step| from the drop-down menu under *Plot 1* as shown
+% below. We will also select *Plot 1* under the *Plot Contents* portion of
+% the window for the only system that is defined. There is only one system
+% available because we have defined only a single input and single output for
+% our system.  
+%
+% <<Content/Introduction/Simulink/Control/figures/scd5.png>>
+%
+% Selecting the *Next Button* will then open the *SISO Design Tool* with a
+% root locus plot and a step response plot. The root locus plot shown below
+% displays the closed-loop pole locations of the train system plant under
+% simple proportional control. Examining the plot, one can see that many
+% values of loop gain will place closed-loop 
+% poles in the right-half plane leading to an unstable response. 
+%
+% <<Content/Introduction/Simulink/Control/figures/scd6.png>>
+%
+% If we decrease the loop gain sufficiently, we can move the closed-loop
+% poles into the left-half plane and we can stabilize our system. This can
+% be accomplished graphically by "grabbing" the pink boxes marking the
+% closed-loop pole locations and dragging them toward the open-loop pole
+% locations (marked by |x|'s). A loop gain of approximately 0.1 will
+% stabilize the system.
+% Examining the corresponding step response, which will change
+% automatically in response to the gain change if the *Real-Time Update*
+% box is checked in the *LTI Viewer* window, you can see that while the
+% response is stable its steady-state error is quite large.
+%
+% <<Content/Introduction/Simulink/Control/figures/scd7.png>>
+%
+% Recall that adding integral control is one way to reduce the steady-state
+% error for a system. In this case, adding an integrator via the controller
+% will make the system type 1, where type 1 systems can track step
+% references with zero steady-state error. Recall the following form of a
+% PI controller.
+%
+% $$ C(s) = K_p + \frac{K_i}{s} = \frac{K_ps + Ki}{s} $$
+%
+% Therefore, a PI controller will add an integrator and a zero to our
+% open-loop system. The integrator can be added to the system by
+% right-clicking in the field of the root locus plot and selecting *Add
+% Pole/Zero > Integrator* from the resulting menu. Similarly, the zero can
+% be added by right-clicking on the root locus plot and selecting *Add
+% Pole/Zero > Real zero* from the resulting menu. Then click where along
+% the real axis you wish to place the zero. We will place the zero just to
+% the right of the plant pole on the real axis. You can move the zero by
+% clicking on it and dragging it to a new location. Once you have placed
+% the zero, then grab the pink boxes representing the closed-loop poles and
+% attempt to line the three dominant poles up so that they have the same
+% real part. There also will be a real closed-loop pole to the left that is
+% "faster" than the rest, and a closed-loop pole at the origin that is
+% cancelled by a closed-loop zero at the origin. The resulting root locus
+% plot is shown below. 
+%
+% <<Content/Introduction/Simulink/Control/figures/scd8.png>>
+%
+% The compensator can also be edited by directly typing in pole and zero locations.
+% This can be done by choosing *Edit Compensator* from the *Design* menu
+% located at the top of the *SISO Design Task* window. The window that
+% opens is shown below. We will more precisely place the zero at -0.15 and
+% will choose a loop gain equal to 0.01.
+%
+% <<Content/Introduction/Simulink/Control/figures/scd9.png>>
+%
+% The resulting closed-loop step response plot is shown below
+% demonstrating that the train engine is brought to speed smoothly and with
+% zero steady-state error for a constant speed command. 
+%
+% <<Content/Introduction/Simulink/Control/figures/scd8a.png>>
+%
+% The control gains that have been chosen can then be applied to the
+% Simulink model by clicking the *Update Simulink Block Parameters*
+% button under the *Compensator Editor* tab of the *Control and Estimation
+% Tools Manager* window (see above). The simulation can then be run with
+% this newly tuned controller. Clicking on the Scope block for the train
+% engine's velocity and selecting autoscale will produce a plot like the
+% one shown below.
+%
+% <<Content/Introduction/Simulink/Control/figures/scd10.png>>
+%
+% Overall this response seems to meet our goals of bringing the train up to
+% speed and to rest smoothly, while maintaining minimal steady-state error.
+% This response matches the result generated with the *SISO Design Tool*
+% above because that analysis and the Simulink model used the exact same linear model.
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=SimulinkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:58 GMT -->
+</html>
+
+	inkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:58 GMT -->
+</html>
+
+		
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=SimulinkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:58 GMT -->
+</html>
+
+	inkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:58 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:58 GMT -->
+</html>
+
+	inkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:58 GMT -->
+</html>
+
+	

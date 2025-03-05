@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Dsserror by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:13:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = ""; 
+			var section = ""; 
+			var aux = "Extras_Dsserror"; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "indexb290.html?aux=Index_Extras";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Extras: Digital Steady-State Error</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="indexb290.html?aux=Index_Extras">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Extras: Digital Steady-State Error</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#4">Finding steady-state error to the unit step input</a></li>
+            <li><a href="#8">Finding steady-state error to the impulse input</a></li>
+         </ul>
+      </div>
+      <p>For a continuous-time system design, we often use the Final Value Theorem</p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dsserror_eq59852.png" alt="$$ \lim_{t \rightarrow \infty}{x(t)} = x_{ss} = \lim_{s \rightarrow 0}{sX(s)}$$"></p>
+      <p>to find the steady-state error for a given system and input. Recall that this theorem only holds if the poles of <i>sX</i>(<i>s</i>) have negative real part. There is also a version of the Final Value Theorem for discrete-time systems. The discrete version
+         of the Final Value Theorem is defined as follows
+      </p>
+      <p><span class="eqn_num">(2)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dsserror_eq09362.png" alt="$$ \lim_{k \rightarrow \infty}{x(k)} = x_{ss} = \lim_{z \rightarrow 1}{(1-z^{-1})X(z)}$$"></p>
+      <p>where it is necessary that all poles of (1- <i>z</i> ^{-1}) <i>X</i>(<i>z</i>) are inside the unit circle.
+      </p>
+      <p>For example, suppose we have the following discrete transfer function.</p>
+      <p><span class="eqn_num">(3)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dsserror_eq22430.png" alt="$$ \frac{X(z)}{U(z)} = \frac{z + 0.5}{z^{2} - 0.6z + 0.3}$$"></p>
+      <p>First, let's obtain the poles of this transfer function and see if they are located inside the unit circle. We can find the
+         poles by hand or by employing the following MATLAB commands.
+      </p><pre class="codeinput">z = tf(<span class="string">'z'</span>,-1);
+sys_d = (z + 0.5)/(z^2 - 0.6*z + 0.3);
+[p,z] = pzmap(sys_d)
+</pre><pre class="codeoutput">p =
+   0.3000 + 0.4583i
+   0.3000 - 0.4583i
+z =
+   -0.5000
+</pre><p>Since both poles are inside the unit circle, the Final Value Theorem will hold.</p>
+      <h2>Finding steady-state error to the unit step input<a name="4"></a></h2>
+      <p>Let the input <i>U</i>(<i>z</i>) be the unit step input as shown below.
+      </p>
+      <p><span class="eqn_num">(4)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dsserror_eq06449.png" alt="$$ U(z) = \frac{1}{(1-z^{-1})} $$"></p>
+      <p>The output <i>X</i>(<i>z</i>) then is the following.
+      </p>
+      <p><span class="eqn_num">(5)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dsserror_eq53264.png" alt="$$ X(z) = \frac{(z+0.5)}{(z^{2}-0.6z+0.3)}\frac{1}{(1-z^{-1})}$$"></p>
+      <p>Applying the Final Value Theorem yields the following.</p>
+      <p><span class="eqn_num">(6)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dsserror_eq77463.png" alt="$$ x_{ss} = \lim_{z \rightarrow 1}(1-z^{-1})\frac{(z+0.5)}{(z^{2}-0.6z+0.3)}\frac{1}{(1-z^{-1})} = 2.14 $$"></p>
+      <p>Therefore, the steady-state output of the above discrete-time system to a unit step input is 2.14. This corresponds to a steady-state
+         error of 114%.
+      </p>
+      <p>Let's confirm this by obtaining a step response plot of the system. Create a new m-file and enter the following commands.
+         Running this <a href="indexd754.html?aux=Extras_Mfile">m-file</a> in the command window generates the step response shown below.
+      </p><pre class="codeinput">Ts = .05;
+z = tf(<span class="string">'z'</span>,Ts);
+sys_d = (z + 0.5)/(z^2 - 0.6*z + 0.3);
+
+step(sys_d,5);
+grid
+title(<span class="string">'Discrete-Time Step Response'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Dsserror_01.png" alt=""> <p>The steady-state value is 2.14 as we expected.</p>
+      <h2>Finding steady-state error to the impulse input<a name="8"></a></h2>
+      <p>Now change the input <i>U</i>(<i>z</i>) from a unit step to a unit impulse.
+      </p>
+      <p><span class="eqn_num">(7)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dsserror_eq17350.png" alt="$$ U(z) = 1 $$"></p>
+      <p>Applying the Final Value Theorem again yields the following.</p>
+      <p><span class="eqn_num">(8)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dsserror_eq18483.png" alt="$$ x_{ss} = \lim_{z \rightarrow 1}(1-z^{-1})\frac{(z+0.5)}{(z^{2}-0.6z+0.3)}(1) = 0 $$"></p>
+      <p>Therefore, the steady-state output of the above system to a unit impulse input is 0.</p>
+      <p>Change the <tt>step</tt> command in the above m-file to the <tt>impulse</tt> command and rerun it in the MATLAB command window. You should see the following response.
+      </p><pre class="codeinput">Ts = .05;
+z = tf(<span class="string">'z'</span>,Ts);
+sys_d = (z + 0.5)/(z^2 - 0.6*z + 0.3);
+
+impulse(sys_d,5);
+grid
+title(<span class="string">'Discrete-Time Impulse Response'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Dsserror_02.png" alt=""> <p>From this plot we see that the steady-state output to a unit impulse input is 0 as was predicted.</p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Extras: Digital Steady-State Error
+%%
+% For a continuous-time system design, we often use the Final Value Theorem
+%
+% $$ \lim_{t \rightarrow \infty}{x(t)} = x_{ss} = \lim_{s \rightarrow 0}{sX(s)}$$
+%
+% to find the steady-state error for a given system and input. Recall that
+% this theorem only holds if the poles of _sX_(_s_) have negative real
+% part. There is also a version of the Final Value Theorem for
+% discrete-time systems. The discrete version of the Final Value Theorem is
+% defined as follows  
+%
+% $$ \lim_{k \rightarrow \infty}{x(k)} = x_{ss} = \lim_{z \rightarrow 1}{(1-z^{-1})X(z)}$$
+%
+% where it is necessary that all poles of (1- _z_ ^{-1}) _X_(_z_) are inside the unit circle.
+%%
+% For example, suppose we have the following discrete transfer function. 
+%
+% $$ \frac{X(z)}{U(z)} = \frac{z + 0.5}{z^{2} - 0.6z + 0.3}$$
+%
+% First, let's obtain the poles of this transfer function and see if they
+% are located inside the unit circle. We can find the poles by hand or by 
+% employing the following MATLAB commands. 
+
+z = tf('z',-1);
+sys_d = (z + 0.5)/(z^2 - 0.6*z + 0.3);
+[p,z] = pzmap(sys_d)
+
+%%
+% Since both poles are inside the unit circle, the Final Value Theorem will hold. 
+%
+%% Finding steady-state error to the unit step input
+% Let the input _U_(_z_) be the unit step input as shown below.
+%
+% $$ U(z) = \frac{1}{(1-z^{-1})} $$
+%
+% The output _X_(_z_) then is the following.
+%
+% $$ X(z) = \frac{(z+0.5)}{(z^{2}-0.6z+0.3)}\frac{1}{(1-z^{-1})}$$
+%%
+% Applying the Final Value Theorem yields the following.
+%
+% $$ x_{ss} = \lim_{z \rightarrow 1}(1-z^{-1})\frac{(z+0.5)}{(z^{2}-0.6z+0.3)}\frac{1}{(1-z^{-1})} = 2.14 $$
+%
+% Therefore, the steady-state output of the above discrete-time system to a unit step input
+% is 2.14. This corresponds to a steady-state error of 114%. 
+%%
+% Let's confirm this by obtaining a step response plot of the system.
+% Create a new m-file and enter the following commands. Running this 
+% < ?aux=Extras_Mfile m-file> in the command window generates the
+% step response shown below. 
+
+Ts = .05;
+z = tf('z',Ts);
+sys_d = (z + 0.5)/(z^2 - 0.6*z + 0.3);
+
+step(sys_d,5);
+grid
+title('Discrete-Time Step Response')
+
+%%
+% The steady-state value is 2.14 as we expected. 
+%
+%% Finding steady-state error to the impulse input
+% Now change the input _U_(_z_) from a unit step to a unit impulse.
+%
+% $$ U(z) = 1 $$
+%
+% Applying the Final Value Theorem again yields the following. 
+%
+% $$ x_{ss} = \lim_{z \rightarrow 1}(1-z^{-1})\frac{(z+0.5)}{(z^{2}-0.6z+0.3)}(1) = 0 $$
+%
+% Therefore, the steady-state output of the above system to a unit impulse input is 0. 
+%
+% Change the |step| command in the above m-file to the |impulse| command
+% and rerun it in the MATLAB command window. You should see the following response. 
+%
+Ts = .05;
+z = tf('z',Ts);
+sys_d = (z + 0.5)/(z^2 - 0.6*z + 0.3);
+
+impulse(sys_d,5);
+grid
+title('Discrete-Time Impulse Response')
+
+%%
+% From this plot we see that the steady-state output to a unit impulse input is 0 as
+% was predicted.
+
+
+
+
+
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Dsserror by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:00 GMT -->
+</html>
+
+	s_Dsserror by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:00 GMT -->
+</html>
+
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Dsserror by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:00 GMT -->
+</html>
+
+	s_Dsserror by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:00 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:00 GMT -->
+</html>
+
+	s_Dsserror by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:00 GMT -->
+</html>
+
+	

@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=BallBeam&section=SystemModeling by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:08:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = "BallBeam"; 
+			var section = "SystemModeling"; 
+			var aux = ""; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "index136b.html?example=BallBeam&amp;section=SystemAnalysis";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Ball & Beam: System Modeling</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="index136b.html?example=BallBeam&amp;section=SystemAnalysis">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Ball &amp; Beam: System Modeling</h1>
+      <!--introduction-->
+      <p>Key MATLAB commands used in this tutorial are: <a href="http://www.mathworks.com/help/toolbox/control/ref/tf.html"><tt>tf</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/ss.html"><tt>ss</tt></a></p>
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#1">Physical setup</a></li>
+            <li><a href="#2">System parameters</a></li>
+            <li><a href="#3">Design criteria</a></li>
+            <li><a href="#4">System equations</a></li>
+         </ul>
+      </div>
+      <h2>Physical setup<a name="1"></a></h2>
+      <p>A ball is placed on a beam, see figure below, where it is allowed to roll with 1 degree of freedom along the length of the
+         beam. A lever arm is attached to the beam at one end and a servo gear at the other. As the servo gear turns by an angle <img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq49435.png" alt="$\theta$">, the lever changes the angle of the beam by <img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq87919.png" alt="$\alpha$">. When the angle is changed from the horizontal position, gravity causes the ball to roll along the beam. A controller will
+         be designed for this system so that the ball's position can be manipulated.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/BallBeam/System/Modeling/figures/bb2.png" alt=""> </p>
+      <h2>System parameters<a name="2"></a></h2>
+      <p>For this problem, we will assume that the ball rolls without slipping and friction between the beam and ball is negligible.
+         The constants and variables for this example are defined as follows:
+      </p><pre>(m)      mass of the ball              0.11 kg</pre><pre>(R)      radius of the ball            0.015 m</pre><pre>(d)      lever arm offset              0.03 m</pre><pre>(g)      gravitational acceleration    9.8 m/s^2</pre><pre>(L)      length of the beam            1.0 m</pre><pre>(J)      ball's moment of inertia      9.99e-6 kg.m^2</pre><pre>(r)      ball position coordinate</pre><pre>(alpha)  beam angle coordinate</pre><pre>(theta)  servo gear angle</pre><h2>Design criteria<a name="3"></a></h2>
+      <div>
+         <ul>
+            <li>Settling time &lt; 3 seconds</li>
+            <li>Overshoot &lt; 5%</li>
+         </ul>
+      </div>
+      <h2>System equations<a name="4"></a></h2>
+      <p>The second derivative of the input angle <img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq87919.png" alt="$\alpha$"> actually affects the second derivative of <img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq25861.png" alt="$r$">. However, we will ignore this contribution. The Lagrangian equation of motion for the ball is then given by the following:
+      </p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq42180.png" alt="$$ 0 = \left(\frac{J}{R^2}+m\right) \ddot{r} + m g \sin{\alpha} - m r&#xA;\dot{\alpha}^2 $$"></p>
+      <p>Linearization of this equation about the beam angle, <img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq46863.png" alt="$\alpha = 0$">, gives us the following linear approximation of the system:
+      </p>
+      <p><span class="eqn_num">(2)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq75986.png" alt="$$ \left(\frac{J}{R^2}+m\right) \ddot{r} = - m g \alpha $$"></p>
+      <p>The equation which relates the beam angle to the angle of the gear can be approximated as linear by the equation below:</p>
+      <p><span class="eqn_num">(3)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq94966.png" alt="$$ \alpha = \frac{d}{L}\theta $$"></p>
+      <p>Substituting this into the previous equation, we get:</p>
+      <p><span class="eqn_num">(4)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq17668.png" alt="$$ \left(\frac{J}{R^2}+m\right) \ddot{r} = - m g \frac{d}{L} \theta $$"></p>
+      <p><b>1. Transfer Function</b></p>
+      <p>Taking the Laplace transform of the equation above, the following equation is found:</p>
+      <p><span class="eqn_num">(5)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq34757.png" alt="$$ \left(\frac{J}{R^2}+m\right) R(s) s^2 = - m g \frac{d}{L} \Theta(s) $$"></p>
+      <p>Rearranging we find the transfer function from the gear angle (<img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq02219.png" alt="$\theta(s)$">) to the ball position (<img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq67596.png" alt="$R(s)$">).
+      </p>
+      <p><span class="eqn_num">(6)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq47141.png" alt="$$ P(s) = \frac{R(s)}{\Theta(s)} = -\frac{mgd}{L \left(\frac{J}{R^2}+m\right)}&#xA;\frac{1}{s^2} \qquad [ \frac{m}{rad} ]$$"></p>
+      <p>It should be noted that the above plant transfer function is a double integrator. As such it is marginally stable and will
+         provide a challenging control problem.
+      </p>
+      <p>The transfer function can be implemented in MATLAB as follows:</p><pre class="codeinput">m = 0.111;
+R = 0.015;
+g = -9.8;
+L = 1.0;
+d = 0.03;
+J = 9.99e-6;
+
+s = tf(<span class="string">'s'</span>);
+P_ball = -m*g*d/L/(J/R^2+m)/s^2
+</pre><pre class="codeoutput">
+P_ball =
+ 
+  0.21
+  ----
+  s^2
+ 
+Continuous-time transfer function.
+
+</pre><p><b>2. State-Space</b></p>
+      <p>The linearized system equations can also be represented in state-space form. This can be done by selecting the ball's position
+         (<img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq25861.png" alt="$r$">) and velocity (<img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq14559.png" alt="$\dot{r}$">) as the state variable and the gear angle (<img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq49435.png" alt="$\theta$">) as the input. The state-space representation is shown below:
+      </p>
+      <p><span class="eqn_num">(7)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq95793.png" alt="$$ \left[{\begin{array}{c} \dot{r} \\ \ddot{r} \end{array}}\right] =&#xA;\left[{\begin{array}{cc} 0 &amp; 1 \\ 0 &amp; 0 \end{array}}\right]&#xA;\left[{\begin{array}{c} r \\ \dot{r} \end{array}}\right] +&#xA;\left[{\begin{array}{c} 0 \\ \frac{m g d}{L&#xA;\left(\frac{J}{R^2}+m\right)}\end{array}}\right] \Theta$$"></p>
+      <p>However, for our state-space example we will be using a slightly different model. The same equation for the ball still applies
+         but instead of controlling the position through the gear angle, <img class="inline_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq49435.png" alt="$\theta$">, we will control the torque of the beam. Below is the representation of this system:
+      </p>
+      <p><span class="eqn_num">(8)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq80935.png" alt="$$ \left[{\begin{array}{c} \dot{r} \\ \ddot{r} \\ \dot{\alpha} \\ \ddot{\alpha} \end{array}}\right] =&#xA;\left[{\begin{array}{cccc} 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; \frac{-m g}{\left(\frac{J}{R^2}+m\right)} &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{array}}\right]&#xA;\left[{\begin{array}{c} r \\ \dot{r} \\ \alpha \\ \dot{\alpha} \end{array}}\right] +&#xA;\left[{\begin{array}{c} 0 \\ 0 \\ 0 \\ 1 \end{array}}\right] u $$"></p>
+      <p><span class="eqn_num">(9)</span><img class="display_eqn" src="Content/BallBeam/System/Modeling/html/BallBeam_SystemModeling_eq41969.png" alt="$$ y = \left[{\begin{array}{cccc} 1 &amp; 0 &amp; 0 &amp; 0 \end{array}}\right]&#xA;\left[{\begin{array}{c} r \\ \dot{r} \\ \alpha \\ \dot{\alpha}&#xA;\end{array}}\right] $$"></p>
+      <p>Note: For this system the gear and lever arm would not be used, instead a motor at the center of the beam will apply torque
+         to the beam, to control the ball's position.
+      </p>
+      <p>The state-space equations can be represented in MATLAB with the following commands (these equations are for the torque control
+         model).
+      </p><pre class="codeinput">H = -m*g/(J/(R^2)+m);
+A = [0 1 0 0
+   0 0 H 0
+   0 0 0 1
+   0 0 0 0];
+B = [0 0 0 1]';
+C = [1 0 0 0];
+D = [0];
+ball_ss = ss(A,B,C,D)
+</pre><pre class="codeoutput">
+ball_ss =
+ 
+  a = 
+       x1  x2  x3  x4
+   x1   0   1   0   0
+   x2   0   0   7   0
+   x3   0   0   0   1
+   x4   0   0   0   0
+ 
+  b = 
+       u1
+   x1   0
+   x2   0
+   x3   0
+   x4   1
+ 
+  c = 
+       x1  x2  x3  x4
+   y1   1   0   0   0
+ 
+  d = 
+       u1
+   y1   0
+ 
+Continuous-time state-space model.
+
+</pre><p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Ball & Beam: System Modeling
+%
+% Key MATLAB commands used in this tutorial are:
+% <http://www.mathworks.com/help/toolbox/control/ref/tf.html |tf|> , 
+% <http://www.mathworks.com/help/toolbox/control/ref/ss.html |ss|>
+%
+%% Physical setup
+%
+% A ball is placed on a beam, see figure below, where it is allowed to roll
+% with 1 degree of freedom along the length of the beam. A lever arm is 
+% attached to the beam at one end and a servo gear at the other. As the 
+% servo gear turns by an angle $\theta$, the lever changes the angle of the 
+% beam by $\alpha$. When the angle is changed from the horizontal position, 
+% gravity causes the ball to roll along the beam. A controller will be 
+% designed for this system so that the ball's position can be manipulated.
+%
+% <<Content/BallBeam/System/Modeling/figures/bb2.png>>
+%
+%% System parameters
+%
+% For this problem, we will assume that the ball rolls without slipping and
+% friction between the beam and ball is negligible. The constants and variables 
+% for this example are defined as follows:
+% 
+%  (m)      mass of the ball              0.11 kg
+%  
+%  (R)      radius of the ball            0.015 m
+%  
+%  (d)      lever arm offset              0.03 m
+%  
+%  (g)      gravitational acceleration    9.8 m/s^2
+%   
+%  (L)      length of the beam            1.0 m
+%
+%  (J)      ball's moment of inertia      9.99e-6 kg.m^2
+%  
+%  (r)      ball position coordinate	
+%  
+%  (alpha)  beam angle coordinate	
+%  
+%  (theta)  servo gear angle
+%
+%% Design criteria
+%
+% * Settling time < 3 seconds
+% * Overshoot < 5%
+%
+%% System equations
+% The second derivative of the input angle $\alpha$ actually affects the second
+% derivative of $r$. However, we will ignore this contribution. The Lagrangian 
+% equation of motion for the ball is then given by the following:
+%
+% $$ 0 = \left(\frac{J}{R^2}+m\right) \ddot{r} + m g \sin{\alpha} - m r
+% \dot{\alpha}^2 $$
+%
+% Linearization of this equation about the beam angle, $\alpha = 0$, gives us
+% the following linear approximation of the system:
+% 
+% $$ \left(\frac{J}{R^2}+m\right) \ddot{r} = - m g \alpha $$ 
+%
+% The equation which relates the beam angle to the angle of the gear can be
+% approximated as linear by the equation below:
+%
+% $$ \alpha = \frac{d}{L}\theta $$
+%
+% Substituting this into the previous equation, we get:
+%
+% $$ \left(\frac{J}{R^2}+m\right) \ddot{r} = - m g \frac{d}{L} \theta $$
+%
+% *1. Transfer Function*
+%
+% Taking the Laplace transform of the equation above, the following equation
+% is found:
+%
+% $$ \left(\frac{J}{R^2}+m\right) R(s) s^2 = - m g \frac{d}{L} \Theta(s) $$
+%
+% Rearranging we find the transfer function from the gear angle ($\theta(s)$)
+% to the ball position ($R(s)$).
+%
+% $$ P(s) = \frac{R(s)}{\Theta(s)} = -\frac{mgd}{L \left(\frac{J}{R^2}+m\right)}
+% \frac{1}{s^2} \qquad [ \frac{m}{rad} ]$$
+%
+% It should be noted that the above plant transfer function is a double 
+% integrator. As such it is marginally stable and will provide a challenging 
+% control problem.
+%
+% The transfer function can be implemented in MATLAB as follows:
+%
+%%
+
+m = 0.111;
+R = 0.015;
+g = -9.8;
+L = 1.0;
+d = 0.03;
+J = 9.99e-6;
+
+s = tf('s');
+P_ball = -m*g*d/L/(J/R^2+m)/s^2
+
+%%
+% *2. State-Space*
+%
+% The linearized system equations can also be represented in state-space
+% form. This can be done by selecting the ball's position ($r$) and velocity 
+% ($\dot{r}$) as the state variable and the gear angle ($\theta$) as the input. The 
+% state-space representation is shown below:
+%
+% $$ \left[{\begin{array}{c} \dot{r} \\ \ddot{r} \end{array}}\right] =
+% \left[{\begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array}}\right]
+% \left[{\begin{array}{c} r \\ \dot{r} \end{array}}\right] +
+% \left[{\begin{array}{c} 0 \\ \frac{m g d}{L
+% \left(\frac{J}{R^2}+m\right)}\end{array}}\right] \Theta$$
+%
+% However, for our state-space example we will be using a slightly different
+% model. The same equation for the ball still applies but instead of controlling 
+% the position through the gear angle, $\theta$, we will control the torque of 
+% the beam. Below is the representation of this system:
+%
+% $$ \left[{\begin{array}{c} \dot{r} \\ \ddot{r} \\ \dot{\alpha} \\ \ddot{\alpha} \end{array}}\right] =
+% \left[{\begin{array}{cccc} 0 & 1 & 0 & 0 \\ 0 & 0 & \frac{-m g}{\left(\frac{J}{R^2}+m\right)} & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{array}}\right]
+% \left[{\begin{array}{c} r \\ \dot{r} \\ \alpha \\ \dot{\alpha} \end{array}}\right] +
+% \left[{\begin{array}{c} 0 \\ 0 \\ 0 \\ 1 \end{array}}\right] u $$
+%
+% $$ y = \left[{\begin{array}{cccc} 1 & 0 & 0 & 0 \end{array}}\right]
+% \left[{\begin{array}{c} r \\ \dot{r} \\ \alpha \\ \dot{\alpha}
+% \end{array}}\right] $$
+%
+% Note: For this system the gear and lever arm would not be used, instead a
+% motor at the center of the beam will apply torque to the beam, to control
+% the ball's position.
+%
+% The state-space equations can be represented in MATLAB with the following
+% commands (these equations are for the torque control model).
+%
+%%
+
+H = -m*g/(J/(R^2)+m);
+A = [0 1 0 0
+   0 0 H 0
+   0 0 0 1
+   0 0 0 0];
+B = [0 0 0 1]';
+C = [1 0 0 0];
+D = [0];
+ball_ss = ss(A,B,C,D)
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="index136b.html?example=BallBeam&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index543f.html?example=BallBeam&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexc9b8.html?example=BallBeam&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index28b6.html?example=BallBeam&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="indexfa3e.html?example=BallBeam&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index447e.html?example=BallBeam&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="indexc9d4.html?example=BallBeam&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index7413.html?example=BallBeam&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=BallBeam&section=SystemModeling by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:08:23 GMT -->
+</html>
+
+	emModeling by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:08:23 GMT -->
+</html>
+
+	iv>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=BallBeam&section=SystemModeling by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:08:23 GMT -->
+</html>
+
+	emModeling by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:08:23 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:08:23 GMT -->
+</html>
+
+	emModeling by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:08:23 GMT -->
+</html>
+
+	

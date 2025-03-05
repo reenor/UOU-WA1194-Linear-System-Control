@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_PIDbilin by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = ""; 
+			var section = ""; 
+			var aux = "Extras_PIDbilin"; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "indexb290.html?aux=Index_Extras";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Extras: PID Compensator with Bilinear Approximation</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="indexb290.html?aux=Index_Extras">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Extras: PID Compensator with Bilinear Approximation</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#1">Bilinear transformation</a></li>
+            <li><a href="#2">PID compensator with bilinear transformation</a></li>
+         </ul>
+      </div>
+      <h2>Bilinear transformation<a name="1"></a></h2>
+      <p>There are several ways for mapping from the s-plane to z-plane. The exact conversion between the Laplace and z-domains is
+         the following where <i>Ts</i> is the sampling time.
+      </p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Extras/html/Extras_PIDbilin_eq23546.png" alt="$$ z = e^{sT_s} $$"></p>
+      <p>This conversion, however, involves a trancendental function and the resulting transfer function cannot be represented as a
+         ratio of polynomials. This makes it difficult to implement such a control algorithm on a digital computer. Therefore, we will
+         use an approximate conversion. In particular, we are going to use the bilinear transformation shown below.
+      </p>
+      <p><span class="eqn_num">(2)</span><img class="display_eqn" src="Content/Extras/html/Extras_PIDbilin_eq38786.png" alt="$$ s = \frac{2}{T_s} \cdot \frac{z-1}{z+1}$$"></p>
+      <p>This transformation maps the entire left half of the <i>s</i>-plane into the unit circle in the <i>z</i>-plane. This transformation also corresponds to a trapezoidal approximation of integration.
+      </p>
+      <h2>PID compensator with bilinear transformation<a name="2"></a></h2>
+      <p>In the continuous-time system, a transfer function for a PID controller is described as follows</p>
+      <p><span class="eqn_num">(3)</span><img class="display_eqn" src="Content/Extras/html/Extras_PIDbilin_eq21774.png" alt="$$ C(s) = K_{p}+\frac{K_{i}}{s}+K_{d}s = \frac{K_d s^2 + K_p s + K_i}{s}$$"></p>
+      <p>where <i>Kp</i>, <i>Ki</i> and <i>Kd</i> are the proportional, integral, and derivative gains respectively. To map to the <i>z</i>-plane we substitute the bilinear relation from above into the above PID transfer function, such that the discrete-time PID
+         controller becomes the following.
+      </p>
+      <p><span class="eqn_num">(4)</span><img class="display_eqn" src="Content/Extras/html/Extras_PIDbilin_eq42039.png" alt="$$C(z) = K_{p}+K_{i}\frac{T_s}{2}\frac{z+1}{z-1}+K_{d}\frac{2}{T_s}\frac{z-1}{z+1}$$"></p>
+      <p><span class="eqn_num">(5)</span><img class="display_eqn" src="Content/Extras/html/Extras_PIDbilin_eq43937.png" alt="$$= \frac{(K_{p}+\frac{K_{i}T_s}{2}+\frac{2K_{d}}{T_s})z^2+(K_{i}T_s-\frac{4K_{d}}{T_s})z+(-K_{p}+\frac{K_{i}T_s}{2}+\frac{2K_{d}}{T_s})}{z^2-1}$$"></p>
+      <p>Inspection of the above shows that the discretization process generated a controller with poles on the unit circle indicating
+         a controller that is marginally stable which can cause problems. See the <a href="indexf267.html?example=MotorSpeed&amp;section=ControlDigital">DC Motor Speed: Digital Control</a> page for an example where the discretization of the PID controller led to an unstable closed-loop digital control system.
+         In that example extra terms were added to the controller to stabilize the system. Alternatively, a different discretization
+         process can be employed.
+      </p>
+      <p>You can add the following MATLAB commands into an <a href="indexd754.html?aux=Extras_Mfile">m-file</a> in order to generate a discrete-time PID controller with gains, <i>Kp</i>, <i>Ki</i>, and <i>Kd</i>, based on the bilinear transformation.
+      </p>
+      <p>
+         <pre class="codeinput">
+         % Discrete PID Controller
+         % Ts = sampling time
+         num = [Kp+(Ki*Ts/2)+((2*Kd)/Ts)
+         (Ki*Ts)-(4*(Kd/Ts))
+         -Kp+(Ki*Ts/2)+((2*Kd)/Ts)]';
+         den = [1 0 -1];
+         C = tf(num,den,Ts);
+         </pre>
+         
+      </p>
+      <p>In addition, the <tt>c2d</tt> command in MATLAB can convert a continuous-time PID controller to discrete-time without going through an algebraic substitution
+         or mapping. This command requires a system representation of the continuous system, the sampling time, and the method that
+         will be used. For this case, the <tt>'tustin'</tt> method corresponds to the bilinear transformation. For example, the <tt>c2d</tt> command can be used as follows.
+      </p>
+      <p>
+         <pre class="codeinput">
+         % Discrete PID Controller using c2d command
+         % Ts = sampling time
+         pid_c = tf([Kd Kp Ki],[1 0]);
+         C = c2d(pid_c,Ts,'tustin');
+         </pre>
+         
+      </p>
+      <p>Alternatively, the <tt>pid</tt> command can be employed within MATLAB to discretize a continuous-time PID controller (as was done with the <tt>c2d</tt> command) or to create a discrete-time PID controller directly. With the <tt>pid</tt> command, the methodology employed for discretizing the integral term and the derivative term can be specified independently.
+         Specifying an integration method of <tt>'Trapezoidal'</tt> corresponds to the bilinear transformation. Alternatively, an integration method of <tt>'BackwardEuler'</tt> or <tt>'ForwardEuler'</tt> can be specified (<tt>ForwardEuler</tt> is the default). Note, the <tt>pid</tt> command will not allow you to employ a trapezoidal integration method for the derivative term (unless the first-order derivative
+         filter is included) due to the stability issues alluded to above. The following gives example code for defining a digital
+         controller directly with the <tt>pid</tt> command.
+      </p>
+      <p>
+         <pre class="codeinput">
+         % Discrete PID Controller using pid command
+         % Ts = sampling time
+         C = pid(Kp,Ki,Kd,'Ts',Ts,'IFormula','Trapezoidal','DFormula','ForwardEuler')
+         </pre>
+         
+      </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Extras: PID Compensator with Bilinear Approximation
+%% Bilinear transformation
+% 
+% There are several ways for mapping from the s-plane to z-plane. The exact
+% conversion between the Laplace and z-domains is the following where _Ts_
+% is the sampling time. 
+%
+% $$ z = e^{sT_s} $$
+%
+% This conversion, however, involves a trancendental function and the
+% resulting transfer function cannot be represented as a ratio of
+% polynomials. This makes it difficult to implement such a control
+% algorithm on a digital computer. Therefore, we will use an approximate
+% conversion. In particular, we are going to use the bilinear
+% transformation shown below.     
+%
+% $$ s = \frac{2}{T_s} \cdot \frac{z-1}{z+1}$$
+%
+% This transformation maps the entire left half of the _s_-plane into the
+% unit circle in the _z_-plane. This transformation also corresponds to a
+% trapezoidal approximation of integration.
+%
+%% PID compensator with bilinear transformation
+% 
+% In the continuous-time system, a transfer function for a PID controller
+% is described as follows
+%
+% $$ C(s) = K_{p}+\frac{K_{i}}{s}+K_{d}s = \frac{K_d s^2 + K_p s + K_i}{s}$$
+%
+% where _Kp_, _Ki_ and _Kd_ are the proportional, integral, and derivative gains
+% respectively. To map to the _z_-plane we substitute the bilinear relation
+% from above into the above PID transfer function, such that the discrete-time PID controller
+% becomes the following. 
+%
+% $$C(z) = K_{p}+K_{i}\frac{T_s}{2}\frac{z+1}{z-1}+K_{d}\frac{2}{T_s}\frac{z-1}{z+1}$$
+%
+% $$= \frac{(K_{p}+\frac{K_{i}T_s}{2}+\frac{2K_{d}}{T_s})z^2+(K_{i}T_s-\frac{4K_{d}}{T_s})z+(-K_{p}+\frac{K_{i}T_s}{2}+\frac{2K_{d}}{T_s})}{z^2-1}$$
+%
+% Inspection of the above shows that the discretization process generated a
+% controller with poles on the unit circle indicating a controller that is
+% marginally stable which can cause problems. See the
+% < ?example=MotorSpeed&section=ControlDigital
+% DC Motor Speed: Digital Control> page for an example where the
+% discretization of the PID controller led to an unstable closed-loop
+% digital control system. In that example extra terms were added to the
+% controller to stabilize the system. Alternatively, a different
+% discretization process can be employed.
+%
+% You can add the following MATLAB commands into an
+% < ?aux=Extras_Mfile m-file> in order to generate a
+% discrete-time PID controller with gains, _Kp_, _Ki_, and _Kd_, based on
+% the bilinear transformation. 
+%
+% <html>
+% <pre class="codeinput">
+% % Discrete PID Controller
+% % Ts = sampling time
+% num = [Kp+(Ki*Ts/2)+((2*Kd)/Ts) 
+%         (Ki*Ts)-(4*(Kd/Ts))
+%         -Kp+(Ki*Ts/2)+((2*Kd)/Ts)]';
+% den = [1 0 -1];
+% C = tf(num,den,Ts); 
+% </pre>
+% </html>
+%
+%%
+% In addition, the |c2d| command in MATLAB can convert a continuous-time PID controller to
+% discrete-time without going through an algebraic
+% substitution or mapping. This command requires a system representation of
+% the continuous system, the sampling time, and the method that will be used. For
+% this case, the |'tustin'| method corresponds to the
+% bilinear transformation. For example, the |c2d| command can be used as follows.     
+%
+% <html>
+% <pre class="codeinput">
+% % Discrete PID Controller using c2d command
+% % Ts = sampling time
+% pid_c = tf([Kd Kp Ki],[1 0]);
+% C = c2d(pid_c,Ts,'tustin');
+% </pre>
+% </html>
+%%
+% Alternatively, the |pid| command can be employed within MATLAB to
+% discretize a continuous-time PID controller (as was done with the |c2d|
+% command) or to create a discrete-time PID controller directly. With the
+% |pid| command, the methodology employed for discretizing the integral
+% term and the derivative term can be specified independently. Specifying
+% an integration method of |'Trapezoidal'| corresponds to the bilinear
+% transformation. Alternatively, an integration method of |'BackwardEuler'|
+% or |'ForwardEuler'| can be specified (|ForwardEuler| is the default).
+% Note, the |pid| command will not allow you to employ a trapezoidal
+% integration method for the derivative term (unless the first-order derivative filter is included)
+% due to the stability issues alluded to above. The following gives example
+% code for defining a digital controller directly with the |pid| command.
+%
+% <html>
+% <pre class="codeinput">
+% % Discrete PID Controller using pid command
+% % Ts = sampling time
+% C = pid(Kp,Ki,Kd,'Ts',Ts,'IFormula','Trapezoidal','DFormula','ForwardEuler')
+% </pre>
+% </html>
+
+
+
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_PIDbilin by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:08 GMT -->
+</html>
+
+	s_PIDbilin by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:08 GMT -->
+</html>
+
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_PIDbilin by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:08 GMT -->
+</html>
+
+	s_PIDbilin by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:08 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:08 GMT -->
+</html>
+
+	s_PIDbilin by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:08 GMT -->
+</html>
+
+	

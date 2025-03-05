@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_lsim by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = ""; 
+			var section = ""; 
+			var aux = "Extras_lsim"; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "indexb290.html?aux=Index_Extras";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Extras: Simulating Linear Systems (using the lsim command)</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="indexb290.html?aux=Index_Extras">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Extras: Simulating Linear Systems (using the <tt>lsim</tt> command)
+      </h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <p>The <tt>lsim</tt> command is quite similar to the <a href="index5e8c.html?aux=Extras_step">step</a> command (actually, the <tt>step</tt> command is just a special case of <tt>lsim</tt>). Given a system described as an LTI object, the <tt>lsim</tt> command can run a simulation of the system using arbitrary inputs and initial conditions.
+      </p>
+      <p>The command <tt>lsim(sys,U,T,X0)</tt> plots the time response of a linear time-invariant system. This system can be continuous or discrete. For a continuous-time
+         system, the differential equation is integrated from time <tt>T(0)</tt> to <tt>T(length(T))</tt>, starting at the initial condition <tt>X0</tt> and using the input <tt>U</tt>. The input vector must have the same number of entries as the time vector. If the initial conditions are all zero, X0 may
+         be omitted.
+      </p>
+      <p>For a discrete-time system, <tt>U</tt> should be sampled at the same rate as the system (<tt>T</tt> is then redundant and may be omitted or set to the empty matrix, i.e. [ ]).
+      </p>
+      <p>Suppose we have a continuous-time system described by the following <tt>A</tt>, <tt>B</tt>, <tt>C</tt>, and <tt>D</tt> matrices.
+      </p><pre class="codeinput">A = [-20 -40 -60
+     1    0    0
+     0    1    0];
+B = [1
+     0
+     0];
+C = [0   0   1];
+D = 0;
+</pre><p>As you can see from the dimensions of the matrices, this system has three states, one input, and one output. Let's say we
+         want to plot the response of the system with a non-zero initial condition and no input. This can be done in the following
+         manner.
+      </p><pre class="codeinput">T = 0:0.01:10;         <span class="comment">% simulation time = 10 seconds</span>
+U = zeros(size(T));    <span class="comment">% no input</span>
+X0 = [0.1 0.1 0.1];    <span class="comment">% initial conditions of the three states</span>
+sys = ss(A,B,C,D);     <span class="comment">% construct a system model</span>
+lsim(sys, U, T, X0)    <span class="comment">% simulate and plot the response (the output)</span>
+title(<span class="string">'Response to Non-Zero Initial Conditions'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_lsim_01.png" alt=""> <p>When the <tt>lsim</tt> command is invoked with left-hand arguments,
+      </p><pre class="codeinput">[Y, Tsim, X] = lsim(sys,U,T);
+</pre><p>no plot is drawn on the screen. MATLAB returns the output and state time history in the matrices <tt>Y</tt> and <tt>X</tt> respectively. In general, <tt>Tsim</tt> is the same as <tt>T</tt>. However, in some cases, <tt>T</tt> is resampled when intersample oscillations occur. Then, <tt>Tsim</tt> is the time actually used in simulation. The matrix <tt>Y</tt> has as many columns as there are outputs and has <tt>length(Tsim)</tt> rows. <tt>X</tt> has as many columns as there are states and has <tt>length(Tsim)</tt> rows. The <a href="index7f96.html?aux=Extras_Plot">plot</a> command can then be used to plot the response. Note that <tt>X</tt> can be omitted.
+      </p>
+      <p>Now let's plot the step response for the system given above; the input <tt>U</tt> is 1 for all positive time, and let the initial conditions be zero.
+      </p><pre class="codeinput">T = 0:0.01:10;                 <span class="comment">% simulation time = 10 seconds</span>
+U = ones(size(T));             <span class="comment">% u = 1, a step input</span>
+sys = ss(A,B,C,D);             <span class="comment">% construct a system model</span>
+[Y, Tsim, X] = lsim(sys,U,T);  <span class="comment">% simulate</span>
+plot(Tsim,Y)                   <span class="comment">% plot the output vs. time</span>
+title(<span class="string">'Step Response with Zero Initial Conditions'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_lsim_02.png" alt=""> <p>The plot above shows the step response of the system. We can also plot the response of the system to any other input that
+         we choose. For example, we can simulate the system's response to a sinusoidal input, say <i>u</i>(<i>t</i>) = 0.1 sin(5 <i>t</i> + 1), employing the code given below.
+      </p><pre class="codeinput">T = 0:0.01:10;                  <span class="comment">% simulation time = 10 seconds</span>
+U = 0.1*sin(5*T+1);             <span class="comment">% input as a function of time</span>
+sys = ss(A,B,C,D);              <span class="comment">% construct a system model</span>
+[Y, Tsim, X] = lsim(sys,U,T);   <span class="comment">% simulate</span>
+plot(Tsim,Y)                    <span class="comment">% plot the output vs. time</span>
+title(<span class="string">'Response to a Sinusoid Input with Zero Initial Conditions'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_lsim_03.png" alt=""> <p>Remember that the steady-state response of a linear system to a sinusoidal input will always be a sinusoid of the same frequency
+         but with a different magnitude and phase. The response shown above is consistent with this fact.
+      </p>
+      <p>The <tt>lsim</tt> command also works with other LTI objects, such as in transfer function form (continuous or discrete). Running the following
+         code will generate the same response found above.
+      </p>
+      <p>
+         <pre class="codeinput">
+         T = 0:0.01:10;
+         U = 0.1*sin(5*T+1);
+         num=1;
+         den=[1 20 40 60];
+         sys_tf = tf(num,den);
+         lsim(sys_tf,U,T);
+         </pre>
+         
+      </p>
+      <p>Because any transfer function can be represented using many different sets of state-space matrices, you can only simulate
+         a system in transfer function form with zero initial conditions (and cannot obtain the state trajectories); see the <a href="index3f2a.html?aux=Extras_Conversions">conversions</a> page for more details.
+      </p>
+      <p>The response of linear systems to arbitrary inputs can also be generated from within the <b>LTI Viewer</b>.
+      </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Extras: Simulating Linear Systems (using the |lsim| command)
+%
+%%
+% The |lsim| command is quite similar to the < ?aux=Extras_step
+% step> command (actually, the |step| command is just a special case of
+% |lsim|). Given a system described as an LTI object, the |lsim| command can run a  
+% simulation of the system using arbitrary inputs and initial conditions.
+%
+% The command |lsim(sys,U,T,X0)| plots the time response of a linear
+% time-invariant system. This system can be continuous or discrete. For a
+% continuous-time system, the differential equation is integrated 
+% from time |T(0)| to |T(length(T))|, starting at the initial condition
+% |X0| and using the input |U|. The input vector must have the same number of
+% entries as the time vector. If the initial conditions are all zero, X0
+% may be omitted.   
+%
+% For a discrete-time system, |U| should be sampled at the same rate as the
+% system (|T| is then redundant and may be omitted or set to the empty
+% matrix, i.e. [ ]). 
+%%
+% Suppose we have a continuous-time system described by the following |A|,
+% |B|, |C|, and |D| matrices. 
+
+A = [-20 -40 -60
+     1    0    0
+     0    1    0];
+B = [1
+     0
+     0];
+C = [0   0   1];
+D = 0;
+%%
+% As you can see from the dimensions of the matrices, this system has three
+% states, one input, and one output. Let's say we want to plot the response
+% of the system with a non-zero initial condition and no input. This can be
+% done in the following manner.  
+
+T = 0:0.01:10;         % simulation time = 10 seconds
+U = zeros(size(T));    % no input
+X0 = [0.1 0.1 0.1];    % initial conditions of the three states
+sys = ss(A,B,C,D);     % construct a system model
+lsim(sys, U, T, X0)    % simulate and plot the response (the output)
+title('Response to Non-Zero Initial Conditions')
+
+%%
+% When the |lsim| command is invoked with left-hand arguments,
+
+[Y, Tsim, X] = lsim(sys,U,T);
+
+%% 
+% no plot is drawn on the screen. MATLAB returns the output and state time
+% history in the matrices |Y| and |X| respectively. In general, |Tsim| is the same as |T|.  
+% However, in some cases, |T| is resampled when intersample oscillations occur. 
+% Then, |Tsim| is the time actually used in simulation. The matrix |Y| has as many 
+% columns as there are outputs and has |length(Tsim)| rows. |X| has as many columns as 
+% there are states and has |length(Tsim)| rows. The
+% < ?aux=Extras_Plot plot> command can then be used to  
+% plot the response. Note that |X| can be omitted.
+%%
+% Now let's plot the step response for the system given above; the input
+% |U| is 1 for all positive time, and let the initial conditions be zero.
+
+T = 0:0.01:10;                 % simulation time = 10 seconds
+U = ones(size(T));             % u = 1, a step input
+sys = ss(A,B,C,D);             % construct a system model
+[Y, Tsim, X] = lsim(sys,U,T);  % simulate
+plot(Tsim,Y)                   % plot the output vs. time
+title('Step Response with Zero Initial Conditions')
+
+%%
+% The plot above shows the step response of the system. We can also plot
+% the response of the system to any other input that we choose. For
+% example, we can simulate the system's response to a sinusoidal input, say
+% _u_(_t_) = 0.1 sin(5 _t_ + 1), employing the code given below. 
+
+T = 0:0.01:10;                  % simulation time = 10 seconds
+U = 0.1*sin(5*T+1);             % input as a function of time
+sys = ss(A,B,C,D);              % construct a system model
+[Y, Tsim, X] = lsim(sys,U,T);   % simulate
+plot(Tsim,Y)                    % plot the output vs. time
+title('Response to a Sinusoid Input with Zero Initial Conditions')
+
+%%
+% Remember that the steady-state response of a linear system to a
+% sinusoidal input will always be a sinusoid of the same frequency but with
+% a different magnitude and phase. The response shown above is consistent
+% with this fact.
+%
+% The |lsim| command also works with other LTI objects, such as in transfer
+% function form (continuous or discrete). Running the following code
+% will generate the same response found above.
+% 
+% <html>
+% <pre class="codeinput">
+% T = 0:0.01:10; 
+% U = 0.1*sin(5*T+1);
+% num=1;
+% den=[1 20 40 60];
+% sys_tf = tf(num,den); 
+% lsim(sys_tf,U,T);
+% </pre>
+% </html>
+%%
+% Because any transfer function can be represented using many different
+% sets of state-space matrices, you can only simulate a system in transfer function
+% form with zero initial conditions (and cannot obtain the state trajectories); 
+% see the < ?aux=Extras_Conversions conversions> page for more details.
+%
+% The response of linear systems to arbitrary inputs can also be generated
+% from within the *LTI Viewer*. 
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_lsim by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:05 GMT -->
+</html>
+
+	xtras_lsim by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:05 GMT -->
+</html>
+
+		
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_lsim by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:05 GMT -->
+</html>
+
+	xtras_lsim by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:05 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:05 GMT -->
+</html>
+
+	xtras_lsim by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:05 GMT -->
+</html>
+
+	

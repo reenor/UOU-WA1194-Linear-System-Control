@@ -1,0 +1,1366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlFrequency by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = "Introduction"; 
+			var section = "ControlFrequency"; 
+			var aux = ""; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "index9b18.html?example=Introduction&amp;section=ControlStateSpace";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Introduction: Frequency Domain Methods for Controller Design</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index75ab.html?example=CruiseControl&amp;section=ControlFrequency"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index5e29.html?example=MotorSpeed&amp;section=ControlFrequency"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index1ae7.html?example=MotorPosition&amp;section=ControlFrequency"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="indexee33.html?example=Suspension&amp;section=ControlFrequency"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="index64c4.html?example=InvertedPendulum&amp;section=ControlFrequency"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="indexe97f.html?example=AircraftPitch&amp;section=ControlFrequency"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index28b6.html?example=BallBeam&amp;section=ControlFrequency"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Introduction: Frequency Domain Methods for Controller Design</h1>
+      <!--introduction-->
+      <p>The frequency response method of controller design may be less intuitive than other methods you have studied previously. 
+         However, it has certain advantages, especially in real-life situations such as modeling transfer functions from physical data.
+         In this tutorial, we will see how we can use the open-loop frequency response of a system to predict its behavior in closed-loop.
+      </p>
+      <p>Key MATLAB commands used in this tutorial are: <a href="http://www.mathworks.com/help/toolbox/control/ref/bode.html"><tt>bode</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/nyquist.html"><tt>nyquist</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/margin.html"><tt>margin</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/lsim.html"><tt>lsim</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/step.html"><tt>step</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/feedback.html"><tt>feedback</tt></a> , <a href="http://www.mathworks.com/help/toolbox/control/ref/sisotool.html"><tt>sisotool</tt></a></p>
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#1">Gain and Phase Margin</a></li>
+            <li><a href="#26">Nyquist Diagram</a></li>
+            <li><a href="#33">The Cauchy Criterion</a></li>
+            <li><a href="#48">Closed-Loop Performance from Bode Plots</a></li>
+            <li><a href="#77">Closed-Loop Stability from the Nyquist Diagram</a></li>
+         </ul>
+      </div>
+      <h2>Gain and Phase Margin<a name="1"></a></h2>
+      <p>Consider the following unity feedback system:</p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_BodePlots_Margins_BlockDiagram.png" alt=""> </p>
+      <p>where <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq14888.png" alt="$K$"> is a variable (constant) gain and <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> is the plant under consideration.  The <b>gain margin</b> is defined as the change in open-loop gain required to make the system unstable.  Systems with greater gain margins can withstand
+         greater changes in system parameters before becoming unstable in closed-loop.
+      </p>
+      <p>The <b>phase margin</b> is defined as the change in open-loop phase shift required to make a closed-loop system unstable.
+      </p>
+      <p>The phase margin also measures the system's tolerance to time delay.  If there is a time delay greater than <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq09484.png" alt="$180/W_{pc}$"> in the loop (where <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq13395.png" alt="$W_{pc}$"> is the frequency where the phase shift is 180 deg), the system will become unstable in closed-loop.  The time delay, <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq79194.png" alt="$\tau_d$"> can be thought of as an extra block in the forward path of the block diagram that adds phase to the system but has no effect
+         on the gain.  That is, a time delay can be represented as a block with magnitude of 1 and phase <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq62801.png" alt="$\omega \tau_d$"> (in radians/second).
+      </p>
+      <p>For now, we won't worry about where all this comes from and will concentrate on identifying the gain and phase margins on
+         a Bode plot.
+      </p>
+      <p>The phase margin is the difference in phase between the phase curve and -180 degrees at the point corresponding to the frequency
+         that gives us a gain of 0 dB (the gain crossover frequency, <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq86267.png" alt="$W_{gc}$">).  Likewise, the gain margin is the difference between the magnitude curve and 0 dB at the point corresponding to the frequency
+         that gives us a phase of -180 degrees (the phase crossover frequency, <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq13395.png" alt="$W_{pc}$">).
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_BodePlots_Margins_MarginDiagrams.png" alt=""> </p>
+      <p>One nice thing about the phase margin is that you don't need to replot the Bode in order to find the new phase margin when
+         changing the gains. If you recall, adding gain only shifts the magnitude plot up.  This is equivalent to changing the y-axis
+         on the magnitude plot.  Finding the phase margin is simply a matter of finding the new cross-over frequency and reading off
+         the phase margin.  For example, suppose you entered the command <tt>bode(sys)</tt>. You will get the following bode plot:
+      </p><pre class="codeinput">s = tf(<span class="string">'s'</span>);
+sys = 50/(s^3 + 9*s^2 + 30*s +40);
+
+bode(sys)
+grid <span class="string">on</span>
+title(<span class="string">'Bode Plot with No Gain'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_01.png" alt=""> <p>You should see that the phase margin is about 100 degrees.  Now suppose you added a gain of 100, by entering the command <tt>bode(100*sys)</tt>.  You should get the following plot:
+      </p><pre class="codeinput">bode(100*sys)
+grid <span class="string">on</span>
+title(<span class="string">'Bode Plot with Gain = 100'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_02.png" alt=""> <p>As you can see the phase plot is exactly the same as before, and the magnitude plot is shifted up by 40 dB (gain of 100).
+          The phase margin is now about -60 degrees.  This same result could be achieved if the y-axis of the magnitude plot was shifted
+         down 40 dB.  Try this, look at the first Bode plot, find where the curve crosses the -40 dB line, and read off the phase margin.
+          It should be about 90 degrees, the same as the second Bode plot.
+      </p>
+      <p>We can have MATLAB calculate and display the gain and phase margins using the <tt>margin(sys)</tt> command. This command returns the gain and phase margins, the gain and phase cross over frequencies, and a graphical representation
+         of these on the Bode plot.  Let's check it out:
+      </p><pre class="codeinput">margin(100*sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_03.png" alt=""> <p><b>Bandwidth Frequency</b></p>
+      <p>The bandwidth frequency is defined as the frequency at which the closed-loop magnitude response is equal to -3 dB.  However,
+         when we design via frequency response, we are interested in predicting the closed-loop behavior from the open-loop response.
+          Therefore, we will use a second-order system approximation and say that the bandwidth frequency equals the frequency at which
+         the open-loop magnitude response is between -6 and -7.5 dB, assuming the open-loop phase response is between -135 deg and
+         -225 deg.  For a complete derivation of this approximation, consult your textbook.
+      </p>
+      <p>In order to illustrate the importance of the bandwidth frequency, we will show how the output changes with different input
+         frequencies.  We will find that sinusoidal inputs with frequency less than <tt>Wbw</tt> (the bandwidth frequency) are tracked "reasonably well" by the system.  Sinusoidal inputs with frequency greater than <tt>Wbw</tt> are attenuated (in magnitude) by a factor of 0.707 or greater (and are also shifted in phase).
+      </p>
+      <p>Let's say we have the following closed-loop transfer function representing a system:</p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq78345.png" alt="$$&#xA;G(s) = \frac{1}{s^2 + 0.5s + 1}&#xA;$$"></p><pre class="codeinput">sys = 1/(s^2 + 0.5*s + 1);
+bode(sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_04.png" alt=""> <p>Since this is the closed-loop transfer function, our bandwidth frequency will be the frequency corresponding to a gain of
+         -3 dB.  Looking at the plot, we find that it is approximately 1.4 rad/s.  We can also read off the plot that for an input
+         frequency of 0.3 radians, the output sinusoid should have a magnitude about one and the phase should be shifted by perhaps
+         a few degrees (behind the input).  For an input frequency of 3 rad/sec, the output magnitude should be about -20 dB (or 1/10
+         as large as the input) and the phase should be nearly -180 (almost exactly out-of-phase).  We can use the <tt>lsim</tt> command to simulate the response of the system to sinusoidal inputs.
+      </p>
+      <p>First, consider a sinusoidal input with a <b>frequency lower than <tt>Wbw</tt></b>. We must also keep in mind that we want to view the steady state response. Therefore, we will modify the axes in order to
+         see the steady state response clearly (ignoring the transient response).
+      </p><pre class="codeinput">sys = 1/(s^2 + 0.5*s + 1);
+w = 0.3;
+t = 0:0.1:100;
+u = sin(w*t);
+[y,t] = lsim(sys,u,t);
+plot(t,y,t,u)
+axis([50 100 -2 2])
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_05.png" alt=""> <p>Note that the output (blue) tracks the input (green) fairly well; it is perhaps a few degrees behind the input as expected.
+         However, if we set the frequency of the input <b>higher than the bandwidth frequency</b> for the system, we get a very distorted response (with respect to the input):
+      </p><pre class="codeinput">sys = 1/(s^2 + 0.5*s + 1);
+w = 3;
+t = 0:0.1:100;
+u = sin(w*t);
+[y,t] = lsim(sys,u,t);
+plot(t,y,t,u)
+axis([90 100 -1 1])
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_06.png" alt=""> <p>Again, note that the magnitude is about 1/10 that of the input, as predicted, and that it is almost exactly out of phase (180
+         degrees behind) the input.  Feel free to experiment and view the response for several different frequencies <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq84050.png" alt="$\omega$">, and see if they match the Bode plot.
+      </p>
+      <h2>Nyquist Diagram<a name="26"></a></h2>
+      <p>The Nyquist plot allows us to predict the stability and performance of a closed-loop system by observing its open-loop behavior.
+          The Nyquist criterion can be used for design purposes regardless of open-loop stability (remember that the Bode design methods
+         assume that the system is stable in open-loop).  Therefore, we use this criterion to determine closed-loop stability when
+         the Bode plots display confusing information.
+      </p>
+      <p><b>Note: The MATLAB <tt>nyquist</tt> command does not provide an adequate representation for systems that have open-loop poles in the jw-axis.</b> Therefore, we suggest that you copy the <a href="Content/Introduction/Control/Frequency/nyquist1.m">nyquist1.m</a> file as a new <tt>m-file</tt>.  This <tt>m-file</tt> creates more accurate Nyquist plots, since it correctly deals with poles and zeros on the jw-axis.
+      </p>
+      <p>The Nyquist diagram is basically a plot of <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq32136.png" alt="$G(j\omega)$"> where <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> is the open-loop transfer function and <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq84050.png" alt="$\omega$"> is a vector of frequencies which encloses the entire right-half plane.  In drawing the Nyquist diagram, both positive and
+         negative frequencies (from zero to infinity) are taken into account.  We will represent positive frequencies in red and negative
+         frequencies in green.  The frequency vector used in plotting the Nyquist diagram usually looks like this (if you can imagine
+         the plot stretching out to infinity):
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_Block1.png" alt=""> </p>
+      <p>However, if we have open-loop poles or zeros on the jw axis, <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> will not be defined at those points, and we must loop around them when we are plotting the contour.  Such a contour would
+         look as follows:
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_Block2.png" alt=""> </p>
+      <p>Please note that the contour loops around the pole on the jw axis.  As we mentioned before, the MATLAB <tt>nyquist</tt> command does not take poles or zeros on the jw axis into account and therefore produces an incorrect plot.  To correct this,
+         please download and use <a href="Content/Introduction/Control/Frequency/nyquist1.m">nyquist1.m</a>.  If we have a pole on the jw axis, we have to use <tt>nyquist1</tt>.  If there are no poles or zeros on the jw-axis, or if we have pole-zero cancellation, we can use either the <tt>nyquist</tt> command or <tt>nyquist1.m</tt>.
+      </p>
+      <h2>The Cauchy Criterion<a name="33"></a></h2>
+      <p>The Cauchy criterion (from complex analysis) states that when taking a closed contour in the complex plane, and mapping it
+         through a complex function <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$">, the number of times that the plot of <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> encircles the origin is equal to the number of zeros of <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> enclosed by the frequency contour minus the number of poles of <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> enclosed by the frequency contour.  Encirclements of the origin are counted as positive if they are in the same direction
+         as the original closed contour or negative if they are in the opposite direction.
+      </p>
+      <p>When studying feedback controls, we are not as interested in <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> as in the closed-loop transfer function:
+      </p>
+      <p><span class="eqn_num">(2)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq01539.png" alt="$$&#xA;\frac{G(s)}{1 + G(s)}&#xA;$$"></p>
+      <p>If <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq07945.png" alt="$1 + G(s)$"> encircles the origin, then <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> will enclose the point -1.  Since we are interested in the closed-loop stability, we want to know if there are any closed-loop
+         poles (zeros of <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq07945.png" alt="$1 + G(s)$">) in the right-half plane.  More details on how to determine this will come later.
+      </p>
+      <p>Therefore, the behavior of the Nyquist diagram around the -1 point in the real axis is very important; however, the axis on
+         the standard <tt>nyquist</tt> diagram might make it hard to see what's happening around this point.  To correct this, you can add the <a href="Content/Introduction/Control/Frequency/lnyquist.m">lnyquist.m</a> function to your files.  The <tt>lnyquist.m</tt> command plots the Nyquist diagram using a logarithmic scale and preserves the characteristics of the -1 point.
+      </p>
+      <p>To view a simple Nyquist plot using MATLAB, we will define the following transfer function and view the Nyquist plot:</p>
+      <p><span class="eqn_num">(3)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq46001.png" alt="$$&#xA;\frac{0.5}{s - 0.5}&#xA;$$"></p><pre class="codeinput">s = tf(<span class="string">'s'</span>);
+sys = 0.5/(s - 0.5);
+nyquist(sys)
+axis([-1 0 -1 1])
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_07.png" alt=""> <p>Now we will look at the Nyquist diagram for the following transfer function:</p>
+      <p><span class="eqn_num">(4)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq44640.png" alt="$$&#xA;\frac{s + 2}{s^2}&#xA;$$"></p>
+      <p>Note that this function has a pole at the origin.  We will see the difference between using the <tt>nyquist</tt>, <tt>nyquist1</tt>, and <tt>lnyquist</tt> commands with this particular function.
+      </p><pre class="codeinput">sys = (s + 2)/(s^2);
+nyquist(sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_08.png" alt=""> <pre class="codeinput">nyquist1(sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_09.png" alt=""> <pre class="codeinput">lnyquist(sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_10.png" alt=""> <p>Note that the <tt>nyquist</tt> plot is not the correct one, the <tt>nyquist1</tt> plot is correct, but it's hard to see what happens close to the -1 point, and the <tt>lnyquist</tt> plot is correct and has an appropriate scale.
+      </p>
+      <h2>Closed-Loop Performance from Bode Plots<a name="48"></a></h2>
+      <p>In order to predict closed-loop performance from open-loop frequency response, we need to have several concepts clear:</p>
+      <div>
+         <ul>
+            <li>The system must be stable in open-loop if we are going to design via Bode plots.</li>
+            <li>If the <b>gain crossover frequency</b> is less than the <b>phase crossover frequency</b> (i.e. <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq90442.png" alt="$W_{gc} < W_{pc}$">), then the closed-loop system will be stable.
+            </li>
+            <li>For second-order systems, the closed-loop damping ratio is approximately equal to the phase margin divided by 100 if the phase
+               margin is between 0 and 60 degrees.  We can use this concept with caution if the phase margin is greater than 60 degrees.
+            </li>
+            <li>For second-order systems, a relationship between damping ratio, bandwidth frequency, and settling time is given by an equation
+               described on the <a href="index044d.html?aux=Extras_wbw">Extras: Bandwidth</a> page.
+            </li>
+            <li>A very rough estimate that you can use is that the bandwidth is approximately equal to the natural frequency.</li>
+         </ul>
+      </div>
+      <p>Let's use these concepts to design a controller for the following system:</p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_BodePlots_CLPerformance_BlockDiagram.png" alt=""> </p>
+      <p>Where <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq83045.png" alt="$G_c(s)$"> is the controller and <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq82676.png" alt="$G(s)$"> is:
+      </p>
+      <p><span class="eqn_num">(5)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq85339.png" alt="$$&#xA;G(s) = \frac{10}{1.25s + 1}&#xA;$$"></p>
+      <p>The design must meet the following specifications:</p>
+      <div>
+         <ul>
+            <li>Zero steady state error.</li>
+            <li>Maximum overshoot must be less than 40%.</li>
+            <li>Settling time must be less than 2 seconds.</li>
+         </ul>
+      </div>
+      <p>There are two ways of solving this problem: one is graphical and the other is numerical.  Within MATLAB, the graphical approach
+         is best, so that is the approach we will use.  First, let's look at the Bode plot. Create a <tt>m-file</tt> with the following code:
+      </p><pre class="codeinput">sys = 10/(1.25*s + 1);
+bode(sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_11.png" alt=""> <p>There are several characteristics of the system that can be read directly from this Bode plot.  First of all, we can see that
+         the bandwidth frequency is around 10 rad/sec.  Since the bandwidth frequency is roughly the same as the natural frequency
+         (for a first order system of this type), the rise time is <tt>1.8/BW = 1.8/10 = 1.8 seconds</tt>.  This is a rough estimate, so we will say the rise time is about 2 seconds.
+      </p>
+      <p>The phase margin for this system is approximately 95 degrees.  The relation <tt>damping ratio = PM/100</tt> only holds for <tt>PM &lt; 60</tt>.  Since the system is first-order, there should be no overshoot.
+      </p>
+      <p>The last major point of interest is <b>steady-state error</b>. The steady-state error can be read directly off the Bode plot as well.  The constant (<img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq63713.png" alt="$K_p$">, <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq78274.png" alt="$K_v$">, or <img class="inline_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq57599.png" alt="$K_a$">) is found from the intersection of the low frequency asymptote with the <tt>w = 1</tt> line.  Just extend the low frequency line to the <tt>w = 1</tt> line.  The magnitude at this point is the constant. Since the Bode plot of this system is a horizontal line at low frequencies
+         (slope = 0), we know this system is of type zero.  Therefore, the intersection is easy to find.  The gain is 20 dB (magnitude
+         10). What this means is that the constant for the error function is 10.  The steady-state error is <tt>1/(1+Kp) = 1/(1+10) = 0.091</tt>.
+      </p>
+      <p>If our system was type one instead of type zero, the constant for the steady-state error would be found in a manner similar
+         to the following.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_BodePlots_CLPerformance_Block2.png" alt=""> </p>
+      <p>Let's check our predictions by looking at a step response plot.  This can be done by adding the following two lines of code
+         into the MATLAB command window.
+      </p><pre class="codeinput">sys_cl = feedback(sys,1);
+step(sys_cl)
+title(<span class="string">'Closed-Loop Step Response, No Controller'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_12.png" alt=""> <p>As you can see, our predictions were very good.  The system has a rise time of about 2 seconds, has no overshoot, and has
+         a steady-state error of about 9%.  Now we need to choose a controller that will allow us to meet the design criteria.  We
+         choose a PI controller because it will yield zero steady-state error for a step input.  Also, the PI controller has a zero,
+         which we can place.  This gives us additional design flexibility to help us meet our criteria.  Recall that a PI controller
+         is given by:
+      </p>
+      <p><span class="eqn_num">(6)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq30687.png" alt="$$&#xA;G_c(s) = \frac{K(s + a)}{s}&#xA;$$"></p>
+      <p>The first thing we need to find is the damping ratio corresponding to a percent overshoot of 40%.  Plugging in this value
+         into the equation relating overshoot and damping ratio (or consulting a plot of this relation), we find that the damping ratio
+         corresponding to this overshoot is approximately 0.28.  Therefore, our phase margin should be at least 30 degrees. We must
+         have a bandwidth frequency greater than or equal to 12 if we want our settling time to be less than 1.75 seconds which meets
+         the design specs.
+      </p>
+      <p>Now that we know our desired phase margin and bandwidth frequency, we can start our design.  Remember that we are looking
+         at the open-loop Bode plots.  Therefore, our bandwidth frequency will be the frequency corresponding to a gain of approximately
+         -7 dB.
+      </p>
+      <p>Let's see how the integrator portion of the PI or affects our response. Change your <tt>m-file</tt> to look like the following (this adds an integral term but no proportional term):
+      </p><pre class="codeinput">plant = 10/(1.25*s + 1);
+contr = 1/s;
+bode(contr*plant, logspace(0,2))
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_13.png" alt=""> <p>Our phase margin and bandwidth frequency are too small.  We will add gain and phase with a zero.  Let's place the zero at
+         1 for now and see what happens.  Change your <tt>m-file</tt> to look like the following:
+      </p><pre class="codeinput">plant = 10/(1.25*s + 1);
+contr = (s + 1)/s;
+bode(contr*plant, logspace(0,2))
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_14.png" alt=""> <p>It turns out that the zero at 1 with a unit gain gives us a satisfactory answer.  Our phase margin is greater than 60 degrees
+         (even less overshoot than expected) and our bandwidth frequency is approximately 11 rad/s, which will give us a satisfactory
+         response.  Although satisfactory, the response is not quite as good as we would like.  Therefore, let's try to get a higher
+         bandwidth frequency without changing the phase margin too much.  Let's try to increase the gain to 5 and see what happens.
+          This will make the gain shift and the phase will remain the same.
+      </p><pre class="codeinput">plant = 10/(1.25*s + 1);
+contr = 5 * ((s + 1)/s);
+bode(contr*plant, logspace(0,2))
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_15.png" alt=""> <p>That looks really good.  Let's look at our step response and verify our results.  Add the following two lines to your <tt>m-file</tt>:
+      </p><pre class="codeinput">sys_cl = feedback(contr*plant,1);
+step(sys_cl)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_16.png" alt=""> <p>As you can see, our response is better than we had hoped for.  However, we are not always quite as lucky and usually have
+         to play around with the gain and the position of the poles and/or zeros in order to achieve our design requirements.
+      </p>
+      <h2>Closed-Loop Stability from the Nyquist Diagram<a name="77"></a></h2>
+      <p>Consider the negative feedback system:</p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_CLStability_Block1.png" alt=""> </p>
+      <p>Remember from the Cauchy criterion that the number <tt>N</tt> of times that the plot of <tt>G(s)H(s)</tt> encircles -1 is equal to the number <tt>Z</tt> of zeros of <tt>1 + G(s)H(s)</tt> enclosed by the frequency contour minus the number <tt>P</tt> of poles of <tt>1 + G(s)H(s)</tt> enclosed by the frequency contour <tt>(N = Z - P)</tt>. Keeping careful track of open- and closed-loop transfer functions, as well as numerators and denominators, you should convince
+         yourself that:
+      </p>
+      <div>
+         <ul>
+            <li>The zeros of <tt>1 + G(s)H(s)</tt> are the poles of the closed-loop transfer function.
+            </li>
+            <li>The poles of <tt>1 + G(s)H(s)</tt> are the poles of the open-loop transfer function.
+            </li>
+         </ul>
+      </div>
+      <p>The Nyquist criterion then states that:</p>
+      <div>
+         <ul>
+            <li><tt>P</tt> = the number of open-loop (unstable) poles of <tt>G(s)H(s)</tt>.
+            </li>
+            <li><tt>N</tt> = the number of times the Nyquist diagram encircles -1.
+            </li>
+            <li>clockwise encirclements of -1 count as positive encirclements.</li>
+            <li>counter-clockwise encirclements of -1 count as negative encirclements.</li>
+            <li><tt>Z</tt> = the number of right-half-plane (positive, real) poles of the closed-loop system.
+            </li>
+         </ul>
+      </div>
+      <p>The important equation whih relates these three quantities is:</p>
+      <p><span class="eqn_num">(7)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq18766.png" alt="$$&#xA;Z = P + N&#xA;$$"></p>
+      <p><b>Note: This is only one convention for the Nyquist criterion. Another convention states that a positive <tt>N</tt> counts the counter-clockwise or anti-clockwise encirclements of -1.  The <tt>P</tt> and <tt>Z</tt> variables remain the same.  In this case the equation becomes <tt>Z = P - N</tt>.  Throughout these tutorials, we will use a positive sign for clockwise encirclements.</b></p>
+      <p>It is very important (and somewhat tricky) to learn how to count the number of times that the diagram encircles -1.  Therefore,
+         we will go into some detail to help you visualize this.  You can view this <b>movie</b> as an example.
+      </p>
+      <p>Another way of looking at it is to imagine you are standing on top of the -1 point and are following the diagram from beginning
+         to end.  Now ask yourself: How many times did I turn my head a full 360 degrees?  Again, if the motion was clockwise, <tt>N</tt> is positive, and if the motion is anti-clockwise, <tt>N</tt> is negative.
+      </p>
+      <p>Knowing the number of right-half plane (unstable) poles in open loop (<tt>P</tt>), and the number of encirclements of -1 made by the Nyquist diagram (<tt>N</tt>), we can determine the closed-loop stability of the system.  If <tt>Z = P + N</tt> is a positive, nonzero number, the closed-loop system is unstable.
+      </p>
+      <p>We can also use the Nyquist diagram to find the range of gains for a closed-loop unity feedback system to be stable.  The
+         system we will test looks like this:
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_CLStability_Block2.png" alt=""> </p>
+      <p>where G(s) is:</p>
+      <p><span class="eqn_num">(8)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq26546.png" alt="$$&#xA;\frac{s^2 + 10s + 24}{s^2 - 8s + 15}&#xA;$$"></p>
+      <p>This system has a gain <tt>K</tt> which can be varied in order to modify the response of the closed-loop system.  However, we will see that we can only vary
+         this gain within certain limits, since we have to make sure that our closed-loop system will be stable.  This is what we will
+         be looking for: the range of gains that will make this system stable in the closed-loop.
+      </p>
+      <p>The first thing we need to do is find the number of positive real poles in our open-loop transfer function:</p><pre class="codeinput">roots([1 -8 15])
+</pre><pre class="codeoutput">ans =
+     5
+     3
+</pre><p>The poles of the open-loop transfer function are both positive. Therefore, we need two anti-clockwise (<tt>N = -2</tt>) encirclements of the Nyquist diagram in order to have a stable closed-loop system (<tt>Z = P + N</tt>).  If the number of encirclements is less than two or the encirclements are not anti-clockwise, our system will be unstable.
+      </p>
+      <p>Let's look at our Nyquist diagram for a gain of 1:</p><pre class="codeinput">sys = (s^2 + 10*s + 24)/(s^2 - 8*s + 15);
+nyquist(sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_17.png" alt=""> <p>There are two anti-clockwise encirclements of -1.  Therefore, the system is stable for a gain of 1.  Now we will see how the
+         system behaves if we increase the gain to 20:
+      </p><pre class="codeinput">nyquist(20*sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_18.png" alt=""> <p>The diagram expanded.  Therefore, we know that the system will be stable no matter how much we increase the gain.  However,
+         if we decrease the gain, the diagram will contract and the system might become unstable. Let's see what happens for a gain
+         of 0.5:
+      </p><pre class="codeinput">nyquist(0.5*sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_19.png" alt=""> <p>The system is now unstable.  By trial and error we find that this system will become unstable for gains less than 0.80.  We
+         can verify our answers by zooming in on the Nyquist plots as well as by looking at the closed-loop steps responses for gains
+         of 0.79, 0.80, and 0.81.
+      </p>
+      <p><b>Gain Margin</b></p>
+      <p>We already defined the gain margin as the change in open-loop gain expressed in decibels (dB), required at 180 degrees of
+         phase shift to make the system unstable.  Now we are going to find out where this comes from.  First of all, let's say that
+         we have a system that is stable if there are no Nyquist encirclements of -1, such as:
+      </p>
+      <p><span class="eqn_num">(9)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq50803.png" alt="$$&#xA;\frac{50}{s^3 + 9s^2 + 30s + 40}&#xA;$$"></p>
+      <p>Looking at the roots, we find that we have no open loop poles in the right half plane and therefore no closed-loop poles in
+         the right-half-plane if there are no Nyquist encirclements of -1.  Now, how much can we vary the gain before this system becomes
+         unstable in closed-loop?  Let's look at the following figure:
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_GainMargin_Block1.png" alt=""> </p>
+      <p>The open-loop system represented by this plot will become unstable in closed loop if the gain is increased past a certain
+         boundary.  The negative real axis area between <tt>-1/a</tt> (defined as the point where the 180 degree phase shift occurs...that is, where the diagram crosses the real axis) and -1
+         represents the amount of increase in gain that can be tolerated before closed-loop instability.
+      </p>
+      <p>If we think about it, we realize that if the gain is equal to <tt>a</tt>, the diagram will touch the -1 point:
+      </p>
+      <p><span class="eqn_num">(10)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq62264.png" alt="$$&#xA;G(jw) = \frac{-1}{a}&#xA;$$"></p>
+      <p>or</p>
+      <p><span class="eqn_num">(11)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq40702.png" alt="$$&#xA;aG(jw) = -1&#xA;$$"></p>
+      <p>Therefore, we say that the gain margin is <tt>a</tt> units.  However, we mentioned before that the gain margin is usually measured in decibels. Hence, the gain margin is:
+      </p>
+      <p><span class="eqn_num">(12)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq48237.png" alt="$$&#xA;GM = 20log_{10}(a) [dB]&#xA;$$"></p>
+      <p>We will now find the gain margin of the stable, open-loop transfer function we viewed before.  Recall that the function is:</p>
+      <p><span class="eqn_num">(13)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq50803.png" alt="$$&#xA;\frac{50}{s^3 + 9s^2 + 30s + 40}&#xA;$$"></p>
+      <p>and that the Nyquist diagram can be viewed by typing:</p><pre class="codeinput">sys = 50/(s^3 + 9*s^2 + 30*s + 20);
+nyquist(sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_20.png" alt=""> <p>As we discussed before, all that we need to do to find the gain margin is find <tt>a</tt>, as defined in the preceding figure.  To do this, we need to find the point where there is exactly 180 degrees of phase shift.
+          This means that the transfer function at this point is real (has no imaginary part).  The numerator is already real, so we
+         just need to look at the denominator.  When <tt>s = jw</tt>, the only terms in the denominator that will have imaginary parts are those which are odd powers of <tt>s</tt>.  Therefore, for <tt>G(jw)</tt> to be real, we must have:
+      </p>
+      <p><span class="eqn_num">(14)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq29926.png" alt="$$&#xA;-jw^3 + 30jw = 0&#xA;$$"></p>
+      <p>which means <tt>w = 0</tt> (this is the rightmost point in the Nyquist diagram) or <tt>w = sqrt(30)</tt>.  We can then find the value of <tt>G(jw)</tt> at this point using <tt>polyval</tt>:
+      </p><pre class="codeinput">w = sqrt(30);
+polyval(50,j*w)/polyval([1 9 30 40],j*w)
+</pre><pre class="codeoutput">ans =
+   -0.2174
+</pre><p>The answer is: <tt>-0.2174 + 0i</tt>.  The imaginary part is zero, so we know that our answer is correct.  We can also verify by looking at the Nyquist plot again.
+          The real part also makes sense.  Now we can proceed to find the gain margin.
+      </p>
+      <p>We found that the 180 degrees phase shift occurs at <tt>-0.2174 + 0i</tt>.  This point was previously defined as <tt>-1/a</tt>.  Therefore, we now have <tt>a</tt>, which is the gain margin.  However, we need to express the gain margin in decibels:
+      </p>
+      <p><span class="eqn_num">(15)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq27854.png" alt="$$ \frac{-1}{a} = -0.2174 $$"></p>
+      <p><span class="eqn_num">(16)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq09321.png" alt="$$ =&gt; a = 4.6 $$"></p>
+      <p><span class="eqn_num">(17)</span><img class="display_eqn" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_eq50297.png" alt="$$ =&gt; GM = 20log_{10}(4.6) = 13.26 dB $$"></p>
+      <p>We now have our gain margin.  Let's see how accurate it is by using a gain of <tt>a = 4.6</tt> and zooming in on the Nyquist plot:
+      </p><pre class="codeinput">a = 4.6;
+nyquist(a*sys)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/html/Introduction_ControlFrequency_21.png" alt=""> <p>The plot appears to go right through the -1 point.  We will now verify the accuracy of our results by viewing the zoomed Nyquist
+         diagrams and step responses for gains of 4.5, 4.6, and 4.7.
+      </p>
+      <p><b>Phase Margin</b></p>
+      <p>We have already discussed the importance of the phase margin. Therefore, we will only talk about where this concept comes
+         from. We have defined the phase margin as the change in open-loop phase shift required at unity gain to make a closed-loop
+         system unstable.  Let's look at the following graphical definition of this concept to get a better idea of what we are talking
+         about.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_PhaseMargin_Block1.png" alt=""> </p>
+      <p>Let's analyze the previous plot and think about what is happening.  From our previous example we know that this particular
+         system will be unstable in closed-loop if the Nyquist diagram encircles the -1 point.  However, we must also realize that
+         if the diagram is shifted by <tt>theta</tt> degrees, it will then touch the -1 point at the negative real axis, making the system marginally stable in closed-loop. 
+         Therefore, the angle required to make this system marginally stable in closed-loop is called the phase margin (measured in
+         degrees).  In order to find the point we measure this angle from, we draw a circle with radius of 1, find the point in the
+         Nyquist diagram with a magnitude of 1 (gain of zero dB), and measure the phase shift needed for this point to be at an angle
+         of 180 degrees.
+      </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Introduction: Frequency Domain Methods for Controller Design
+%
+% The frequency response method of controller design may be less intuitive 
+% than other methods you have studied previously.  However, it has certain 
+% advantages, especially in real-life situations such as modeling transfer 
+% functions from physical data.  In this tutorial, we will see how we can 
+% use the open-loop frequency response of a system to predict its behavior in closed-loop.
+%
+% Key MATLAB commands used in this tutorial are:
+% <http://www.mathworks.com/help/toolbox/control/ref/bode.html |bode|> , 
+% <http://www.mathworks.com/help/toolbox/control/ref/nyquist.html |nyquist|> , 
+% <http://www.mathworks.com/help/toolbox/control/ref/margin.html |margin|> , 
+% <http://www.mathworks.com/help/toolbox/control/ref/lsim.html |lsim|> , 
+% <http://www.mathworks.com/help/toolbox/control/ref/step.html |step|> ,
+% <http://www.mathworks.com/help/toolbox/control/ref/feedback.html |feedback|> ,
+% <http://www.mathworks.com/help/toolbox/control/ref/sisotool.html |sisotool|>
+%
+%% Gain and Phase Margin
+% Consider the following unity feedback system:
+%
+%%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_BodePlots_Margins_BlockDiagram.png>>
+%
+%%
+% where $K$ is a variable (constant) gain and $G(s)$ is the plant under
+% consideration.  The *gain margin* is defined as the change in open-loop
+% gain required to make the system unstable.  Systems with greater gain
+% margins can withstand greater changes in system parameters before
+% becoming unstable in closed-loop.
+%
+%%
+% The *phase margin* is defined as the change in open-loop phase shift
+% required to make a closed-loop system unstable.
+%
+% The phase margin also measures the system's tolerance to time delay.  If
+% there is a time delay greater than $180/W_{pc}$ in the loop (where $W_{pc}$ is 
+% the frequency where the phase shift is 180 deg), the system will become 
+% unstable in closed-loop.  The time delay, $\tau_d$ can be thought of as an extra 
+% block in the forward path of the block diagram that adds phase to the 
+% system but has no effect on the gain.  That is, a time delay can be 
+% represented as a block with magnitude of 1 and phase $\omega \tau_d$ (in 
+% radians/second).
+%
+%%
+% For now, we won't worry about where all this comes from and will
+% concentrate on identifying the gain and phase margins on a Bode plot.
+%
+%%
+% The phase margin is the difference in phase between the phase curve and
+% -180 degrees at the point corresponding to the frequency that gives us a
+% gain of 0 dB (the gain crossover frequency, $W_{gc}$).  Likewise, the gain
+% margin is the difference between the magnitude curve and 0 dB at the
+% point corresponding to the frequency that gives us a phase of -180
+% degrees (the phase crossover frequency, $W_{pc}$).
+%
+%%
+%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_BodePlots_Margins_MarginDiagrams.png>>
+%
+%%
+% One nice thing about the phase margin is that you don't need to replot
+% the Bode in order to find the new phase margin when changing the gains.  
+% If you recall, adding gain only shifts the magnitude plot up.  This is 
+% equivalent to changing the y-axis on the magnitude plot.  Finding the
+% phase margin is simply a matter of finding the new cross-over frequency
+% and reading off the phase margin.  For example, suppose you entered the 
+% command |bode(sys)|. You will get the following bode plot:
+%
+%%
+
+s = tf('s');
+sys = 50/(s^3 + 9*s^2 + 30*s +40);
+
+bode(sys)
+grid on
+title('Bode Plot with No Gain')
+
+%%
+% You should see that the phase margin is about 100 degrees.  Now suppose
+% you added a gain of 100, by entering the command |bode(100*sys)|.  You
+% should get the following plot:
+%
+%%
+
+bode(100*sys)
+grid on
+title('Bode Plot with Gain = 100')
+
+%%
+% As you can see the phase plot is exactly the same as before, and the
+% magnitude plot is shifted up by 40 dB (gain of 100).  The phase margin is
+% now about -60 degrees.  This same result could be achieved if the y-axis 
+% of the magnitude plot was shifted down 40 dB.  Try this, look at the 
+% first Bode plot, find where the curve crosses the -40 dB line, and read 
+% off the phase margin.  It should be about 90 degrees, the same as the 
+% second Bode plot.
+%
+%%
+% We can have MATLAB calculate and display the gain and phase margins
+% using the |margin(sys)| command. This command returns the gain 
+% and phase margins, the gain and phase cross over frequencies, and a 
+% graphical representation of these on the Bode plot.  Let's check it out:
+%
+%%
+
+margin(100*sys)
+
+%%
+% *Bandwidth Frequency*
+%
+% The bandwidth frequency is defined as the frequency at which the
+% closed-loop magnitude response is equal to -3 dB.  However, when we 
+% design via frequency response, we are interested in predicting the 
+% closed-loop behavior from the open-loop response.  Therefore, we will use
+% a second-order system approximation and say that the bandwidth frequency 
+% equals the frequency at which the open-loop magnitude response is between
+% -6 and -7.5 dB, assuming the open-loop phase response is between -135 deg
+% and -225 deg.  For a complete derivation of this approximation, consult 
+% your textbook.
+%
+%%
+% In order to illustrate the importance of the bandwidth frequency, we will
+% show how the output changes with different input frequencies.  We will 
+% find that sinusoidal inputs with frequency less than |Wbw| (the bandwidth
+% frequency) are tracked "reasonably well" by the system.  Sinusoidal 
+% inputs with frequency greater than |Wbw| are attenuated (in magnitude) by
+% a factor of 0.707 or greater (and are also shifted in phase).
+%
+%%
+% Let's say we have the following closed-loop transfer function
+% representing a system:
+%
+%%
+% $$
+% G(s) = \frac{1}{s^2 + 0.5s + 1}
+% $$
+%
+%%
+sys = 1/(s^2 + 0.5*s + 1);
+bode(sys)
+
+%%
+% Since this is the closed-loop transfer function, our bandwidth frequency
+% will be the frequency corresponding to a gain of -3 dB.  Looking at the 
+% plot, we find that it is approximately 1.4 rad/s.  We can also read off 
+% the plot that for an input frequency of 0.3 radians, the output sinusoid 
+% should have a magnitude about one and the phase should be shifted by 
+% perhaps a few degrees (behind the input).  For an input frequency of 3 
+% rad/sec, the output magnitude should be about -20 dB (or 1/10 as large as
+% the input) and the phase should be nearly -180 (almost exactly 
+% out-of-phase).  We can use the |lsim| command to simulate the response of
+% the system to sinusoidal inputs.
+%
+%%
+% First, consider a sinusoidal input with a *frequency lower than |Wbw|*. 
+% We must also keep in mind that we want to view the steady state response.
+% Therefore, we will modify the axes in order to see the steady state 
+% response clearly (ignoring the transient response). 
+%
+%%
+sys = 1/(s^2 + 0.5*s + 1);
+w = 0.3;
+t = 0:0.1:100;
+u = sin(w*t);
+[y,t] = lsim(sys,u,t);
+plot(t,y,t,u)
+axis([50 100 -2 2])
+
+%%
+% Note that the output (blue) tracks the input (green) fairly well; it is
+% perhaps a few degrees behind the input as expected. However, if we set the 
+% frequency of the input *higher than the bandwidth frequency* for the system, 
+% we get a very distorted response (with respect to the input):
+%
+%%
+
+sys = 1/(s^2 + 0.5*s + 1);
+w = 3;
+t = 0:0.1:100;
+u = sin(w*t);
+[y,t] = lsim(sys,u,t);
+plot(t,y,t,u)
+axis([90 100 -1 1])
+
+%%
+% Again, note that the magnitude is about 1/10 that of the input, as
+% predicted, and that it is almost exactly out of phase (180 degrees
+% behind) the input.  Feel free to experiment and view the response for
+% several different frequencies $\omega$, and see if they match the Bode plot.
+%
+%% Nyquist Diagram
+%
+% The Nyquist plot allows us to predict the stability and performance of a
+% closed-loop system by observing its open-loop behavior.  The Nyquist 
+% criterion can be used for design purposes regardless of open-loop 
+% stability (remember that the Bode design methods assume that the system 
+% is stable in open-loop).  Therefore, we use this criterion to determine 
+% closed-loop stability when the Bode plots display confusing information.  
+%
+%%
+% *Note: The MATLAB |nyquist| command does not provide an adequate
+% representation for systems that have open-loop poles in the jw-axis.*
+% Therefore, we suggest that you copy the <Content/Introduction/Control/Frequency/nyquist1.m nyquist1.m> file as a new 
+% |m-file|.  This |m-file| creates more accurate Nyquist plots, since it 
+% correctly deals with poles and zeros on the jw-axis.
+%
+%%
+% The Nyquist diagram is basically a plot of $G(j\omega)$ where $G(s)$ is the
+% open-loop transfer function and $\omega$ is a vector of frequencies which 
+% encloses the entire right-half plane.  In drawing the Nyquist diagram, 
+% both positive and negative frequencies (from zero to infinity) are taken 
+% into account.  We will represent positive frequencies in red and negative
+% frequencies in green.  The frequency vector used in plotting the Nyquist 
+% diagram usually looks like this (if you can imagine the plot stretching 
+% out to infinity):
+%
+%%
+%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_Block1.png>>
+%
+%%
+% However, if we have open-loop poles or zeros on the jw axis, $G(s)$ will
+% not be defined at those points, and we must loop around them when we are 
+% plotting the contour.  Such a contour would look as follows:
+%
+%%
+%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_Block2.png>>
+%
+%%
+% Please note that the contour loops around the pole on the jw axis.  As we
+% mentioned before, the MATLAB |nyquist| command does not take poles or 
+% zeros on the jw axis into account and therefore produces an incorrect 
+% plot.  To correct this, please download and use <Content/Introduction/Control/Frequency/nyquist1.m nyquist1.m>.  If we have
+% a pole on the jw axis, we have to use |nyquist1|.  If there are no poles 
+% or zeros on the jw-axis, or if we have pole-zero cancellation, we can use 
+% either the |nyquist| command or |nyquist1.m|.
+%
+%% The Cauchy Criterion
+%
+% The Cauchy criterion (from complex analysis) states that when taking a
+% closed contour in the complex plane, and mapping it through a complex 
+% function $G(s)$, the number of times that the plot of $G(s)$ encircles 
+% the origin is equal to the number of zeros of $G(s)$ enclosed by the 
+% frequency contour minus the number of poles of $G(s)$ enclosed by the 
+% frequency contour.  Encirclements of the origin are counted as positive 
+% if they are in the same direction as the original closed contour or 
+% negative if they are in the opposite direction.
+%
+%%
+% When studying feedback controls, we are not as interested in $G(s)$ as in
+% the closed-loop transfer function:
+%
+%%
+% $$
+% \frac{G(s)}{1 + G(s)}
+% $$
+%
+%%
+% If $1 + G(s)$ encircles the origin, then $G(s)$ will enclose the point 
+% -1.  Since we are interested in the closed-loop stability, we want to 
+% know if there are any closed-loop poles (zeros of $1 + G(s)$) in the 
+% right-half plane.  More details on how to determine this will come later.
+%
+%%
+% Therefore, the behavior of the Nyquist diagram around the -1 point in the
+% real axis is very important; however, the axis on the standard |nyquist| 
+% diagram might make it hard to see what's happening around this point.  To
+% correct this, you can add the <Content/Introduction/Control/Frequency/lnyquist.m lnyquist.m> function to your files.  The 
+% |lnyquist.m| command plots the Nyquist diagram using a logarithmic scale 
+% and preserves the characteristics of the -1 point.
+%
+%%
+% To view a simple Nyquist plot using MATLAB, we will define the following
+% transfer function and view the Nyquist plot:
+%
+%%
+% $$
+% \frac{0.5}{s - 0.5}
+% $$
+%
+%%
+s = tf('s');
+sys = 0.5/(s - 0.5);
+nyquist(sys)
+axis([-1 0 -1 1])
+
+%%
+% Now we will look at the Nyquist diagram for the following transfer
+% function:
+%
+%%
+% $$
+% \frac{s + 2}{s^2}
+% $$
+%
+%%
+% Note that this function has a pole at the origin.  We will see the
+% difference between using the |nyquist|, |nyquist1|, and |lnyquist|
+% commands with this particular function.
+%
+%%
+sys = (s + 2)/(s^2);
+nyquist(sys)
+
+%%
+nyquist1(sys)
+
+%%
+lnyquist(sys)
+
+%%
+% Note that the |nyquist| plot is not the correct one, the |nyquist1| plot
+% is correct, but it's hard to see what happens close to the -1 point, and
+% the |lnyquist| plot is correct and has an appropriate scale.
+%
+%% Closed-Loop Performance from Bode Plots
+%
+% In order to predict closed-loop performance from open-loop frequency
+% response, we need to have several concepts clear:
+%
+%%
+% * The system must be stable in open-loop if we are going to design via
+% Bode plots.
+% * If the *gain crossover frequency* is less than the *phase crossover
+% frequency* (i.e. $W_{gc} < W_{pc}$), then the closed-loop system will be
+% stable.
+% * For second-order systems, the closed-loop damping ratio is
+% approximately equal to the phase margin divided by 100 if the phase
+% margin is between 0 and 60 degrees.  We can use this concept with caution
+% if the phase margin is greater than 60 degrees.
+% * For second-order systems, a relationship between damping ratio,
+% bandwidth frequency, and settling time is given by an equation described
+% on the < ?aux=Extras_wbw Extras: Bandwidth> page.
+% * A very rough estimate that you can use is that the bandwidth is
+% approximately equal to the natural frequency.
+%
+%%
+% Let's use these concepts to design a controller for the following system:
+%
+%%
+%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_BodePlots_CLPerformance_BlockDiagram.png>>
+%
+%%
+% Where $G_c(s)$ is the controller and $G(s)$ is:
+%
+%%
+% $$
+% G(s) = \frac{10}{1.25s + 1}
+% $$
+%
+%%
+% The design must meet the following specifications:
+%
+%%
+% * Zero steady state error.
+% * Maximum overshoot must be less than 40%.
+% * Settling time must be less than 2 seconds.
+%
+%%
+% There are two ways of solving this problem: one is graphical and the
+% other is numerical.  Within MATLAB, the graphical approach is best, so 
+% that is the approach we will use.  First, let's look at the Bode plot. 
+% Create a |m-file| with the following code:
+%
+%%
+sys = 10/(1.25*s + 1);
+bode(sys)
+
+%%
+% There are several characteristics of the system that can be read directly
+% from this Bode plot.  First of all, we can see that the bandwidth 
+% frequency is around 10 rad/sec.  Since the bandwidth frequency is roughly
+% the same as the natural frequency (for a first order system of this 
+% type), the rise time is |1.8/BW = 1.8/10 = 1.8 seconds|.  This is a rough
+% estimate, so we will say the rise time is about 2 seconds.
+%
+%%
+% The phase margin for this system is approximately 95 degrees.  The
+% relation |damping ratio = PM/100| only holds for |PM < 60|.  Since the
+% system is first-order, there should be no overshoot.
+%
+%%
+% The last major point of interest is *steady-state error*. The 
+% steady-state error can be read directly off the Bode plot as well.  The 
+% constant ($K_p$, $K_v$, or $K_a$) is found from the intersection of the low 
+% frequency asymptote with the |w = 1| line.  Just extend the low frequency
+% line to the |w = 1| line.  The magnitude at this point is the constant. 
+% Since the Bode plot of this system is a horizontal line at low 
+% frequencies (slope = 0), we know this system is of type zero.  Therefore,
+% the intersection is easy to find.  The gain is 20 dB (magnitude 10).  
+% What this means is that the constant for the error function is 10.  The 
+% steady-state error is |1/(1+Kp) = 1/(1+10) = 0.091|.  
+%
+% If our system was type one instead of type zero, the constant for the steady-state error 
+% would be found in a manner similar to the following.
+%
+%%
+%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_BodePlots_CLPerformance_Block2.png>>
+%
+%%
+% Let's check our predictions by looking at a step response plot.  This can
+% be done by adding the following two lines of code into the MATLAB command
+% window.
+%
+%%
+sys_cl = feedback(sys,1);
+step(sys_cl)
+title('Closed-Loop Step Response, No Controller')
+
+%%
+% As you can see, our predictions were very good.  The system has a rise
+% time of about 2 seconds, has no overshoot, and has a steady-state error 
+% of about 9%.  Now we need to choose a controller that will allow us to 
+% meet the design criteria.  We choose a PI controller because it will 
+% yield zero steady-state error for a step input.  Also, the PI controller 
+% has a zero, which we can place.  This gives us additional design 
+% flexibility to help us meet our criteria.  Recall that a PI controller is
+% given by:
+%
+%%
+% $$
+% G_c(s) = \frac{K(s + a)}{s}
+% $$
+%
+%%
+% The first thing we need to find is the damping ratio corresponding to a
+% percent overshoot of 40%.  Plugging in this value into the equation 
+% relating overshoot and damping ratio (or consulting a plot of this 
+% relation), we find that the damping ratio corresponding to this overshoot
+% is approximately 0.28.  Therefore, our phase margin should be at least 30
+% degrees. We must have a bandwidth frequency greater than or equal to 12 if we
+% want our settling time to be less than 1.75 seconds which meets the 
+% design specs.
+%
+%%
+% Now that we know our desired phase margin and bandwidth frequency, we can
+% start our design.  Remember that we are looking at the open-loop Bode 
+% plots.  Therefore, our bandwidth frequency will be the frequency 
+% corresponding to a gain of approximately -7 dB.
+%
+%%
+% Let's see how the integrator portion of the PI or affects our response.
+% Change your |m-file| to look like the following (this adds an integral 
+% term but no proportional term):
+%
+%%
+plant = 10/(1.25*s + 1);
+contr = 1/s;
+bode(contr*plant, logspace(0,2))
+
+%%
+% Our phase margin and bandwidth frequency are too small.  We will add gain
+% and phase with a zero.  Let's place the zero at 1 for now and see what
+% happens.  Change your |m-file| to look like the following:
+%
+%%
+plant = 10/(1.25*s + 1);
+contr = (s + 1)/s;
+bode(contr*plant, logspace(0,2))
+
+%%
+% It turns out that the zero at 1 with a unit gain gives us a satisfactory
+% answer.  Our phase margin is greater than 60 degrees (even less overshoot
+% than expected) and our bandwidth frequency is approximately 11 rad/s, 
+% which will give us a satisfactory response.  Although satisfactory, the 
+% response is not quite as good as we would like.  Therefore, let's try to 
+% get a higher bandwidth frequency without changing the phase margin too 
+% much.  Let's try to increase the gain to 5 and see what happens.  This 
+% will make the gain shift and the phase will remain the same.
+%
+%%
+plant = 10/(1.25*s + 1);
+contr = 5 * ((s + 1)/s);
+bode(contr*plant, logspace(0,2))
+
+%%
+% That looks really good.  Let's look at our step response and verify our
+% results.  Add the following two lines to your |m-file|: 
+%
+%%
+sys_cl = feedback(contr*plant,1);
+step(sys_cl)
+
+%%
+% As you can see, our response is better than we had hoped for.  However, 
+% we are not always quite as lucky and usually have to play around with the
+% gain and the position of the poles and/or zeros in order to achieve our 
+% design requirements.
+%
+%% Closed-Loop Stability from the Nyquist Diagram
+%
+% Consider the negative feedback system:
+%
+%%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_CLStability_Block1.png>>
+%
+%%
+% Remember from the Cauchy criterion that the number |N| of times that the
+% plot of |G(s)H(s)| encircles -1 is equal to the number |Z| of zeros of 
+% |1 + G(s)H(s)| enclosed by the frequency contour minus the number |P| of 
+% poles of |1 + G(s)H(s)| enclosed by the frequency contour |(N = Z - P)|. 
+% Keeping careful track of open- and closed-loop transfer functions, as 
+% well as numerators and denominators, you should convince yourself that: 
+%
+%%
+% * The zeros of |1 + G(s)H(s)| are the poles of the closed-loop transfer
+% function.
+% * The poles of |1 + G(s)H(s)| are the poles of the open-loop transfer
+% function.
+%
+%%
+% The Nyquist criterion then states that:
+%
+%%
+% * |P| = the number of open-loop (unstable) poles of |G(s)H(s)|.
+% * |N| = the number of times the Nyquist diagram encircles -1.
+% * clockwise encirclements of -1 count as positive encirclements.
+% * counter-clockwise encirclements of -1 count as negative encirclements.
+% * |Z| = the number of right-half-plane (positive, real) poles of the
+% closed-loop system.
+%
+%%
+% The important equation whih relates these three quantities is:
+%
+%%
+% $$
+% Z = P + N
+% $$
+%
+%%
+% *Note: This is only one convention for the Nyquist criterion. Another
+% convention states that a positive |N| counts the counter-clockwise or 
+% anti-clockwise encirclements of -1.  The |P| and |Z| variables remain the
+% same.  In this case the equation becomes |Z = P - N|.  Throughout these 
+% tutorials, we will use a positive sign for clockwise encirclements.*
+%
+%%
+% It is very important (and somewhat tricky) to learn how to count the
+% number of times that the diagram encircles -1.  Therefore, we will go 
+% into some detail to help you visualize this.  You can view this *movie* 
+% as an example.
+%
+%%
+% Another way of looking at it is to imagine you are standing on top of the
+% -1 point and are following the diagram from beginning to end.  Now ask 
+% yourself: How many times did I turn my head a full 360 degrees?  Again, 
+% if the motion was clockwise, |N| is positive, and if the motion is 
+% anti-clockwise, |N| is negative.
+%
+%%
+% Knowing the number of right-half plane (unstable) poles in open loop 
+% (|P|), and the number of encirclements of -1 made by the Nyquist diagram 
+% (|N|), we can determine the closed-loop stability of the system.  If 
+% |Z = P + N| is a positive, nonzero number, the closed-loop system is 
+% unstable.
+%
+%%
+% We can also use the Nyquist diagram to find the range of gains for a
+% closed-loop unity feedback system to be stable.  The system we will test 
+% looks like this:
+%
+%%
+%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_CLStability_Block2.png>>
+%
+%%
+% where G(s) is:
+%
+%%
+% $$
+% \frac{s^2 + 10s + 24}{s^2 - 8s + 15}
+% $$
+%
+%%
+% This system has a gain |K| which can be varied in order to modify the
+% response of the closed-loop system.  However, we will see that we can 
+% only vary this gain within certain limits, since we have to make sure 
+% that our closed-loop system will be stable.  This is what we will be 
+% looking for: the range of gains that will make this system stable in the 
+% closed-loop.
+%
+%%
+% The first thing we need to do is find the number of positive real poles
+% in our open-loop transfer function:
+%
+%%
+roots([1 -8 15])
+
+%%
+% The poles of the open-loop transfer function are both positive.
+% Therefore, we need two anti-clockwise (|N = -2|) encirclements of the 
+% Nyquist diagram in order to have a stable closed-loop system 
+% (|Z = P + N|).  If the number of encirclements is less than two or the 
+% encirclements are not anti-clockwise, our system will be unstable.
+%
+%%
+% Let's look at our Nyquist diagram for a gain of 1:
+%
+%%
+sys = (s^2 + 10*s + 24)/(s^2 - 8*s + 15);
+nyquist(sys)
+
+%%
+% There are two anti-clockwise encirclements of -1.  Therefore, the system
+% is stable for a gain of 1.  Now we will see how the system behaves if we 
+% increase the gain to 20:
+%
+%%
+nyquist(20*sys)
+
+%%
+% The diagram expanded.  Therefore, we know that the system will be stable
+% no matter how much we increase the gain.  However, if we decrease the 
+% gain, the diagram will contract and the system might become unstable.  
+% Let's see what happens for a gain of 0.5:
+%
+%%
+nyquist(0.5*sys)
+
+%%
+% The system is now unstable.  By trial and error we find that this system
+% will become unstable for gains less than 0.80.  We can verify our answers
+% by zooming in on the Nyquist plots as well as by looking at the 
+% closed-loop steps responses for gains of 0.79, 0.80, and 0.81.
+%
+%%
+% *Gain Margin*
+%
+%%
+% We already defined the gain margin as the change in open-loop gain
+% expressed in decibels (dB), required at 180 degrees of phase shift to 
+% make the system unstable.  Now we are going to find out where this comes 
+% from.  First of all, let's say that we have a system that is stable if 
+% there are no Nyquist encirclements of -1, such as:
+%
+%%
+% $$
+% \frac{50}{s^3 + 9s^2 + 30s + 40}
+% $$
+%
+%%
+% Looking at the roots, we find that we have no open loop poles in the
+% right half plane and therefore no closed-loop poles in the 
+% right-half-plane if there are no Nyquist encirclements of -1.  Now, how 
+% much can we vary the gain before this system becomes unstable in 
+% closed-loop?  Let's look at the following figure:
+%
+%%
+%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_GainMargin_Block1.png>>
+%
+%%
+% The open-loop system represented by this plot will become unstable in
+% closed loop if the gain is increased past a certain boundary.  The 
+% negative real axis area between |-1/a| (defined as the point where the 
+% 180 degree phase shift occurs...that is, where the diagram crosses the 
+% real axis) and -1 represents the amount of increase in gain that can be 
+% tolerated before closed-loop instability.
+%
+%%
+% If we think about it, we realize that if the gain is equal to |a|, the
+% diagram will touch the -1 point: 
+%
+%%
+% $$
+% G(jw) = \frac{-1}{a}
+% $$
+% 
+%%
+% or
+%
+%%
+% $$
+% aG(jw) = -1
+% $$
+%
+%%
+% Therefore, we say that the gain margin is |a| units.  However, we
+% mentioned before that the gain margin is usually measured in decibels.  
+% Hence, the gain margin is:
+%
+%%
+% $$
+% GM = 20log_{10}(a) [dB]
+% $$
+%
+%%
+% We will now find the gain margin of the stable, open-loop transfer
+% function we viewed before.  Recall that the function is:
+%
+%%
+% $$
+% \frac{50}{s^3 + 9s^2 + 30s + 40}
+% $$
+%
+%%
+% and that the Nyquist diagram can be viewed by typing:
+%
+%%
+sys = 50/(s^3 + 9*s^2 + 30*s + 20);
+nyquist(sys)
+
+%%
+% As we discussed before, all that we need to do to find the gain margin is
+% find |a|, as defined in the preceding figure.  To do this, we need to 
+% find the point where there is exactly 180 degrees of phase shift.  This 
+% means that the transfer function at this point is real (has no imaginary 
+% part).  The numerator is already real, so we just need to look at the 
+% denominator.  When |s = jw|, the only terms in the denominator that will 
+% have imaginary parts are those which are odd powers of |s|.  Therefore, 
+% for |G(jw)| to be real, we must have:
+%
+%%
+% $$
+% -jw^3 + 30jw = 0
+% $$
+%
+%%
+% which means |w = 0| (this is the rightmost point in the Nyquist diagram) 
+% or |w = sqrt(30)|.  We can then find the value of |G(jw)| at this point 
+% using |polyval|:
+%
+%%
+w = sqrt(30);
+polyval(50,j*w)/polyval([1 9 30 40],j*w)
+
+%%
+% The answer is: |-0.2174 + 0i|.  The imaginary part is zero, so we know 
+% that our answer is correct.  We can also verify by looking at the Nyquist
+% plot again.  The real part also makes sense.  Now we can proceed to find 
+% the gain margin.
+%
+%%
+% We found that the 180 degrees phase shift occurs at |-0.2174 + 0i|.  This
+% point was previously defined as |-1/a|.  Therefore, we now have |a|, 
+% which is the gain margin.  However, we need to express the gain margin in
+% decibels:
+%
+%%
+% $$ \frac{-1}{a} = -0.2174 $$
+%
+%%
+% $$ => a = 4.6 $$
+%
+%%
+% $$ => GM = 20log_{10}(4.6) = 13.26 dB $$
+%
+%%
+% We now have our gain margin.  Let's see how accurate it is by using a 
+% gain of |a = 4.6| and zooming in on the Nyquist plot:
+%
+%%
+a = 4.6;
+nyquist(a*sys)
+
+%%
+% The plot appears to go right through the -1 point.  We will now verify 
+% the accuracy of our results by viewing the zoomed Nyquist diagrams and 
+% step responses for gains of 4.5, 4.6, and 4.7.
+%
+%%
+% *Phase Margin*
+%
+%%
+% We have already discussed the importance of the phase margin. Therefore,
+% we will only talk about where this concept comes from. We have defined 
+% the phase margin as the change in open-loop phase shift required at unity
+% gain to make a closed-loop system unstable.  Let's look at the following 
+% graphical definition of this concept to get a better idea of what we are 
+% talking about. 
+%
+%%
+%
+% <<Content/Introduction/Control/Frequency/figures/FrequencyResponseTutorial_NyquistDiagram_PhaseMargin_Block1.png>>
+%
+%%
+% Let's analyze the previous plot and think about what is happening.  From
+% our previous example we know that this particular system will be unstable 
+% in closed-loop if the Nyquist diagram encircles the -1 point.  However, 
+% we must also realize that if the diagram is shifted by |theta| degrees, 
+% it will then touch the -1 point at the negative real axis, making the 
+% system marginally stable in closed-loop.  Therefore, the angle required 
+% to make this system marginally stable in closed-loop is called the phase 
+% margin (measured in degrees).  In order to find the point we measure this
+% angle from, we draw a circle with radius of 1, find the point in the 
+% Nyquist diagram with a magnitude of 1 (gain of zero dB), and measure the 
+% phase shift needed for this point to be at an angle of 180 degrees.
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlFrequency by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:26 GMT -->
+</html>
+
+	lFrequency by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:26 GMT -->
+</html>
+
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlFrequency by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:26 GMT -->
+</html>
+
+	lFrequency by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:26 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:26 GMT -->
+</html>
+
+	lFrequency by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:09:26 GMT -->
+</html>
+
+	

@@ -1,0 +1,739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Ess by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = ""; 
+			var section = ""; 
+			var aux = "Extras_Ess"; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "indexb290.html?aux=Index_Extras";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Extras: Steady-State Error</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="indexb290.html?aux=Index_Extras">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Extras: Steady-State Error</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#2">Calculating steady-state errors</a></li>
+            <li><a href="#7">System type and steady-state error</a></li>
+            <li><a href="#8">Example: Meeting steady-state error requirements</a></li>
+         </ul>
+      </div>
+      <p>Steady-state error is defined as the difference between the input (command) and the output of a system in the limit as time
+         goes to infinity (i.e. when the response has reached steady state). The steady-state error will depend on the type of input
+         (step, ramp, etc.) as well as the system type (0, I, or II).
+      </p>
+      <p><b>Note: Steady-state error analysis is only useful for stable systems. You should always check the system for stability before
+            performing a steady-state error analysis. Many of the techniques that we present will give an answer even if the error does
+            not reach a finite steady-state value.</b></p>
+      <h2>Calculating steady-state errors<a name="2"></a></h2>
+      <p>Before talking about the relationships between steady-state error and system type, we will show how to calculate error regardless
+         of system type or input. Then, we will start deriving formulas we can apply when the system has a specific structure and the
+         input is one of our standard functions. Steady-state error can be calculated from the open- or closed-loop transfer function
+         for unity feedback systems. For example, let's say that we have the system given below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/essblk1.png" alt=""> </p>
+      <p>This is equivalent to the following system, where <i>T</i>(<i>s</i>) is the closed-loop transfer function.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/essblk2.png" alt=""> </p>
+      <p>We can calculate the steady-state error for this system from either the open- or closed-loop transfer function using the Final
+         Value Theorem. <b>Recall that this theorem can only be applied if the subject of the limit (<i>sE</i>(<i>s</i>) in this case) has poles with negative real part</b>.
+      </p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq44664.png" alt="$$ e(\infty) = \lim_{s\rightarrow0}sE(s) = \lim_{s\rightarrow0}\frac{sR(s)}{1+G(s)} $$"></p>
+      <p><span class="eqn_num">(2)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq06106.png" alt="$$ e(\infty) = \lim_{s\rightarrow0}sE(s) = \lim_{y\rightarrow0}sR(s)[1-T(s)] $$"></p>
+      <p>Now, let's plug in the Laplace transforms for some standard inputs and determine equations to calculate steady-state error
+         from the open-loop transfer function in each case.
+      </p>
+      <div>
+         <ul>
+            <li>Step Input (<i>R</i>(<i>s</i>) = 1 / <i>s</i>):
+            </li>
+         </ul>
+      </div>
+      <p><span class="eqn_num">(3)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq62150.png" alt="$$ e(\infty)=\frac{1}{1+\lim_{s\rightarrow0}G(s)}=\frac{1}{1+K_{p}}\Rightarrow K_{p}=\lim_{y\rightarrow0}G(s) $$"></p>
+      <div>
+         <ul>
+            <li>Ramp Input (<i>R</i>(<i>s</i>) = 1 / <i>s</i>^2):
+            </li>
+         </ul>
+      </div>
+      <p><span class="eqn_num">(4)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq16122.png" alt="$$ e(\infty)=\frac{1}{\lim_{s\rightarrow0}sG(s)}=\frac{1}{K_{v}}\Rightarrow K_{v}=\lim_{s\rightarrow0}sG(s) $$"></p>
+      <div>
+         <ul>
+            <li>Parabolic Input (<i>R</i>(<i>s</i>) = 1 / <i>s</i>^3):
+            </li>
+         </ul>
+      </div>
+      <p><span class="eqn_num">(5)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq34677.png" alt="$$ e(\infty)=\frac{1}{\lim_{s\rightarrow0}s^2G(s)}=\frac{1}{K_{a}}\Rightarrow K_{a}=\lim_{s\rightarrow0}s^2G(s) $$"></p>
+      <p>When we design a controller, we usually also want to compensate for disturbances to a system. Let's say that we have a system
+         with a disturbance that enters in the manner shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/essblk4.png" alt=""> </p>
+      <p>We can find the steady-state error due to a step disturbance input again employing the Final Value Theorem (treat <i>R</i>(<i>s</i>) = 0).
+      </p>
+      <p><span class="eqn_num">(6)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq66914.png" alt="$$ e(\infty)= \lim_{s\rightarrow0}sE(s) = \frac{1}{\lim_{s\rightarrow0}\frac{1}{P(s)}+\lim_{s\rightarrow0}&#xA;C(s)} $$"></p>
+      <p>When we have a non-unity feedback system we need to be careful since the signal entering <i>G</i>(<i>s</i>) is no longer the actual error <i>E</i>(<i>s</i>). Error is the difference between the commanded reference and the actual output, <i>E</i>(<i>s</i>) = <i>R</i>(<i>s</i>) - <i>Y</i>(<i>s</i>). When there is a transfer function <i>H</i>(<i>s</i>) in the feedback path, the signal being substracted from <i>R</i>(<i>s</i>) is no longer the true output <i>Y</i>(<i>s</i>), it has been distorted by <i>H</i>(<i>s</i>). This situation is depicted below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/essblk6.png" alt=""> </p>
+      <p>Manipulating the blocks, we can transform the system into an equivalent unity-feedback structure as shown below.</p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/essblk5.png" alt=""> </p>
+      <p>Then we can apply the equations we derived above.</p>
+      <h2>System type and steady-state error<a name="7"></a></h2>
+      <p>If you refer back to the equations for calculating steady-state errors for unity feedback systems, you will find that we have
+         defined certain constants (known as the static error constants). These constants are the position constant (<i>Kp</i>), the velocity constant (<i>Kv</i>), and the acceleration constant (<i>Ka</i>). Knowing the value of these constants, as well as the system type, we can predict if our system is going to have a finite
+         steady-state error.
+      </p>
+      <p>First, let's talk about system type. The system type is defined as the number of pure integrators in the forward path of a
+         unity-feedback system. That is, the system type is equal to the value of <i>n</i> when the system is represented as in the following figure. It does not matter if the integrators are part of the controller
+         or the plant.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/essblk3.png" alt=""> </p>
+      <p>Therefore, a system can be type 0, type 1, etc. The following tables summarize how steady-state error varies with system type.</p>
+      <p>
+         <table style="border:2px solid black;" align="center" >
+         <tr style="background-color:#EEEEEE; font-weight:bold;">
+         <th><a href="index75c1.html?aux=Extras_ess1">Type 0 system</a></th>
+         <td><i>Step Input </i></td>
+         <td><i>Ramp Input </i></td>
+         <td><i>Parabolic Input </i></td>
+         </tr>
+         <tr>
+         <td><i>Steady-State Error Formula  </i></td>
+         <td>1/(1+Kp)</td>
+         <td>1/Kv</td>
+         <td>1/Ka</td>
+         </tr>
+         <tr>
+         <td><i>Static Error Constant</i></td>
+         <td>Kp = constant</td>
+         <td>Kv = 0</td>
+         <td>Ka = 0</td>
+         </tr>
+         <tr>
+         <td><i>Error</i></td>
+         <td>1/(1+Kp)</td>
+         <td>infinity</td>
+         <td>infinity</td>
+         </tr>
+         </table>
+         
+      </p>
+      <p>
+         <table style="border:2px solid black;" align="center" >
+         <tr style="background-color:#EEEEEE; font-weight:bold;">
+         <th><a href="index0773.html?aux=Extras_ess2">Type 1 system</a></th>
+         <td><i>Step Input</i></td>
+         <td><i>Ramp Input</i></td>
+         <td><i>Parabolic Input</i></td>
+         </tr>
+         <tr>
+         <td><i>Steady-State Error Formula  </i></td>
+         <td>1/(1+Kp)</td>
+         <td>1/Kv</td>
+         <td>1/Ka</td>
+         </tr>
+         <tr>
+         <td><i>Static Error Constant</i></td>
+         <td>Kp = infinity</td>
+         <td>Kv = constant</td>
+         <td>Ka = 0</td>
+         </tr>
+         <tr>
+         <td><i>Error</i></td>
+         <td>0</td>
+         <td>1/Kv</td>
+         <td>infinity</td>
+         </tr>
+         </table>
+         
+      </p>
+      <p>
+         <table style="border:2px solid black;" align="center" >
+         <tr style="background-color:#EEEEEE; font-weight:bold;">
+         <th><a href="index7f57.html?aux=Extras_ess3">Type 2 system</a></th>
+         <td><i>Step Input</i></td>
+         <td><i>Ramp Input</i></td>
+         <td><i>Parabolic Input</i></td>
+         </tr>
+         <tr>
+         <td><i>Steady-State Error Formula</i></td>
+         <td>1/(1+Kp)</td>
+         <td>1/Kv</td>
+         <td>1/Ka</td>
+         </tr>
+         <tr>
+         <td><i>Static Error Constant</i></td>
+         <td>Kp = infinity</td>
+         <td>Kv = infinity</td>
+         <td>Ka = constant</td>
+         </tr>
+         <tr>
+         <td><i>Error</i></td>
+         <td>0</td>
+         <td>0</td>
+         <td>1/Ka</td>
+         </tr>
+         </table>
+         
+      </p>
+      <h2>Example: Meeting steady-state error requirements<a name="8"></a></h2>
+      <p>Consider a system of the form shown below.</p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/essblk1.png" alt=""> </p>
+      <p>For this example, let <i>G</i>(<i>s</i>) equal the following.
+      </p>
+      <p><span class="eqn_num">(7)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq22215.png" alt="$$G(s) = \frac{K(s+3)(s+5)}{s(s+7)(s+8)}$$"></p>
+      <p>Since this system is type 1, there will be no steady-state error for a step input and there will be infinite error for a parabolic
+         input. The only input that will yield a finite steady-state error in this system is a ramp input. We wish to choose <i>K</i> such that the closed-loop system has a steady-state error of 0.1 in response to a ramp reference. Let's first examine the
+         ramp input response for a gain of <i>K</i> = 1.
+      </p><pre class="codeinput">s = tf(<span class="string">'s'</span>);
+G = ((s+3)*(s+5))/(s*(s+7)*(s+8));
+T = feedback(G,1);
+t = 0:0.1:25;
+u = t;
+[y,t,x] = lsim(T,u,t);
+plot(t,y,<span class="string">'y'</span>,t,u,<span class="string">'m'</span>)
+xlabel(<span class="string">'Time (sec)'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+title(<span class="string">'Input-purple, Output-yellow'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Ess_01.png" alt=""> <p>The steady-state error for this system is quite large, since we can see that at time 20 seconds the output is approximately
+         16 as compared to an input of 20 (steady-state error is approximately equal to 4). Let's examine this in further detail.
+      </p>
+      <p>We know from our problem statement that the steady-state error must be 0.1. Therefore, we can solve the problem following
+         these steps:
+      </p>
+      <p><span class="eqn_num">(8)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq45297.png" alt="$$e(\infty)=\frac{1}{K_{v}}=0.1$$"></p>
+      <p><span class="eqn_num">(9)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq25606.png" alt="$$K_{v}=10=\lim_{s\rightarrow0}sG(s)=\frac{15K}{56}$$"></p>
+      <p><span class="eqn_num">(10)</span><img class="display_eqn" src="Content/Extras/html/Extras_Ess_eq13256.png" alt="$$\Rightarrow K=37.33$$"></p>
+      <p>Let's see the ramp input response for <i>K</i> = 37.33 by entering the following code in the MATLAB command window.
+      </p><pre class="codeinput">K = 37.33 ;
+s = tf(<span class="string">'s'</span>);
+G = (K*(s+3)*(s+5))/(s*(s+7)*(s+8));
+sysCL = feedback(G,1);
+t = 0:0.1:50;
+u = t;
+[y,t,x] = lsim(sysCL,u,t);
+plot(t,y,<span class="string">'y'</span>,t,u,<span class="string">'m'</span>)
+xlabel(<span class="string">'Time (sec)'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+title(<span class="string">'Input-purple, Output-yellow'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Ess_02.png" alt=""> <p>In order to get a better view, we must zoom in on the response. We choose to zoom in between time equals 39.9 and 40.1 seconds
+         because that will ensure that the system has reached steady state.
+      </p><pre class="codeinput">axis([39.9,40.1,39.9,40.1])
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Ess_03.png" alt=""> <p>Examination of the above shows that the steady-state error is indeed 0.1 as desired.</p>
+      <p>Now let's modify the problem a little bit and say that our system has the form shown below.</p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/conblock.png" alt=""> </p>
+      <p>In essence we are no distinguishing between the controller and the plant in our feedback system. Now we want to achieve zero
+         steady-state error for a ramp input.
+      </p>
+      <p>From our tables, we know that a system of type 2 gives us zero steady-state error for a ramp input. Therefore, we can get
+         zero steady-state error by simply adding an integrator (a pole at the origin). Let's view the ramp input response for a step
+         input if we add an integrator and employ a gain <i>K</i> = 1.
+      </p><pre class="codeinput">s = tf(<span class="string">'s'</span>);
+P = ((s+3)*(s+5))/(s*(s+7)*(s+8));
+C = 1/s;
+sysCL = feedback(C*P,1);
+t = 0:0.1:250;
+u = t;
+[y,t,x] = lsim(sysCL,u,t);
+plot(t,y,<span class="string">'y'</span>,t,u,<span class="string">'m'</span>)
+xlabel(<span class="string">'Time (sec)'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+title(<span class="string">'Input-purple, Output-yellow'</span>)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Ess_04.png" alt=""> <p>As you can see, there is initially some oscillation (you may need to zoom in). However, at steady state we do have zero steady-state
+         error as desired. Let's zoom in around 240 seconds (trust me, it doesn't reach steady state until then).
+      </p><pre class="codeinput">axis([239.9,240.1,239.9,240.1])
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Ess_05.png" alt=""> <p>As you can see, the steady-state error is zero. Feel free to zoom in on different areas of the graph to observe how the response
+         approaches steady state.
+      </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Extras: Steady-State Error
+%
+%%
+% Steady-state error is defined as the difference between the input (command) and
+% the output of a system in the limit as time goes to infinity (i.e. when the
+% response has reached steady state). The steady-state error will
+% depend on the type of input (step, ramp, etc.) as well as the system type
+% (0, I, or II).   
+%
+% *Note: Steady-state error analysis is only useful for stable systems. You
+% should always check the system for stability before performing a
+% steady-state error analysis. Many of the techniques that we present will
+% give an answer even if the error does not reach a finite steady-state value.*  
+%% Calculating steady-state errors
+% Before talking about the relationships between steady-state error and
+% system type, we will show how to calculate error regardless of system
+% type or input. Then, we will start deriving formulas we can apply when
+% the system has a specific structure and the input is one of our standard
+% functions. Steady-state error can be calculated from the open- or
+% closed-loop transfer function for unity feedback systems. For example,
+% let's say that we have the system given below.       
+% 
+% <<Content/Extras/figures/essblk1.png>>
+%
+%%
+% This is equivalent to the following system, where _T_(_s_) is the
+% closed-loop transfer function.
+%
+% <<Content/Extras/figures/essblk2.png>>
+%
+% We can calculate the steady-state error for this system from either the
+% open- or closed-loop transfer function using the Final Value Theorem.
+% *Recall that this theorem can only be applied if the subject of the limit
+% (_sE_(_s_) in this case) has poles with negative real part*.
+%
+% $$ e(\infty) = \lim_{s\rightarrow0}sE(s) = \lim_{s\rightarrow0}\frac{sR(s)}{1+G(s)} $$
+%
+% $$ e(\infty) = \lim_{s\rightarrow0}sE(s) = \lim_{y\rightarrow0}sR(s)[1-T(s)] $$
+% 
+% Now, let's plug in the Laplace transforms for some standard inputs and
+% determine equations to calculate steady-state error from the open-loop
+% transfer function in each case.
+% 
+%% 
+% * Step Input (_R_(_s_) = 1 / _s_):
+%
+% $$ e(\infty)=\frac{1}{1+\lim_{s\rightarrow0}G(s)}=\frac{1}{1+K_{p}}\Rightarrow K_{p}=\lim_{y\rightarrow0}G(s) $$
+%% 
+% * Ramp Input (_R_(_s_) = 1 / _s_^2):
+%
+% $$ e(\infty)=\frac{1}{\lim_{s\rightarrow0}sG(s)}=\frac{1}{K_{v}}\Rightarrow K_{v}=\lim_{s\rightarrow0}sG(s) $$
+%% 
+% * Parabolic Input (_R_(_s_) = 1 / _s_^3):
+% 
+% $$ e(\infty)=\frac{1}{\lim_{s\rightarrow0}s^2G(s)}=\frac{1}{K_{a}}\Rightarrow K_{a}=\lim_{s\rightarrow0}s^2G(s) $$
+%
+% When we design a controller, we usually also want to compensate for
+% disturbances to a system. Let's say that we have a system
+% with a disturbance that enters in the manner shown below.
+%
+% <<Content/Extras/figures/essblk4.png>>
+%
+% We can find the steady-state error due to a step disturbance input again
+% employing the Final Value Theorem (treat _R_(_s_) = 0). 
+%
+% $$ e(\infty)= \lim_{s\rightarrow0}sE(s) = \frac{1}{\lim_{s\rightarrow0}\frac{1}{P(s)}+\lim_{s\rightarrow0}
+% C(s)} $$
+%
+% When we have a non-unity feedback system we need to be careful since the
+% signal entering _G_(_s_) is no longer the actual error _E_(_s_). Error is
+% the difference between the commanded reference and the actual output,
+% _E_(_s_) = _R_(_s_) - _Y_(_s_). When there is a transfer function _H_(_s_) in the
+% feedback path, the signal being substracted from _R_(_s_) is no longer
+% the true output _Y_(_s_), it has been distorted by _H_(_s_). This
+% situation is depicted below.
+%
+% <<Content/Extras/figures/essblk6.png>>
+% 
+% Manipulating the blocks, we can transform the system into an equivalent
+% unity-feedback structure as shown below.
+%
+% <<Content/Extras/figures/essblk5.png>>
+%
+% Then we can apply the equations we derived above.
+%% System type and steady-state error
+% If you refer back to the equations for calculating steady-state errors
+% for unity feedback systems, you will find that we have defined certain
+% constants (known as the static error constants). These constants are the
+% position constant (_Kp_), the velocity constant (_Kv_), and the
+% acceleration constant (_Ka_). Knowing the value of these constants, as
+% well as the system type, we can predict if our system is going to have a
+% finite steady-state error.     
+%
+% First, let's talk about system type. The system type is defined as the
+% number of pure integrators in the forward path of a unity-feedback
+% system. That is, the system type is equal to the value of _n_ when the
+% system is represented as in the following figure. It does not matter if
+% the integrators are part of the controller or the plant.
+%
+% <<Content/Extras/figures/essblk3.png>>
+% 
+% Therefore, a system can be type 0, type 1, etc. The following tables
+% summarize how steady-state error varies with system type.
+% 
+% <html>
+% <table style="border:2px solid black;" align="center" >
+% <tr style="background-color:#EEEEEE; font-weight:bold;">
+%    <th><a href="?aux=Extras_ess1">Type 0 system</a></th>
+%    <td><i>Step Input </i></td>
+%    <td><i>Ramp Input </i></td>
+%    <td><i>Parabolic Input </i></td>
+%  </tr>
+%  <tr>
+%    <td><i>Steady-State Error Formula  </i></td>
+%    <td>1/(1+Kp)</td>
+%    <td>1/Kv</td>
+%    <td>1/Ka</td>
+%  </tr>
+%  <tr>
+%    <td><i>Static Error Constant</i></td>
+%    <td>Kp = constant</td>
+%    <td>Kv = 0</td>
+%    <td>Ka = 0</td>
+%  </tr>
+%  <tr>
+%    <td><i>Error</i></td>
+%    <td>1/(1+Kp)</td>
+%    <td>infinity</td>
+%    <td>infinity</td>
+%  </tr>
+% </table>
+% </html>
+%
+% <html>
+% <table style="border:2px solid black;" align="center" >
+% <tr style="background-color:#EEEEEE; font-weight:bold;">
+%    <th><a href="?aux=Extras_ess2">Type 1 system</a></th>
+%    <td><i>Step Input</i></td>
+%    <td><i>Ramp Input</i></td>
+%    <td><i>Parabolic Input</i></td>
+%  </tr>
+%  <tr>
+%    <td><i>Steady-State Error Formula  </i></td>
+%    <td>1/(1+Kp)</td>
+%    <td>1/Kv</td>
+%    <td>1/Ka</td>
+%  </tr>
+%  <tr>
+%    <td><i>Static Error Constant</i></td>
+%    <td>Kp = infinity</td>
+%    <td>Kv = constant</td>
+%    <td>Ka = 0</td>
+%  </tr>
+%  <tr>
+%    <td><i>Error</i></td>
+%    <td>0</td>
+%    <td>1/Kv</td>
+%    <td>infinity</td>
+%  </tr>
+% </table>
+% </html>
+% 
+% <html>
+% <table style="border:2px solid black;" align="center" >
+% <tr style="background-color:#EEEEEE; font-weight:bold;">
+%    <th><a href="?aux=Extras_ess3">Type 2 system</a></th>
+%    <td><i>Step Input</i></td>
+%    <td><i>Ramp Input</i></td>
+%    <td><i>Parabolic Input</i></td>
+%  </tr>
+%  <tr>
+%    <td><i>Steady-State Error Formula</i></td>
+%    <td>1/(1+Kp)</td>
+%    <td>1/Kv</td>
+%    <td>1/Ka</td>
+%  </tr>
+%  <tr>
+%    <td><i>Static Error Constant</i></td>
+%    <td>Kp = infinity</td>
+%    <td>Kv = infinity</td>
+%    <td>Ka = constant</td>
+%  </tr>
+%  <tr>
+%    <td><i>Error</i></td>
+%    <td>0</td>
+%    <td>0</td>
+%    <td>1/Ka</td>
+%  </tr>
+% </table>
+% </html>
+%
+%% Example: Meeting steady-state error requirements
+% Consider a system of the form shown below.
+%
+% <<Content/Extras/figures/essblk1.png >>
+%
+% For this example, let _G_(_s_) equal the following.
+%
+% $$G(s) = \frac{K(s+3)(s+5)}{s(s+7)(s+8)}$$
+%
+% Since this system is type 1, there will be no steady-state error for a
+% step input and there will be infinite error for a parabolic input. The only input
+% that will yield a finite steady-state error in this system is a ramp
+% input. We wish to choose _K_ such that the closed-loop system has a
+% steady-state error of 0.1 in response to a ramp reference. Let's first
+% examine the ramp input response for a gain of _K_ = 1.    
+
+s = tf('s');
+G = ((s+3)*(s+5))/(s*(s+7)*(s+8));
+T = feedback(G,1);
+t = 0:0.1:25;
+u = t;
+[y,t,x] = lsim(T,u,t);
+plot(t,y,'y',t,u,'m')
+xlabel('Time (sec)')
+ylabel('Amplitude')
+title('Input-purple, Output-yellow')
+%%
+% The steady-state error for this system is quite large, since we can see
+% that at time 20 seconds the output is approximately 16 as compared to an
+% input of 20 (steady-state error is approximately equal to 4). Let's
+% examine this in further detail.   
+%
+% We know from our problem statement that the steady-state error must be
+% 0.1. Therefore, we can solve the problem following these steps:
+%
+% $$e(\infty)=\frac{1}{K_{v}}=0.1$$
+%
+% $$K_{v}=10=\lim_{s\rightarrow0}sG(s)=\frac{15K}{56}$$
+%
+% $$\Rightarrow K=37.33$$
+%
+% Let's see the ramp input response for _K_ = 37.33 by entering the
+% following code in the MATLAB command window.
+
+K = 37.33 ;
+s = tf('s');
+G = (K*(s+3)*(s+5))/(s*(s+7)*(s+8));
+sysCL = feedback(G,1);
+t = 0:0.1:50;
+u = t;
+[y,t,x] = lsim(sysCL,u,t);
+plot(t,y,'y',t,u,'m')
+xlabel('Time (sec)')
+ylabel('Amplitude')
+title('Input-purple, Output-yellow')
+%%
+% In order to get a better view, we must zoom in on the response. We choose
+% to zoom in between time equals 39.9 and 40.1 seconds because that will ensure
+% that the system has reached steady state.  
+
+axis([39.9,40.1,39.9,40.1])
+
+%%
+% Examination of the above shows that the steady-state error is indeed 0.1
+% as desired. 
+%
+% Now let's modify the problem a little bit and say that our system has the
+% form shown below.
+%
+% <<Content/Extras/figures/conblock.png>>
+%
+% In essence we are no distinguishing between the controller and the plant
+% in our feedback system. Now we want to achieve zero steady-state error for a
+% ramp input.
+%
+% From our tables, we know that a system of type 2 gives us zero
+% steady-state error for a ramp input. Therefore, we can get zero
+% steady-state error by simply adding an integrator (a pole at the origin).
+% Let's view the ramp input response for a step input if we add an
+% integrator and employ a gain _K_ = 1.   
+
+s = tf('s');
+P = ((s+3)*(s+5))/(s*(s+7)*(s+8));
+C = 1/s;
+sysCL = feedback(C*P,1);
+t = 0:0.1:250;
+u = t;
+[y,t,x] = lsim(sysCL,u,t);
+plot(t,y,'y',t,u,'m')
+xlabel('Time (sec)')
+ylabel('Amplitude')
+title('Input-purple, Output-yellow')
+%%
+% As you can see, there is initially some oscillation (you may need to zoom
+% in). However, at steady state we do have zero steady-state error as desired.
+% Let's zoom in around 240 seconds (trust me, it doesn't reach steady state
+% until then). 
+
+axis([239.9,240.1,239.9,240.1])
+
+%%
+% As you can see, the steady-state error is zero. Feel free to zoom in on
+% different areas of the graph to observe how the response approaches steady state.
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Ess by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:54 GMT -->
+</html>
+
+	Extras_Ess by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:54 GMT -->
+</html>
+
+			
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Ess by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:54 GMT -->
+</html>
+
+	Extras_Ess by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:54 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:54 GMT -->
+</html>
+
+	Extras_Ess by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:54 GMT -->
+</html>
+
+	

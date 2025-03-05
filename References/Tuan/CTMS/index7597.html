@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Dtrans by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = ""; 
+			var section = ""; 
+			var aux = "Extras_Dtrans"; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "indexb290.html?aux=Index_Extras";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Extras: Discrete Pole Locations and Transient Response</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="indexb290.html?aux=Index_Extras">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Extras: Discrete Pole Locations and Transient Response</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#2">Small damping (<i>zeta</i> = 0.1, <i>Wn</i> = (4 <i>pi</i>)/(5 <i>T</i>))</a></li>
+            <li><a href="#5">Medium damping (<i>zeta</i> = 0.4, <i>Wn</i> = (11 <i>pi</i>)/(20 <i>T</i>))</a></li>
+            <li><a href="#10">Large damping (<i>zeta</i> = 0.8, <i>Wn</i> = <i>pi</i> /(4 <i>T</i>))</a></li>
+         </ul>
+      </div>
+      <p>In this page we are going to explain in more detail how the pole locations of a discrete-time transfer function relate to
+         the corresponding time response.
+      </p>
+      <h2>Small damping (<i>zeta</i> = 0.1, <i>Wn</i> = (4 <i>pi</i>)/(5 <i>T</i>))<a name="2"></a></h2>
+      <p>First let's consider the following discrete transfer function.</p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dtrans_eq72890.png" alt="$$ \frac{Y(z)}{F(z)} = \frac{1}{z^2 + 1.2z + 0.57} $$"></p>
+      <p>The following commands will determine and plot the poles of this transfer function. Enter the following commands to a new
+         <a href="indexd754.html?aux=Extras_Mfile">m-file</a> and run it in the MATLAB command window. You should see the pole-zero map shown below.
+      </p><pre class="codeinput">T = .05;
+z = tf(<span class="string">'z'</span>,T);
+sys = 1/(z^2+1.2*z+0.57);
+[poles,zeros] = pzmap(sys)
+pzmap(sys)
+
+axis([-1 1 -1 1])
+zgrid
+</pre><pre class="codeoutput">poles =
+  -0.6000 + 0.4583i
+  -0.6000 - 0.4583i
+zeros =
+   Empty matrix: 0-by-1
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Dtrans_01.png" alt=""> <p>From this figure, we see that poles are located such that they have a natural frequency of (0.8 <i>pi</i>)/ <i>T</i> rad/sample or (4 <i>pi</i>)/(5 <i>T</i>) rad/sample (where <i>T</i> is the sampling time in sample/sec) and a damping ratio of approximately 0.1. Assuming that we have a sampling time of 1/20
+         sec/sample and using the three equations shown below,
+      </p>
+      <p><span class="eqn_num">(2)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dtrans_eq52745.png" alt="$$ t_s = \frac{4}{\zeta\omega_{n}} $$"></p>
+      <p><span class="eqn_num">(3)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dtrans_eq66542.png" alt="$$ t_r =\frac{1.8}{\omega_{n}}$$"></p>
+      <p><span class="eqn_num">(4)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dtrans_eq27387.png" alt="$$ M_p = e^{\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}} $$"></p>
+      <p>we can determine that this system should approximately have a rise time of 0.035 sec, a settling time of 0.8 sec, and a maximum
+         overshoot of 70%. <b>When you use these equations, you must convert the natural frequency (<i>Wn</i>) from rad/sample to rad/sec.</b> Also, these relationships are most valid for underdamped 2nd order system with no zeros. Let's confirm these results by obtaining
+         the system's step response. Add the following commands to the above m-file and rerun it in the MATLAB command window. You
+         should see the following step response.
+      </p><pre class="codeinput">[x,t] = step(sys,2.5);
+stairs(t,x)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Dtrans_02.png" alt=""> <p>The plot shows that the rise time, the settling time, and the overshoot are approximately as expected.</p>
+      <h2>Medium damping (<i>zeta</i> = 0.4, <i>Wn</i> = (11 <i>pi</i>)/(20 <i>T</i>))<a name="5"></a></h2>
+      <p>Now consider the next discrete transfer function.</p>
+      <p><span class="eqn_num">(5)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dtrans_eq53886.png" alt="$$\frac{Y(z)}{F(z)} = \frac{1}{z^2 +0.25}$$"></p>
+      <p>Let's follow the same steps as what we did above. Create a new m-file and enter the following commands. Running this m-file
+         in the command window gives you the following pole map.
+      </p><pre class="codeinput">T = .05;
+z = tf(<span class="string">'z'</span>,T);
+sys = 1/(z^2 + 0.25);
+[poles,zeros] = pzmap(sys)
+pzmap(sys)
+
+axis([-1 1 -1 1])
+zgrid
+</pre><pre class="codeoutput">poles =
+        0 + 0.5000i
+        0 - 0.5000i
+zeros =
+   Empty matrix: 0-by-1
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Dtrans_03.png" alt=""> <p>From this pole map, we see that poles are located at a natural frequency of (11 <i>pi</i>)/(20 <i>T</i>) rad/sample and a damping ratio of approximately 0.4. Assuming a sampling time of 1/20 sec as before and using the above
+         three equations, we can determine that the step response should approximately have a rise time of 0.05 sec, a settling time
+         of 0.3 sec, and a maximum overshoot of 25%. Let's obtain the step response and see if these are correct. Add the following
+         commands to the above m-file and rerun it. You should see the following step response.
+      </p><pre class="codeinput">[x,t] = step(sys,2.5);
+stairs(t,x)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Dtrans_04.png" alt=""> <p>Once again, this step response shows the rise time, settling time and overshoot that we approximately expected.</p>
+      <h2>Large damping (<i>zeta</i> = 0.8, <i>Wn</i> = <i>pi</i> /(4 <i>T</i>))<a name="10"></a></h2>
+      <p>For the last example, let's consider the following discrete-time transfer function.</p>
+      <p><span class="eqn_num">(6)</span><img class="display_eqn" src="Content/Extras/html/Extras_Dtrans_eq65063.png" alt="$$\frac{Y(z)}{F(z)} = \frac{1}{z^2 -0.98z + 0.3}$$"></p>
+      <p>Just as before, enter the following commands to a new m-file and run it in the MATLAB command window. You should see the following
+         pole-zero map.
+      </p><pre class="codeinput">T = .05;
+z = tf(<span class="string">'z'</span>,T);
+sys = 1/(z^2 - 0.98*z + 0.3);
+[poles,zeros] = pzmap(sys)
+pzmap(sys)
+
+axis([-1 1 -1 1])
+zgrid
+</pre><pre class="codeoutput">poles =
+   0.4900 + 0.2447i
+   0.4900 - 0.2447i
+zeros =
+   Empty matrix: 0-by-1
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Dtrans_05.png" alt=""> <p>From this plot, we see that the poles are located at a natural frequency of <i>pi</i> /(4 <i>T</i>) rad/sample and a damping ratio of approximately 0.8. Once again assuming a sampling time of 1/20 sec, we can determine that
+         this system should approximately have a rise time of 0.1 sec, a settling time of 0.3 sec and an overshoot of 1%. Let's confirm
+         this by adding the following commands to the above m-file and rerunning it. You should see the following step response.
+      </p><pre class="codeinput">[x,t] = step(sys,2.5);
+stairs(t,x)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/Extras/html/Extras_Dtrans_06.png" alt=""> <p>The resulting step response again has roughly the shape predicted.</p>
+      <p>Using these three examples, we proved that the pole locations can be used to get a rough estimate of the transient response
+         of a system. This analysis is particularly useful in the root-locus design method where you attempt to place the closed-loop
+         poles to obtain a satisfactory response.
+      </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Extras: Discrete Pole Locations and Transient Response
+%%
+% In this page we are going to explain in more detail how the pole
+% locations of a discrete-time transfer function relate to the
+% corresponding time response.
+
+%% Small damping (_zeta_ = 0.1, _Wn_ = (4 _pi_)/(5 _T_))
+% First let's consider the following discrete transfer function. 
+%
+% $$ \frac{Y(z)}{F(z)} = \frac{1}{z^2 + 1.2z + 0.57} $$
+%
+% The following commands will determine and plot the poles of this transfer function.
+% Enter the following commands to a new < ?aux=Extras_Mfile m-file> and run 
+% it in the MATLAB command window. You should see the pole-zero map shown below.
+
+T = .05;
+z = tf('z',T);
+sys = 1/(z^2+1.2*z+0.57);
+[poles,zeros] = pzmap(sys)
+pzmap(sys)
+
+axis([-1 1 -1 1])
+zgrid
+
+%%
+% From this figure, we see that poles are located such that they have a natural
+% frequency of (0.8 _pi_)/ _T_ rad/sample or (4 _pi_)/(5 _T_) rad/sample (where _T_ is the sampling 
+% time in sample/sec) and a damping ratio of approximately 0.1. Assuming that we have a
+% sampling time of 1/20 sec/sample and using the three equations shown below, 
+%
+% $$ t_s = \frac{4}{\zeta\omega_{n}} $$
+%
+% $$ t_r =\frac{1.8}{\omega_{n}}$$
+%
+% $$ M_p = e^{\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}} $$
+% 
+% we can determine that this system should approximately have a rise time of 0.035 sec, a
+% settling time of 0.8 sec, and a maximum overshoot of 70%. *When you use
+% these equations, you must convert the natural frequency (_Wn_) from
+% rad/sample to rad/sec.* Also, these relationships are most valid for
+% underdamped 2nd order system with no zeros. Let's confirm these results
+% by obtaining the system's step response. Add the following commands to
+% the above m-file and rerun it in the MATLAB command window. You should
+% see the following step response.  
+%
+[x,t] = step(sys,2.5);
+stairs(t,x)
+
+%%
+% The plot shows that the rise time, the settling time, and the overshoot
+% are approximately as expected. 
+%% Medium damping (_zeta_ = 0.4, _Wn_ = (11 _pi_)/(20 _T_))
+% Now consider the next discrete transfer function. 
+%%
+% $$\frac{Y(z)}{F(z)} = \frac{1}{z^2 +0.25}$$
+%%
+% Let's follow the same steps as what we did above. Create a new m-file
+% and enter the following commands. Running this m-file in the command 
+% window gives you the following pole map. 
+
+T = .05;
+z = tf('z',T);
+sys = 1/(z^2 + 0.25);
+[poles,zeros] = pzmap(sys)
+pzmap(sys)
+
+axis([-1 1 -1 1])
+zgrid
+
+%%
+% From this pole map, we see that poles are located at a natural
+% frequency of (11 _pi_)/(20 _T_) rad/sample and a damping ratio of approximately 0.4. 
+% Assuming a sampling time of 1/20 sec as before and using the above 
+% three equations, we can determine that the step response should
+% approximately have a rise time of 0.05 sec, a settling time of 0.3 sec,
+% and a maximum overshoot of 25%. Let's obtain the step response and see if these are correct. Add the
+% following commands to the above m-file and rerun it. You should see the
+% following step response.
+
+[x,t] = step(sys,2.5);
+stairs(t,x)
+
+%%
+% Once again, this step response shows the rise time, settling
+% time and overshoot that we approximately expected.
+
+%% Large damping (_zeta_ = 0.8, _Wn_ = _pi_ /(4 _T_))
+% For the last example, let's consider the following discrete-time transfer
+% function. 
+%%
+% $$\frac{Y(z)}{F(z)} = \frac{1}{z^2 -0.98z + 0.3}$$
+%%
+% Just as before, enter the following commands to a new m-file and run it
+% in the MATLAB command window. You should see the following pole-zero map. 
+T = .05;
+z = tf('z',T);
+sys = 1/(z^2 - 0.98*z + 0.3);
+[poles,zeros] = pzmap(sys)
+pzmap(sys)
+
+axis([-1 1 -1 1])
+zgrid
+
+%%
+% From this plot, we see that the poles are located at a natural
+% frequency of _pi_ /(4 _T_) rad/sample and a damping ratio of approximately 0.8.
+% Once again assuming a sampling time of 1/20 sec, we can determine that this system
+% should approximately have a rise time of 0.1 sec, a settling time of 0.3
+% sec and an overshoot of 1%. Let's confirm this by adding the following commands 
+% to the above m-file and rerunning it. You should see the following step 
+% response. 
+
+[x,t] = step(sys,2.5);
+stairs(t,x)
+
+%%
+% The resulting step response again has roughly the shape predicted.
+%
+% Using these three examples, we proved that the pole locations can be 
+% used to get a rough estimate of the transient response of a system. This
+% analysis is particularly useful in the root-locus design method where you 
+% attempt to place the closed-loop poles to obtain a satisfactory response.
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Dtrans by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	ras_Dtrans by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Dtrans by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	ras_Dtrans by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	ras_Dtrans by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:03 GMT -->
+</html>
+
+	

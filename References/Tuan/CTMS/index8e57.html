@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=CruiseControl&section=SimulinkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:06:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = "CruiseControl"; 
+			var section = "SimulinkControl"; 
+			var aux = ""; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "index9e20.html?example=MotorSpeed&amp;section=SystemModeling";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Cruise Control: Simulink Control</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index8e57.html?example=CruiseControl&amp;section=SimulinkControl"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="indexc535.html?example=MotorSpeed&amp;section=SimulinkControl"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index4c9e.html?example=MotorPosition&amp;section=SimulinkControl"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index24af.html?example=Suspension&amp;section=SimulinkControl"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexd477.html?example=InvertedPendulum&amp;section=SimulinkControl"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index9a32.html?example=AircraftPitch&amp;section=SimulinkControl"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index7413.html?example=BallBeam&amp;section=SimulinkControl"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Cruise Control: Simulink Controller Design</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#2">Extracting a linear model into MATLAB</a></li>
+            <li><a href="#4">Implementing PI control</a></li>
+            <li><a href="#5">Closed-loop response</a></li>
+         </ul>
+      </div>
+      <p>In the <a href="index3818.html?example=CruiseControl&amp;section=SimulinkModeling">Cruise Control: Simulink Modeling</a> page we created a Simulink model of the cruise control system. You can recreate the model or download it <a href="Content/CruiseControl/Simulink/Control/ccmodel.mdl">here</a>. In this section, we will show how to implement a feedback controller in Simulink to meet the performance specifications
+         for the system.
+      </p>
+      <h2>Extracting a linear model into MATLAB<a name="2"></a></h2>
+      <p>A linear model of the system (in state space or transfer function form) can be extracted from a Simulink model into MATLAB.
+         This is done through the use of In1 and Out1 blocks and the MATLAB function <tt>linmod</tt>.
+      </p>
+      <div>
+         <ul>
+            <li>Replace the Step Block and Scope Block with an In1 and an Out1 block, respectively (these blocks can be found in the Ports
+               &amp; Subsystems library). This defines the input and output of the system for the extraction process.
+            </li>
+         </ul>
+      </div>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/ccmodel.png" alt=""> </p>
+      <p>Save your file as "ccmodel.mdl" (select Save As from the File menu). MATLAB will extract the linear model from the saved model
+         file, not from the open model window. At the MATLAB prompt, enter the following commands:
+      </p><pre class="codeinput">m = 1000;
+b = 50;
+u = 500;
+[A,B,C,D] = linmod(<span class="string">'ccmodel'</span>)
+cruise_ss = ss(A,B,C,D);
+</pre><pre class="codeoutput">A =
+   -0.0500
+B =
+   1.0000e-03
+C =
+     1
+D =
+     0
+</pre><p>To verify the model extraction, we will generate an open-loop step response of the extracted transfer function in MATLAB.
+         We will multiply the numerator by 500 to simulate a step input of 500 N. Enter the following command in MATLAB.
+      </p><pre class="codeinput">step(u*cruise_ss)
+</pre><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/html/CruiseControl_SimulinkControl_01.png" alt=""> <h2>Implementing PI control<a name="4"></a></h2>
+      <p>In the <a href="index08fb.html?example=CruiseControl&amp;section=ControlPID">Cruise Control: PID Control</a> page a PI controller was designed with Kp = 800 and Ki = 40 to give the desired response. We will implement this in Simulink
+         by first containing the open-loop system from earlier in this page in a Subsystem block.
+      </p>
+      <div>
+         <ul>
+            <li>Create a new model window.</li>
+            <li>Drag a Subsystem block from the Ports &amp; Subsystems library into your new model window.</li>
+         </ul>
+      </div>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/cruise1.png" alt=""> </p>
+      <div>
+         <ul>
+            <li>Double-click on this block. You will see a blank window representing the contents of the subsystem (which is currently empty).</li>
+            <li>Open your previously saved model of the cruise control system, <a href="Content/CruiseControl/Simulink/Control/ccmodel.mdl">ccmodel.mdl</a>.
+            </li>
+            <li>Select Select All from the Edit menu (or Ctrl-A), and select Copy from the Edit menu (or Ctrl-C).</li>
+            <li>Select the blank subsystem window from your new model and select Paste from the Edit menu (or Ctrl-V). You should see your
+               original system in this new subsystem window. Close this window.
+            </li>
+            <li>You should now see input and output terminals on the Subsystem block. Name this block "plant model".</li>
+         </ul>
+      </div>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/cruise2.png" alt=""> </p>
+      <p>Now, we will build a PI controller around the plant model. First, we will feed back the plant output.</p>
+      <div>
+         <ul>
+            <li>Draw a line extending from the plant output.</li>
+            <li>Insert a Sum block and assign "+-" to it's inputs.</li>
+            <li>Tap a line of the output line and draw it to the negative input of the Sum block.</li>
+         </ul>
+      </div>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/cruise3.png" alt=""> </p>
+      <p>The output of the Sum block will provide the error signal. From this, we will generate proportional and integral components.</p>
+      <div>
+         <ul>
+            <li>Insert an Integrator block after the Sum block and connect them with a line.</li>
+            <li>Insert and connect a Gain block after the Integrator block to provide the integral gain.</li>
+            <li>Label this Integrator "Ki" and assign it a value of "Ki".</li>
+            <li>Insert a new Gain block and connect it with a line tapped off the output of the Sum block.</li>
+            <li>Label this gain "Kp" and assign it a value of "Kp".</li>
+         </ul>
+      </div>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/cruise4.png" alt=""> </p>
+      <p>Now we will add the proportional and integral components and apply the sum to the plant.</p>
+      <div>
+         <ul>
+            <li>Insert a Sum block between the Ki block and the plant model and connect the outputs of the two Gain blocks to the Sum block
+               inputs.
+            </li>
+            <li>Connect the Sum block output to the input of the plant block.</li>
+         </ul>
+      </div>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/cruise5.png" alt=""> </p>
+      <p>Finally, we will apply a step input and view the output with a Scope block.</p>
+      <div>
+         <ul>
+            <li>Attach a Step block to the free input of the feedback Sum block.</li>
+            <li>Attach a Scope block to the plant output.</li>
+            <li>Double-click the Step block and set the Step Time to "0" and the Final Value to "u". This allows the input magnitude to be
+               changed outside of Simulink.
+            </li>
+         </ul>
+      </div>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/ccpi.png" alt=""> </p>
+      <p>You can download our version of the closed-loop system model <a href="Content/CruiseControl/Simulink/Control/ccpi.mdl">here</a>.
+      </p>
+      <p>In this example, we constructed a PI controller from fundamental blocks. As an alternative, we could have used a Transfer
+         Function block (from the Continuous library) to implement this in one step, as shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/cruise_tf.png" alt=""> </p>
+      <p>You can download this model <a href="Content/CruiseControl/Simulink/Control/ccpitf.mdl">here</a>.
+      </p>
+      <h2>Closed-loop response<a name="5"></a></h2>
+      <p>To simulate this system, first, an appropriate simulation time must be set. Select Parameters from the Simulation menu and
+         enter "10" in the Stop Time field. The design requirements included a rise time of less than 5 sec, so we simulate for 10
+         seconds to view the output. The physical parameters must now be set. Run the following commands at the MATLAB prompt:
+      </p><pre class="codeinput">m = 1000;
+b = 50;
+u = 10;
+Kp = 800;
+Ki = 40;
+</pre><p>Run the simulation (hit Ctrl-T or select Start from the Simulation menu). When the simulation is finished, double-click on
+         the scope and hit its autoscale button. You should see the following output.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/CruiseControl/Simulink/Control/figures/cruise_step.png" alt=""> </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Cruise Control: Simulink Controller Design
+%
+%% 
+% In the 
+% < ?example=CruiseControl&section=SimulinkModeling Cruise Control: Simulink Modeling> page
+% we created a Simulink model of the cruise control system. You can
+% recreate the model or download it <Content/CruiseControl/Simulink/Control/ccmodel.mdl here>. In this section, we
+% will show how to implement a feedback controller in Simulink 
+% to meet the performance specifications for the system.
+%
+%% Extracting a linear model into MATLAB
+%
+% A linear model of the system (in state space or transfer function form)
+% can be extracted from a Simulink model into MATLAB. This is done through 
+% the use of In1 and Out1 blocks and the MATLAB function |linmod|. 
+%
+% * Replace the Step Block and Scope Block with an In1 and an Out1 block,
+% respectively (these blocks can be found in the Ports & Subsystems
+% library). This defines the input and output of the system for the
+% extraction process.    
+%
+% <<Content/CruiseControl/Simulink/Control/figures/ccmodel.png>>
+%
+% Save your file as "ccmodel.mdl" (select Save As from the File menu).
+% MATLAB will extract the linear model from the saved model file, not from 
+% the open model window. At the MATLAB prompt, enter the following commands: 
+
+m = 1000;
+b = 50;
+u = 500;
+[A,B,C,D] = linmod('ccmodel')
+cruise_ss = ss(A,B,C,D);
+
+%%
+% To verify the model extraction, we will generate an open-loop step
+% response of the extracted transfer function in MATLAB. We will multiply 
+% the numerator by 500 to simulate a step input of 500 N. Enter the following
+% command in MATLAB. 
+
+step(u*cruise_ss)
+
+%% Implementing PI control
+%
+% In the < ?example=CruiseControl&section=ControlPID Cruise Control: PID
+% Control> page a PI controller was designed with Kp = 800 
+% and Ki = 40 to give the desired response. We will implement this in Simulink
+% by first containing the open-loop system from earlier in this page in a 
+% Subsystem block. 
+%
+% * Create a new model window. 
+% * Drag a Subsystem block from the Ports & Subsystems library into your
+% new model window.  
+%
+% <<Content/CruiseControl/Simulink/Control/figures/cruise1.png>>
+%
+% * Double-click on this block. You will see a blank window representing
+% the contents of the subsystem (which is currently empty).  
+% * Open your previously saved model of the cruise control system,
+% <Content/CruiseControl/Simulink/Control/ccmodel.mdl ccmodel.mdl>.  
+% * Select Select All from the Edit menu (or Ctrl-A), and select Copy from
+% the Edit menu (or Ctrl-C).  
+% * Select the blank subsystem window from your new model and select Paste
+% from the Edit menu (or Ctrl-V). You should see your original system in
+% this new subsystem window. Close this window.   
+% * You should now see input and output terminals on the Subsystem block.
+% Name this block "plant model".  
+%
+% <<Content/CruiseControl/Simulink/Control/figures/cruise2.png>>
+%
+% Now, we will build a PI controller around the plant model. First, we will
+% feed back the plant output. 
+% 
+% * Draw a line extending from the plant output. 
+% * Insert a Sum block and assign "+-" to it's inputs. 
+% * Tap a line of the output line and draw it to the negative input of the Sum block. 
+%
+% <<Content/CruiseControl/Simulink/Control/figures/cruise3.png>>
+%
+% The output of the Sum block will provide the error signal. From this, we
+% will generate proportional and integral components. 
+%
+% * Insert an Integrator block after the Sum block and connect them with a line. 
+% * Insert and connect a Gain block after the Integrator block to provide
+% the integral gain.  
+% * Label this Integrator "Ki" and assign it a value of "Ki". 
+% * Insert a new Gain block and connect it with a line tapped off the
+% output of the Sum block.  
+% * Label this gain "Kp" and assign it a value of "Kp". 
+%
+% <<Content/CruiseControl/Simulink/Control/figures/cruise4.png>>
+%
+% Now we will add the proportional and integral components and apply the
+% sum to the plant. 
+%
+% * Insert a Sum block between the Ki block and the plant model and connect
+% the outputs of the two Gain blocks to the Sum block inputs.  
+% * Connect the Sum block output to the input of the plant block. 
+%
+% <<Content/CruiseControl/Simulink/Control/figures/cruise5.png>>
+%
+% Finally, we will apply a step input and view the output with a Scope block. 
+%
+% * Attach a Step block to the free input of the feedback Sum block. 
+% * Attach a Scope block to the plant output. 
+% * Double-click the Step block and set the Step Time to "0" and the Final
+% Value to "u". This allows the input magnitude to be changed outside of Simulink.  
+%
+% <<Content/CruiseControl/Simulink/Control/figures/ccpi.png>>
+%
+% You can download our version of the closed-loop system model <Content/CruiseControl/Simulink/Control/ccpi.mdl here>. 
+%
+% In this example, we constructed a PI controller from fundamental blocks.
+% As an alternative, we could have used a Transfer Function block (from the 
+% Continuous library) to implement this in one step, as shown below. 
+%
+% <<Content/CruiseControl/Simulink/Control/figures/cruise_tf.png>>
+%
+% You can download this model <Content/CruiseControl/Simulink/Control/ccpitf.mdl here>. 
+%
+%% Closed-loop response
+%
+% To simulate this system, first, an appropriate simulation time must be
+% set. Select Parameters from the Simulation menu and enter "10" in the Stop 
+% Time field. The design requirements included a rise time of less than 5 sec, 
+% so we simulate for 10 seconds to view the output. The physical parameters must 
+% now be set. Run the following commands at the MATLAB prompt: 
+
+m = 1000;
+b = 50;
+u = 10;
+Kp = 800;
+Ki = 40;
+
+%%
+% Run the simulation (hit Ctrl-T or select Start from the Simulation menu).
+% When the simulation is finished, double-click on the scope and hit its autoscale 
+% button. You should see the following output. 
+%
+% <<Content/CruiseControl/Simulink/Control/figures/cruise_step.png>>
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="index5c95.html?example=CruiseControl&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index08fb.html?example=CruiseControl&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="index4431.html?example=CruiseControl&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index75ab.html?example=CruiseControl&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index1502.html?example=CruiseControl&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index6e12.html?example=CruiseControl&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index3818.html?example=CruiseControl&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index8e57.html?example=CruiseControl&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=CruiseControl&section=SimulinkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:06:07 GMT -->
+</html>
+
+	inkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:06:07 GMT -->
+</html>
+
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?example=CruiseControl&section=SimulinkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:06:07 GMT -->
+</html>
+
+	inkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:06:07 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:06:07 GMT -->
+</html>
+
+	inkControl by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:06:07 GMT -->
+</html>
+
+	

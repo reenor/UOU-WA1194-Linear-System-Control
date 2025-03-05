@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Imatlab by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+
+		<script type="text/javascript" src="jquery.js"></script>
+					
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type="text/javascript">
+	
+			var example = ""; 
+			var section = ""; 
+			var aux = "Extras_Imatlab"; 
+			var effects = Boolean(1); 
+			var tips = Boolean(1); 
+			$.fx.off = !effects;
+			
+			$(document).keydown(function(e){
+				if (!$("#search_field").is(":focus")){
+					if (e.keyCode == 39) { 
+						window.location = "indexb290.html?aux=Index_Extras";
+					}
+					if (e.keyCode == 37) { 
+						window.history.back()
+					}
+				}
+			});		
+			
+		</script>
+			
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" Content="NO-CACHE" />
+		
+		<title>Control Tutorials for MATLAB and Simulink - Simulink Basics Tutorial: Interaction With MATLAB</title>
+			
+	</head>
+
+	<body>
+	
+		
+		<div id="container">
+		
+			<form id="search_form"><input id="search_field" type="text" name="q" placeholder="Search Control Tutorials"/></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Effects</div><input type="hidden" name="effects" value="0"/><input type="checkbox" name="effects" value="1" checked='true' /></form>
+			<form class="option_form" method="post" onclick="submit()"><div>Tips</div><input type="hidden" name="tips" value="0"/><input type="checkbox" name="tips" value="1" checked='true' /></form>	
+				
+			<div style="clear:both"></div>
+		
+			<div id="header">
+		
+				
+
+				
+				
+				<div id="menu_container">
+				
+					<ul class="menu">
+						<li class="heading" id="Tips"><a href="index80e7.html?aux=Extras_Tips">TIPS</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+				
+					<ul class="menu">
+						<li class="heading" id="About"><a>ABOUT</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="About_Tutorials"><a href="index64fe.html?aux=About_Tutorials">Tutorials</a></li>
+							<li class="item" id="About_Contact"><a href="mailto:ControlTutorialsMatlabSimulink@gmail.com">Contact</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Basics"><a>BASICS</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Basics_Matlab"><a href="index87b6.html?aux=Basics_Matlab">MATLAB</a></li>
+							<li class="item" id="Basics_Simulink"><a href="indexe9ea.html?aux=Basics_Simulink">Simulink</a></li>
+						</div></div>
+					</ul>
+					
+					<ul class="menu">
+						<li class="heading" id="Index"><a>INDEX</a></li>
+						<div class="collapse"><div class="expand">
+							<li class="item" id="Index_Tutorials"><a href="index5e52.html?aux=Index_Tutorials">Tutorials</a></li>
+							<li class="item" id="Index_Commands"><a href="index111e.html?aux=Index_Commands">Commands</a></li>
+							<li class="item" id="Index_Animations"><a href="indexc3c5.html?aux=Index_Animations">Animations</a></li>
+							<li class="item" id="Index_Extras"><a href="indexb290.html?aux=Index_Extras">Extras</a></li>
+						</div></div>
+					</ul>
+									
+					<ul class="menu">
+						<li class="heading" id="Next"><a href="indexb290.html?aux=Index_Extras">NEXT&nbsp;&#x25BA;</a></li>
+						<div class="collapse"><div class="expand">
+						</div></div>
+					</ul>
+											
+				</div>
+
+			</div>
+			
+			<div id="body_container">
+			
+				<div id="gradient_container"></div>
+			
+				<div id="top">
+				
+					<a href="index1304.html?aux=Home"><img id="CTMS_logo" src="Images/CTMS_logo.png"></a>
+				
+					<ul class="example">
+					
+						<li class="item" id="Introduction"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling"><img class="icon" src="Images/Introduction_Icon.png"><div class="tab">INTRODUCTION</div></a></li>
+						<li class="item" id="CruiseControl"><a href="index9b00.html?example=CruiseControl&amp;section=SystemModeling"><img class="icon" src="Images/CruiseControl_Icon.png"><div class="tab">CRUISE&nbsp;CONTROL</div></a></li>
+						<li class="item" id="MotorSpeed"><a href="index9e20.html?example=MotorSpeed&amp;section=SystemModeling"><img class="icon" src="Images/MotorSpeed_Icon.png"><div class="tab">MOTOR&nbsp;SPEED</div></a></li>
+						<li class="item" id="MotorPosition"><a href="index9ba6.html?example=MotorPosition&amp;section=SystemModeling"><img class="icon" src="Images/MotorPosition_Icon.png"><div class="tab">MOTOR&nbsp;POSITION</div></a></li>
+						<li class="item" id="Suspension"><a href="index7abe.html?example=Suspension&amp;section=SystemModeling"><img class="icon" src="Images/Suspension_Icon.png"><div class="tab">SUSPENSION</div></a></li>
+						<li class="item" id="InvertedPendulum"><a href="indexdeb1.html?example=InvertedPendulum&amp;section=SystemModeling"><img class="icon" src="Images/InvertedPendulum_Icon.png"><div class="tab">INVERTED&nbsp;PENDULUM</div></a></li>
+						<li class="item" id="AircraftPitch"><a href="index1987.html?example=AircraftPitch&amp;section=SystemModeling"><img class="icon" src="Images/AircraftPitch_Icon.png"><div class="tab">AIRCRAFT&nbsp;PITCH</div></a></li>
+						<li class="item" id="BallBeam"><a href="index9ee5.html?example=BallBeam&amp;section=SystemModeling"><img class="icon" src="Images/BallBeam_Icon.png"><div class="tab">BALL&nbsp;&amp;&nbsp;BEAM</div></a></li>
+					
+					</ul> 
+		
+				</div>
+				
+				<div id="content_container">
+					<div class="content">
+   <div class="content_fx">
+      <h1>Simulink Basics Tutorial: Interaction With MATLAB</h1>
+      <!--introduction-->
+      <!--/introduction-->
+      <h2>Contents</h2>
+      <div>
+         <ul>
+            <li><a href="#2">Block parameters from MATLAB variables</a></li>
+            <li><a href="#7">Exchanging signals with MATLAB</a></li>
+            <li><a href="#8">Extracting models from Simulink into MATLAB</a></li>
+         </ul>
+      </div>
+      <p>In this page we will examine three of the ways in which Simulink can interact with MATLAB.</p>
+      <div>
+         <ul>
+            <li>Block parameters can be defined from MATLAB variables.</li>
+            <li>Signals can be exchanged between Simulink and MATLAB.</li>
+            <li>Entire systems can be extracted from Simulink into MATLAB.</li>
+         </ul>
+      </div>
+      <h2>Block parameters from MATLAB variables<a name="2"></a></h2>
+      <p>Often a controller will be designed in MATLAB and verified within a Simulink model. Commonly, numerical parameters such as
+         gains and controller transfer functions are entered into Simulink manually by entering the corresponding numbers into the
+         block dialog boxes. Rather than enter numbers directly, it is also possible to use MATLAB variables in the Simulink block
+         dialog boxes.
+      </p>
+      <p>Consider, for example, the Simulink model from the <a href="indexe9ea.html?aux=Basics_Simulink">Simulink Basics</a> tutorial which is shown in the figure below. You can recreate this model yourself, or you can download it <a href="Content/Extras/buildex.mdl">here</a>.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/buildn.png" alt=""> </p>
+      <p>In this case, the complete controller transfer function is the following.</p>
+      <p><span class="eqn_num">(1)</span><img class="display_eqn" src="Content/Extras/html/Extras_Imatlab_eq22393.png" alt="$$ \frac{U(s)}{E(s)} = 2.5\frac{s+2}{s}$$"></p>
+      <p>Suppose this transfer function were generated by some computation in MATLAB. In this case, there would most likely be three
+         variables, the numerator polynomial, the denominator polynomial, and the gain. Enter the following commands in MATLAB to define
+         these variables.
+      </p><pre class="codeinput">K = 2.5;
+num = [1 2];
+den = [1 0];
+</pre><p>These variables can now be used within blocks in the Simulink environment. In your Simulink model, double-click on the Gain
+         block and enter <tt>"K"</tt> in the <b>Gain</b> field as shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/gaink.png" alt=""> </p>
+      <p>Now close this dialog box. Notice that the Gain block in the Simulink model now shows the variable <tt>K</tt> rather than a number.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/bldwk.png" alt=""> </p>
+      <p>Next, double-click on the PI Controller block. Enter <tt>"num"</tt> into the <b>Numerator Coefficient</b> field and <tt>"den"</tt> into the <b>Denominator Coefficient</b> field as shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/tfnumden.png" alt=""> </p>
+      <p>Close this dialog box. Notice now that the PI Controller block shows the variables <tt>num</tt> and <tt>den</tt> (as functions of <i>s</i>) rather than an explicit numerical transfer function.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/wnumden.png" alt=""> </p>
+      <p>You can then simulate the model with the MATLAB variable parameters. Select <b>Start</b> from the <b>Simulation</b> menu to run the simulation. Double-click on the Scope block to view its output. Hit the autoscale button (binoculars) and
+         you should see the following.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/output.png" alt=""> </p>
+      <p>Now, if any calculations are done in MATLAB to change any of the variables used in the Simulink model, the simulation will
+         use the new values the next time it is run. To try this, change the gain <tt>K</tt> within MATLAB by entering the following at the command prompt.
+      </p><pre class="codeinput">K=5;
+</pre><p>Start the simulation again, bring up the Scope window, and hit the autoscale button. You will see the following output which
+         reflects the new, higher gain.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/bldhighk.png" alt=""> </p>
+      <p>To download the Simulink model with MATLAB variable parameters, click <a href="Content/Extras/variab.mdl">here</a>.
+      </p>
+      <h2>Exchanging signals with MATLAB<a name="7"></a></h2>
+      <p>Sometimes, we would like to use the results of a Simulink simulation in the MATLAB command window for further calculations
+         and plotting. Less often, we would like to generate signals in MATLAB which we can then use as inputs in a Simulink model.
+         These tasks are accomplished through the use of the To Workspace block from the Sinks library and the From Workspace block
+         found in the Sources library. We will only transfer signals from Simulink to MATLAB. Doing the reverse is a very similar process.
+      </p>
+      <p>The To Workspace block saves a signal as a vector (or structure) in the MATLAB workspace. Open the model which you used previously
+         in this tutorial or click <a href="Content/Extras/variab.mdl">here</a> to download the model. Be sure that the variables <tt>K</tt> = 5, <tt>num</tt> = [1 2], and <tt>den</tt> = [1 0] are defined in the MATLAB workspace.
+      </p>
+      <p>We would like to use both the output signal <tt>y</tt> and the control signal <tt>u</tt> for calculations in MATLAB. We will save these two variables as well as a time signal from our Simulink model. First, we
+         need to generate an explicit time signal. Open the Sources library by double-clicking the Sources icon in the main <b>Simulink Library Browser</b> window. Drag the Clock block from the Sources window to the lower portion of your Simulink model as shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/addclock.png" alt=""> </p>
+      <p>Now, open the Sinks library and drag three instances of the To Workspace block into your Simulink window, arranged approximately
+         as shown below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/addwork.png" alt=""> </p>
+      <p>Before connecting these blocks to the rest of your system, name the variables where the data is stored in the MATLAB workspace.
+         The lower To Workspace block will output the time signal, hence we will store this data in the MATLAB variable <tt>t</tt>. Double-click on this block and enter <tt>"t"</tt> in the <b>Variable Name</b> field as shown below. Also change the entry in the <b>Save format</b> field from the default of <tt>Structure</tt> to <tt>Array</tt>.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/towork.png" alt=""> </p>
+      <p>Now close the dialog box. Notice that the lower To Workspace block displays a <tt>t</tt>.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/changedt.png" alt=""> </p>
+      <p>The To Workspace block near the Plant block will output the control signal to a MATLAB variable we've named <tt>u</tt>. Again define the variable name for this block by entering <tt>"u"</tt> into the the <b>Variable Name</b> field and choose <tt>Array</tt> from the drop-down menu in the <b>Save format</b> field. The last To Workspace block will output the output signal to the MATLAB variable <tt>y</tt> by repeating the steps above. Also, for better clarity, change the labels (by clicking on the existing labels "To Workspace")
+         of these blocks to "time", "control", and "output". Your model should appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/chngouts.png" alt=""> </p>
+      <p>Now, you will connect these blocks to the rest of your system. Draw a line from the Clock block to the time (<tt>t</tt>) block. Tap a line off of the control signal (the line between the PI Controller block and the Plant block) and connect it
+         to the control (<tt>u</tt>) block. Remember, to tap off an existing line, hold the <b>Ctrl</b> key while drawing the line. You can also tap off a line by right-clicking. Tap a line off the output signal line (the line
+         which enters the Scope block) and connect it to the output (<tt>y</tt>) block. Your system should appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/outvar.png" alt=""> </p>
+      <p>Start the simulation (<b>Start</b> from the <b>Simulation</b> menu). You can still view the output in the Scope window (remember autoscale).
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/bldhighk.png" alt=""> </p>
+      <p>You can now examine the variables saved to the MATLAB workspace. Plot <tt>u</tt> and <tt>y</tt> vs. <tt>t</tt> by entering the following commands.
+      </p>
+      <p>
+         <pre class="codeinput">
+         plot(t,u,t,y);
+         </pre>
+         
+      </p>
+      <p>Note that it is important to plot each of these variables against the time vector generated by Simulink. This is because the
+         time between elements in the signal vectors may be unequal if a variable-step solver is employed. This is particularly the
+         case near a discontinuity such as the step input (anywhere the signals are changing rapidly). Your plot of <tt>u</tt> (blue) and <tt>y</tt> (green) should appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/uyplot.png" alt=""> </p>
+      <p>To download the model with outputs to MATLAB variables, click <a href="Content/Extras/outvar.mdl">here</a>.
+      </p>
+      <p>Instead of employing To Workspace blocks, you can also output data to the MATLAB workspace using your Scope block. Specifically,
+         if you double-click on your Scope and select the <b>Parameters</b> icon you will open the following dialog box. Under the <b>History</b> tab, you can select the box <b>Save data to workspace</b>. Here you can also define the <b>Format</b> of the data and the <b>Variable name</b> to which the data is saved. In this case, the data will be output as a matrix with the first column corresponding to simulation
+         time, and subsequent columns corresponding to the signals being fed to the Scope block.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/parameters.png" alt=""> </p>
+      <p>Furthermore, you do not always need to define a clock to generate the simulation time vector. By default, Simulink will ouput
+         a vector <tt>tout</tt> to the MATLAB workspace that includes the simulation time. This vector, however, is limited to a size of 1000 elements.
+      </p>
+      <h2>Extracting models from Simulink into MATLAB<a name="8"></a></h2>
+      <p>It is also sometimes useful to extract a simulation model from within Simulink into the MATLAB workspace. This is especially
+         true for situations where your simulation model is complicated or nonlinear. This extraction can be accomplished with the
+         MATLAB command <tt>linmod</tt>, or from within the Simulation model itself as we will demonstrate here.
+      </p>
+      <p>We will employ the Simulink model with variables defined above (download <a href="Content/Extras/outvar.mdl">here</a>). First, choose from the menus at the top of the model window <b>Tools &gt; Control Design &gt; Linear Analysis</b>. This will cause the <b>Linear Analysis Tool</b> window to open. In order to perform our extraction/linearization, we need to identify the inputs and outputs for the model
+         and the operating point that we wish to perform the linearization about. We will extract the closed-loop model from the reference
+         <tt>r</tt> to the output <tt>y</tt>. Right-click on the signal representing the reference <tt>r</tt> in the Simulink model. Then choose <b>Linearization Points &gt; Input Point</b> from the resulting menu. Similarly, right-click on the output signal of the model (<tt>y</tt>) and select <b>Linearization Points &gt; Output Point</b> from the resulting menu. The resulting input and output should now be identified on your model by arrow symbols as shown
+         in the figure below.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/extract1.png" alt=""> </p>
+      <p>Next we need to identify the operating point to be linearized about. Since our model is already linear, any choice will produce
+         the same output. Therefore, we can leave the <b>Operating Point</b> field in the <b>Linear Analysis Tool</b> window as its default, <tt>Model Initial Condition</tt>. We can also leave the <b>Plot Result</b> field as the default of a <tt>New Step</tt> since that is the type of input employed in the above simulations. The <b>Linear Analysis Tool</b> window should appear as follows.
+      </p>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/extract2.png" alt=""> </p>
+      <div>
+         <ul>
+            <li>Finally, click the <b>Linearize</b> button indicated by the green triangle. This automatically generates a step response plot and the model <tt>linsys1</tt> as shown below.
+            </li>
+         </ul>
+      </div>
+      <p><img class="figure"vspace="5" hspace="5" src="Content/Extras/figures/extract3.png" alt=""> </p>
+      <p>The above step response exactly matches the results achieved from running the simulation because the Simulink model was already
+         linear. We can then export the resulting linearized model into the MATLAB workspace for further analysis and design. This
+         can be accomplished by simply dragging the <tt>linsys1</tt> object from the <b>Linear Analysis Workspace</b> to the <b>MATLAB Workspace</b>.
+      </p>
+      <p class="footer"><br>
+         Published with MATLAB&reg; 7.14<br></p>
+   </div>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Simulink Basics Tutorial: Interaction With MATLAB
+%
+%%
+% In this page we will examine three of the ways in which Simulink can interact with MATLAB.
+%
+% * Block parameters can be defined from MATLAB variables.
+% * Signals can be exchanged between Simulink and MATLAB.
+% * Entire systems can be extracted from Simulink into MATLAB.
+%
+%% Block parameters from MATLAB variables
+% 
+% Often a controller will be designed in MATLAB and verified within a Simulink
+% model. Commonly, numerical parameters such as gains and controller
+% transfer functions are entered into Simulink manually by entering the
+% corresponding numbers into the block dialog boxes. Rather than enter numbers directly, it
+% is also possible to use MATLAB variables in the Simulink block dialog boxes.   
+%
+% Consider, for example, the Simulink model from the
+% < ?aux=Basics_Simulink Simulink Basics>
+% tutorial which is shown in the figure below.  
+% You can recreate this model yourself, or you can download it 
+% <Content/Extras/buildex.mdl here>. 
+%
+% <<Content/Extras/figures/buildn.png>>
+%
+% In this case, the complete controller transfer function is the following.
+%
+% $$ \frac{U(s)}{E(s)} = 2.5\frac{s+2}{s}$$
+%
+% Suppose this transfer function were generated by some computation in
+% MATLAB. In this case, there would most likely be three variables, the
+% numerator polynomial, the denominator polynomial, and the gain. Enter the
+% following commands in MATLAB to define these variables.   
+
+K = 2.5;
+num = [1 2];
+den = [1 0];
+
+%%
+% These variables can now be used within blocks in the Simulink environment. In your Simulink
+% model, double-click on the Gain block and enter |"K"| in the *Gain* field as shown below.
+%
+% <<Content/Extras/figures/gaink.png>>
+%
+% Now close this dialog box. Notice that the Gain block in the Simulink
+% model now shows the variable |K| rather than a number. 
+% 
+% <<Content/Extras/figures/bldwk.png>>
+%
+%%
+% Next, double-click on the PI Controller block. Enter |"num"| into the
+% *Numerator Coefficient* field and |"den"| into the *Denominator
+% Coefficient* field as shown below.
+%
+% <<Content/Extras/figures/tfnumden.png>>
+%
+% Close this dialog box. Notice now that the PI Controller block shows the
+% variables |num| and |den| (as functions of _s_) rather than an
+% explicit numerical transfer function.
+%
+% <<Content/Extras/figures/wnumden.png>>
+%
+%%
+% You can then simulate the model with the MATLAB variable parameters. Select
+% *Start* from the *Simulation* menu to run the simulation. Double-click on
+% the Scope block to view its output. Hit the autoscale button (binoculars)
+% and you should see the following.   
+%
+% <<Content/Extras/figures/output.png>>
+%
+% Now, if any calculations are done in MATLAB to change any of the variables
+% used in the Simulink model, the simulation will use the new values the
+% next time it is run. To try this, change the gain |K| within MATLAB by
+% entering the following at the command prompt.  
+
+K=5;
+
+%%
+% Start the simulation again, bring up the Scope window, and hit
+% the autoscale button. You will see the following output which reflects
+% the new, higher gain. 
+%
+% <<Content/Extras/figures/bldhighk.png>>
+%
+% To download the Simulink model with MATLAB variable parameters, click
+% <Content/Extras/variab.mdl here>. 
+%
+%% Exchanging signals with MATLAB
+% Sometimes, we would like to use the results of a Simulink simulation in
+% the MATLAB command window for further calculations and plotting. Less
+% often, we would like to generate signals in MATLAB which we can then use as
+% inputs in a Simulink model. These tasks are accomplished through the use
+% of the To Workspace block from the Sinks library and the From Workspace
+% block found in the Sources library. We will only transfer signals from
+% Simulink to MATLAB. Doing the reverse is a very similar process.     
+% 
+% The To Workspace block saves a signal as a vector (or structure) in the MATLAB
+% workspace. Open the model which you used previously in this tutorial or
+% click <Content/Extras/variab.mdl here> to download the model. Be sure that the
+% variables |K| = 5, |num| = [1 2], and |den| = [1 0] are defined in the MATLAB workspace.       
+%
+% We would like to use both the output signal |y| and the control signal
+% |u| for calculations in MATLAB. We will save these two variables as well
+% as a time signal from our Simulink model. First, we need to generate an
+% explicit time signal. Open the Sources library by double-clicking the
+% Sources icon in the main *Simulink Library Browser* window. Drag the
+% Clock block from the Sources window to the lower portion of your Simulink
+% model as shown below.      
+%
+% <<Content/Extras/figures/addclock.png>>
+%
+% Now, open the Sinks library and drag three instances of the To Workspace
+% block into your Simulink window, arranged approximately as shown below.
+%
+% <<Content/Extras/figures/addwork.png>>
+%
+% Before connecting these blocks to the rest of your system, name the
+% variables where the data is stored in the MATLAB workspace. The lower To
+% Workspace block will output the time signal, hence we will store this
+% data in the MATLAB variable |t|. Double-click on 
+% this block and enter |"t"| in the *Variable Name* field as shown below.
+% Also change the entry in the *Save format* field from the default of
+% |Structure| to |Array|.
+%
+% <<Content/Extras/figures/towork.png>>
+%
+% Now close the dialog box. Notice that the lower To Workspace block
+% displays a |t|. 
+%
+% <<Content/Extras/figures/changedt.png>>
+%
+% The To Workspace block near the Plant block will output the control
+% signal to a MATLAB variable we've named |u|. Again define the variable
+% name for this block by entering |"u"| into the the *Variable Name* field
+% and choose |Array| from the drop-down menu in the *Save format* field.
+% The last To Workspace block will output the output signal  
+% to the MATLAB variable |y| by repeating the steps above. Also, for better
+% clarity, change the labels (by clicking on the existing labels "To
+% Workspace") of these blocks to "time", "control", and "output". Your
+% model should appear as follows. 
+%
+% <<Content/Extras/figures/chngouts.png>>
+%
+% Now, you will connect these blocks to the rest of your system. Draw a
+% line from the Clock block to the time (|t|) block. Tap a line off of the
+% control signal (the line between the PI Controller block and the Plant
+% block) and connect it to the control (|u|) block. Remember, to tap off an
+% existing line, hold the *Ctrl* key while drawing the line. You can also
+% tap off a line by right-clicking. Tap a line off 
+% the output signal line (the line which enters the Scope block) and
+% connect it to the output (|y|) block. Your system should appear as follows.     
+%
+% <<Content/Extras/figures/outvar.png>>
+%
+% Start the simulation (*Start* from the *Simulation* menu). You can still view
+% the output in the Scope window (remember autoscale). 
+%
+% <<Content/Extras/figures/bldhighk.png>>
+%
+% You can now examine the variables saved to the MATLAB workspace. Plot |u| and
+% |y| vs. |t| by entering the following commands.
+%
+% <html>
+% <pre class="codeinput">
+% plot(t,u,t,y);
+% </pre>
+% </html>
+%
+% Note that it is important to plot each of these variables against the time
+% vector generated by Simulink. This is because the time between elements in the
+% signal vectors may be unequal if a variable-step solver is employed. This
+% is particularly the case near a discontinuity such as the step input (anywhere the
+% signals are changing rapidly). Your plot of |u| (blue) and |y| (green) should
+% appear as follows.    
+%
+% <<Content/Extras/figures/uyplot.png>>
+%
+% To download the model with outputs to MATLAB variables, click
+% <Content/Extras/outvar.mdl here>. 
+%
+% Instead of employing To Workspace blocks, you can also output data to the
+% MATLAB workspace using your Scope block. Specifically, if you
+% double-click on your Scope and select the *Parameters* icon you will open
+% the following dialog box. Under the *History* tab, you can select the box *Save data to
+% workspace*. Here you can also define the *Format* of the data and the
+% *Variable name* to which the data is saved. In this case, the data will be output
+% as a matrix with the first column corresponding to simulation time, and
+% subsequent columns corresponding to the signals being fed to the Scope
+% block.
+%
+% <<Content/Extras/figures/parameters.png>>
+%
+% Furthermore, you do not always need to define a clock to generate the
+% simulation time vector. By default, Simulink will ouput a vector |tout|
+% to the MATLAB workspace that includes the simulation time. This vector,
+% however, is limited to a size of 1000 elements.
+%
+%% Extracting models from Simulink into MATLAB 
+% It is also sometimes useful to extract a simulation model from within
+% Simulink into the MATLAB workspace. This is especially true for situations
+% where your simulation model is complicated or nonlinear. This extraction
+% can be accomplished with the MATLAB command |linmod|, or from within the
+% Simulation model itself as we will demonstrate here. 
+%
+% We will employ the Simulink model with variables defined
+% above (download <Content/Extras/outvar.mdl here>). First, choose from
+% the menus at the top of the model window *Tools > 
+% Control Design > Linear Analysis*. This will cause the *Linear Analysis
+% Tool* window to open. In order to perform our extraction/linearization, we need to
+% identify the inputs and outputs for the model and the operating point
+% that we wish to perform the linearization about. We will extract the
+% closed-loop model from the reference |r| to the output |y|. Right-click on the signal
+% representing the reference |r| in the Simulink model. Then choose
+% *Linearization Points > Input Point* from the resulting menu. Similarly,
+% right-click on the output signal of the model (|y|) and select
+% *Linearization Points > Output Point* from the resulting menu. The
+% resulting input and output should now be identified on your model by
+% arrow symbols as shown in the figure below. 
+%
+% <<Content/Extras/figures/extract1.png>>
+%
+% Next we need to identify the operating point to be linearized about.
+% Since our model is already linear, any choice will produce the same
+% output. Therefore, we can leave the *Operating Point* field in the
+% *Linear Analysis Tool* window as its default, |Model Initial Condition|.
+% We can also leave the *Plot Result* field as the default of a |New Step|
+% since that is the type of input employed in the above simulations. The
+% *Linear Analysis Tool* window should appear as follows.
+% 
+% <<Content/Extras/figures/extract2.png>>
+%
+% * Finally, click the *Linearize* button indicated by the green triangle. This
+% automatically generates a step response plot and the model |linsys1| as shown below.
+% 
+% <<Content/Extras/figures/extract3.png>>
+%
+% The above step response exactly matches the results achieved from running
+% the simulation because the Simulink model was already linear. We can then
+% export the resulting linearized model into the MATLAB 
+% workspace for further analysis and design. This can be accomplished by
+% simply dragging the |linsys1| object from the *Linear Analysis
+% Workspace* to the *MATLAB Workspace*.
+
+##### SOURCE END #####
+-->				</div>
+				
+				<div id="left">
+
+					<ul class="section">
+						<li class="heading" id="System">SYSTEM<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SystemModeling"><a href="indexf617.html?example=Introduction&amp;section=SystemModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SystemAnalysis"><a href="indexa13b.html?example=Introduction&amp;section=SystemAnalysis">ANALYSIS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Control">CONTROL<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="ControlPID"><a href="index6e33.html?example=Introduction&amp;section=ControlPID">PID<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlRootLocus"><a href="indexe528.html?example=Introduction&amp;section=ControlRootLocus">ROOT&nbsp;LOCUS<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlFrequency"><a href="index7f35.html?example=Introduction&amp;section=ControlFrequency">FREQUENCY<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlStateSpace"><a href="index9b18.html?example=Introduction&amp;section=ControlStateSpace">STATE-SPACE<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="ControlDigital"><a href="index4e79.html?example=Introduction&amp;section=ControlDigital">DIGITAL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+					
+					<div class="section_break"></div>
+
+					<ul class="section">
+						<li class="heading" id="Simulink">SIMULINK<img class="section_heading_arrow" src="Images/section_heading_arrow.png"/></li>
+						<li class="item" id="SimulinkModeling"><a href="index5af4.html?example=Introduction&amp;section=SimulinkModeling">MODELING<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+						<li class="item" id="SimulinkControl"><a href="index87ee.html?example=Introduction&amp;section=SimulinkControl">CONTROL<img class="section_arrow" src="Images/section_arrow.png"/></a></li>
+					</ul>
+		
+				</div>
+			
+				<div style="clear:both"></div>
+				
+				<div id="bottombar"><span style="color:#FF5500;font-weight:bold">.</div>
+				
+			</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Imatlab by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:44 GMT -->
+</html>
+
+	as_Imatlab by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:44 GMT -->
+</html>
+
+				</div>
+			
+		</div>
+	
+		<script type="text/javascript" src="script.js"></script>
+						
+	</body>
+	
+
+<!-- Mirrored from ctms.engin.umich.edu/CTMS/index.php?aux=Extras_Imatlab by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:44 GMT -->
+</html>
+
+	as_Imatlab by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:44 GMT -->
+</html>
+
+	pier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:44 GMT -->
+</html>
+
+	as_Imatlab by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2014 21:14:44 GMT -->
+</html>
+
+	
