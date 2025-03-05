@@ -1,4 +1,4 @@
-# UOU-WA1194-Linear-Control
+# UOU-WA1194-Linear-System-Control
 ## Professor in charge
 - Prof. 안경관
 ## Course time
