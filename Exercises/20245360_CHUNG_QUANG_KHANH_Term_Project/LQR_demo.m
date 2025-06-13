@@ -359,7 +359,7 @@ end
 % Label the plot
 xlabel('Time (s)', 'FontSize', 14);
 ylabel('Angular Velocity (rad/s)', 'FontSize', 14);
-%title('LQR Step Responses with Reference Tracking');
+title('LQR Step Responses with Reference Tracking');
 yline(1, '--k', 'Desired Speed = 1 rad/s', 'LabelVerticalAlignment', 'bottom', 'HandleVisibility', 'off');
 grid on;
 legend('Location', 'best');
